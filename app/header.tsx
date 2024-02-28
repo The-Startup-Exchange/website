@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { messina_mono_sans } from "./fonts";
 import { useRef } from "react";
 import NextImage from "next/image";
-import NextLink from "next/link";
 
 export default function Header() {
     const navRef = useRef<HTMLDivElement>(null);

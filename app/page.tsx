@@ -3,6 +3,9 @@ import Image from "next/image";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import Header from "./header";
 import Footer from "./footer";
+import { Badge, badgeVariants } from "@/components/ui/badge"
+import Link from "next/link";
+import { messina_mono_sans } from "./fonts";
 
 const plus_jakarta_sans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -23,6 +26,9 @@ export default function Home() {
             <div
               className={`flex flex-col w-full text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold items-start justify-start lg:gap-y-2 gap-y-0 ${plus_jakarta_sans.className}`}
             >
+              <div className={`${messina_mono_sans.className}`}>
+                <Link href="" className={badgeVariants({ variant: "outlineimg" })}>ImmerseGT is happening this spring</Link>
+              </div>
               <div className="w-full">
                 <h1>A space for student builders,</h1>
               </div>
