@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import Header from "./header";
 
 const plus_jakarta_sans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -15,26 +16,7 @@ export default function Home() {
           {/* Radial gradient for the container to give a faded look */}
           <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_5%,black)]"></div>
         </div>
-        <div className="flex w-full justify-between flex-row border-dashed border-[#414141] border-b-2 pb-4 px-16">
-          <div>
-            <Image
-              src="/sx-full-logo.png"
-              alt="SX Full Logo"
-              width={200}
-              height={200}
-            />
-          </div>
-          <div className="flex flex-row gap-x-4 items-center">
-            <h2>EVENTS</h2>
-            <h2>PARTNERS</h2>
-            <h2>FAQs</h2>
-            <h2>DONATE</h2>
-            <h2>ABOUT</h2>
-            <Button variant="secondary" className="rounded-full p-6">
-              BRING THIS TO YOUR CAMPUS
-            </Button>
-          </div>
-        </div>
+        <Header />
         <div className="flex flex-col w-3/4 h-3/4 pl-24 border-dashed border-[#414141] border-b-2 border-x-2 items-start justify-center text-6xl font-bold gap-y-4 ">
           <div className="flex flex-col gap-y-4">
             <div
