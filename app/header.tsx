@@ -29,15 +29,12 @@ export default function Header() {
                 <h2 className={`${messina_mono_sans.className}`}>FAQs</h2>
                 <h2 className={`${messina_mono_sans.className}`}>DONATE</h2>
                 <h2 className={`${messina_mono_sans.className}`}>ABOUT</h2>
-                
-                <Button variant="secondary" className="rounded-full p-6">
-                    <div className={`${messina_mono_sans.className}`}>
-                        BRING THIS TO YOUR CAMPUS
-                    </div>
-                </Button>
-                
-
-          </div>
+          </div>            
+          <Button variant="secondary" className="rounded-full p-6">
+            <div className={`${messina_mono_sans.className}`}>
+                BRING THIS TO YOUR CAMPUS
+            </div>
+          </Button>
         </header>
       </>
     );

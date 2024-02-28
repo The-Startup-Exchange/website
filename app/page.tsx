@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import Header from "./header";
+import Footer from "./footer";
 
 const plus_jakarta_sans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -51,6 +52,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <Footer/>
       </main>
     </>
   );
