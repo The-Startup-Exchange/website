@@ -15,7 +15,7 @@ export default function Home() {
           {/* Radial gradient for the container to give a faded look */}
           <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_5%,black)]"></div>
         </div>
-        <div className="flex w-full justify-between flex-row border-dashed border-[#414141] border-b-2 pb-4 px-16">
+        <div className="flex w-full justify-between flex-row border-dotted border-[#414141] border-b-2 pb-4 px-16">
           <div>
             <Image
               src="/sx-full-logo.png"
@@ -35,7 +35,7 @@ export default function Home() {
             </Button>
           </div>
         </div>
-        <div className="flex flex-col w-3/4 h-3/4 pl-24 border-dashed border-[#414141] border-b-2 border-x-2 items-start justify-center text-6xl font-bold gap-y-4 ">
+        <div className="flex flex-col w-3/4 h-3/4 pl-24 border-dotted border-[#414141] border-b-2 border-x-2 items-start justify-center text-6xl font-bold gap-y-4 ">
           <div className="flex flex-col gap-y-4">
             <div
               className={`flex flex-col w-full text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold items-start justify-start lg:gap-y-2 gap-y-0 ${plus_jakarta_sans.className}`}
