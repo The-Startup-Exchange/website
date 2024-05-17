@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { messinaBook } from "./fonts";
+import { messina_book } from "./fonts";
 import { useRef } from "react";
 import NextImage from "next/image";
 import NextLink from "next/link";
@@ -15,7 +15,7 @@ export default function Footer() {
     return (
       <>
         <footer className="flex w-full justify-center mx-auto flex-row border-dashed border-[#414141] border-t-2 py-7 px-16 space-x-4">
-            <div className={`${messinaBook.className} flex flex-row gap-x-4 text-gray-400 tracking-tight items-center`}>
+            <div className={`${messina_book.className} flex flex-row gap-x-4 text-gray-400 tracking-tight items-center`}>
                 © 2024 STARTUP EXCHANGE. ALL RIGHTS RESERVED
             </div> 
             <div className="flex space-x-3.5 flex-row">

@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { messinaBook, messinaSemiBold } from "./fonts";
+import { messina_book, messina_semibold } from "./fonts";
 import { useRef } from "react";
 import NextImage from "next/image";
 import Link from "next/link";
@@ -41,7 +41,7 @@ export default function Header() {
       };
     return (
       <>
-        <header className="flex w-full justify-between align-center items-center flex-row border-dashed border-[#414141] border-b-2 pb-3.5 py-5 px-12">
+        <header className="flex w-full justify-between align-center items-center flex-row border-[#242424] border-b pb-3.5 py-5 px-12">
           <div>
             <Link href="/">
               <NextImage
@@ -55,12 +55,12 @@ export default function Header() {
             <div className="flex flex-row space-x-8 items-center">
               {navItems.map((item) => (
                 <Link href={item.link}>
-                  <h2 className={`${messinaBook.className} text-[15px] transition duration-500 hover:text-[#414141]`}>{item.name}</h2>
+                  <h2 className={`${messina_book.className} text-[15px] transition duration-500 hover:text-[#414141]`}>{item.name}</h2>
                 </Link>
               ))}
           </div>            
           <Button variant="secondary" className="rounded-xl py-3 px-5">
-            <div className={`${messinaSemiBold.className} font-bold`}>
+            <div className={`${messina_semibold.className} font-bold`}>
                 JOIN THE COMMUNITY
             </div>
           </Button>
