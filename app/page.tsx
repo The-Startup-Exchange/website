@@ -14,6 +14,8 @@ import {
   messina_book
 } from './fonts';
 import DashedDivider from "./dashedDivider";
+import NextImage from "next/image";
+import SiteMenu from "./siteMenu";
 
 const programLogos = [
   { text: "Link 1", href: "/link1" },
@@ -144,6 +146,21 @@ export default function Home() {
                 <h1 className={`text-[#000] text-[16px] tracking-tighter ${messina_book.className}`}>the F24 cohort</h1>
               </Button>
             </div> */}
+          </div>
+        </div>
+        <DashedDivider/>
+        <div className="flex flex-col w-[94%] py-[52px] border-[#242424] border-x items-center justify-center">
+          <div className="flex flex-col px-28 py-28 items-center align-center justify-center w-full">
+            <NextImage
+                    src="/sxLogo.png"
+                    alt="SX Full Logo"
+                    width={200}
+                    height={200}
+                    />
+            <h1 className={`text-[#FFFFFF] text-[14px] leading-[125%] ${plus_jakarta_sans_extrabold.className}`}>STARTUP EXCHANGE</h1>
+          </div>
+          <div className="flex flex-row w-full items-center align-center justify-center">
+            <SiteMenu />
           </div>
         </div>
         <Footer/>

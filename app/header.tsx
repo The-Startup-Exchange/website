@@ -5,33 +5,7 @@ import { messina_book, messina_semibold } from "./fonts";
 import { useRef } from "react";
 import NextImage from "next/image";
 import Link from "next/link";
-
-const navItems = [
-  {
-    name: "COMMUNITY",
-    link: "/community",
-  },
-  {
-    name: "CHAPTERS",
-    link: "/chapters",
-  },
-  {
-    name: "EVENTS",
-    link: "/events",
-  },
-  {
-    name: "DONATE",
-    link: "/donate",
-  },
-  {
-    name: "BLOG",
-    link: "/blog",
-  },
-  {
-    name: "ABOUT",
-    link: "/about",
-  },
-];
+import SiteMenu from "./siteMenu";
 
 export default function Header() {
     const navRef = useRef<HTMLDivElement>(null);
@@ -51,14 +25,8 @@ export default function Header() {
                   height={27}
                   />
             </Link>
-            </div>
-            <div className="flex flex-row space-x-8 items-center">
-              {navItems.map((item) => (
-                <Link href={item.link}>
-                  <h2 className={`${messina_book.className} text-[15px] transition duration-500 hover:text-[#414141]`}>{item.name}</h2>
-                </Link>
-              ))}
-          </div>            
+          </div>
+          <SiteMenu useBold={true}/>
           <Button variant="secondary" className="rounded-xl py-3 px-5">
             <div className={`${messina_semibold.className} font-bold`}>
                 JOIN THE COMMUNITY
