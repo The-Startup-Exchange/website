@@ -22,11 +22,12 @@ export default function Header() {
                 height={200}
                 />
             </div>
-            <div className="flex flex-row gap-x-4 items-center">
-                <h2 className={`${messina_mono_sans.className}`}>EVENTS</h2>
-                <h2 className={`${messina_mono_sans.className}`}>PARTNERS</h2>
-                <h2 className={`${messina_mono_sans.className}`}>FAQs</h2>
-                <h2 className={`${messina_mono_sans.className}`}>DONATE</h2>
+            <div className="flex flex-row gap-x-8 items-center">
+                <h2 className={`${messina_mono_sans.className} text-[15px]`}>COMMUNITY</h2>
+                <h2 className={`${messina_mono_sans.className} text-[15px]`}>CHAPTERS</h2>
+                <h2 className={`${messina_mono_sans.className} text-[15px]`}>EVENTS</h2>
+                <h2 className={`${messina_mono_sans.className} text-[15px]`}>DONATE</h2>
+                <h2 className={`${messina_mono_sans.className}`}>BLOG</h2>
                 <h2 className={`${messina_mono_sans.className}`}>ABOUT</h2>
           </div>            
           <Button variant="secondary" className="rounded-full p-6">
