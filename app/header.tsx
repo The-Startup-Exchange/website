@@ -1,9 +1,37 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { messina_mono_sans } from "./fonts";
+import { messinaBook, messinaSemiBold } from "./fonts";
 import { useRef } from "react";
 import NextImage from "next/image";
+import Link from "next/link";
+
+const navItems = [
+  {
+    name: "COMMUNITY",
+    link: "/community",
+  },
+  {
+    name: "CHAPTERS",
+    link: "/chapters",
+  },
+  {
+    name: "EVENTS",
+    link: "/events",
+  },
+  {
+    name: "DONATE",
+    link: "/donate",
+  },
+  {
+    name: "BLOG",
+    link: "/blog",
+  },
+  {
+    name: "ABOUT",
+    link: "/about",
+  },
+];
 
 export default function Header() {
     const navRef = useRef<HTMLDivElement>(null);
@@ -13,26 +41,27 @@ export default function Header() {
       };
     return (
       <>
-        <header className="flex w-full justify-between flex-row border-dashed border-[#414141] border-b-2 pb-4 px-16">
+        <header className="flex w-full justify-between align-center items-center flex-row border-dashed border-[#414141] border-b-2 pb-3.5 py-5 px-12">
           <div>
-            <NextImage
-                src="/sx-full-logo.png"
-                alt="SX Full Logo"
-                width={200}
-                height={200}
-                />
+            <Link href="/">
+              <NextImage
+                  src="/sx-full-logo.png"
+                  alt="SX Full Logo"
+                  width={136}
+                  height={27}
+                  />
+            </Link>
             </div>
-            <div className="flex flex-row gap-x-8 items-center">
-                <h2 className={`${messina_mono_sans.className} text-[15px]`}>COMMUNITY</h2>
-                <h2 className={`${messina_mono_sans.className} text-[15px]`}>CHAPTERS</h2>
-                <h2 className={`${messina_mono_sans.className} text-[15px]`}>EVENTS</h2>
-                <h2 className={`${messina_mono_sans.className} text-[15px]`}>DONATE</h2>
-                <h2 className={`${messina_mono_sans.className}`}>BLOG</h2>
-                <h2 className={`${messina_mono_sans.className}`}>ABOUT</h2>
+            <div className="flex flex-row space-x-8 items-center">
+              {navItems.map((item) => (
+                <Link href={item.link}>
+                  <h2 className={`${messinaBook.className} text-[15px] transition duration-500 hover:text-[#414141]`}>{item.name}</h2>
+                </Link>
+              ))}
           </div>            
-          <Button variant="secondary" className="rounded-full p-6">
-            <div className={`${messina_mono_sans.className}`}>
-                BRING THIS TO YOUR CAMPUS
+          <Button variant="secondary" className="rounded-xl py-3 px-5">
+            <div className={`${messinaSemiBold.className} font-bold`}>
+                JOIN THE COMMUNITY
             </div>
           </Button>
         </header>
