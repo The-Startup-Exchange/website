@@ -21,7 +21,7 @@ export default function Home() {
           <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_5%,black)]"></div>
         </div>
         <Header />
-        <div className="flex flex-col w-3/4 h-3/4 pl-24 border-dashed border-[#414141] border-b-2 border-x-2 items-start justify-center text-6xl font-bold gap-y-4 ">
+        <div className="flex flex-col w-[94%] h-3/4 mx-8 pl-24 border-dashed border-[#414141] border-b-2 border-x-2 items-start justify-center text-6xl font-bold gap-y-4 ">
           <div className="flex flex-col gap-y-4">
             <div
               className={`flex flex-col w-full text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold items-start justify-start lg:gap-y-2 gap-y-0 ${plus_jakarta_sans.className}`}
@@ -30,25 +30,15 @@ export default function Home() {
                 <Link href="" className={badgeVariants({ variant: "outlineimg" })}>ImmerseGT is happening this spring</Link>
               </div>
               <div className="w-full">
-                <h1>A space for student builders,</h1>
-              </div>
-              <div>
-                <h1>makers, & creators to exchange</h1>
-              </div>
-              <div>
-                <h1>their passions & ideas.</h1>
+                <h1>The path to moving your ideas forward awaits.</h1>
               </div>
             </div>
             <div
               className={`text-[#FFFFFF] text-lg font-thin leading-snug ${plus_jakarta_sans.className}`}
             >
               <div>
-                Join a community of students passionate about their own ideas.
-                Connect with us by
-              </div>
-              <div>
-                joining our Discord below, or by setting up a meetup at your
-                campus.
+              SX offers students the community and mentors that enable them to become full-time founders. 
+              Sign up to hear about cool builders, campus communities, and upcoming events.
               </div>
             </div>
             <div>
