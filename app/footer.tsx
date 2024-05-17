@@ -4,7 +4,30 @@ import { Button } from "@/components/ui/button";
 import { messina_book } from "./fonts";
 import { useRef } from "react";
 import NextImage from "next/image";
-import NextLink from "next/link";
+import Link from "next/link";
+
+const socialLinks = [
+    {
+        href: "https://discord.gg/6nXvx6fG6V",
+        src: "/discord.png",
+        alt: "Discord Logo"
+    },
+    {
+        href: "https://www.linkedin.com/company/thestartupexchange",
+        src: "/linkedin.png",
+        alt: "Linkedin Logo"
+    },
+    {
+        href: "https://x.com/startupxchange",
+        src: "/twitter.png",
+        alt: "Twitter Logo"
+    },
+    {
+        href: "https://www.instagram.com/startupexchange",
+        src: "/instagram.png",
+        alt: "Instagram Logo"
+    },
+]
 
 export default function Footer() {
     const navRef = useRef<HTMLDivElement>(null);
@@ -14,43 +37,21 @@ export default function Footer() {
       };
     return (
       <>
-        <footer className="flex w-full justify-center mx-auto flex-row border-dashed border-[#414141] border-t-2 py-7 px-16 space-x-4">
-            <div className={`${messina_book.className} flex flex-row gap-x-4 text-gray-400 tracking-tight items-center`}>
+        <footer className="flex w-full justify-center mx-auto flex-row border-dashed border-[#414141] border-t py-7 px-16 space-x-4">
+            <div className={`${messina_book.className} flex flex-row gap-x-4 text-[#A1A1A1] tracking-tight items-center`}>
                 © 2024 STARTUP EXCHANGE. ALL RIGHTS RESERVED
             </div> 
-            <div className="flex space-x-3.5 flex-row">
-                <NextLink href={"/"}>
-                    <NextImage
-                        src="/discord.png"
-                        alt="Discord Logo"
-                        width={19}
-                        height={19}
-                    />
-                </NextLink>
-                <NextLink href={"/"}>
-                    <NextImage
-                        src="/appstore.png"
-                        alt="Discord Logo"
-                        width={19}
-                        height={19}
-                    />
-                </NextLink>
-                <NextLink href={"/"}>
-                    <NextImage
-                        src="/twitter.png"
-                        alt="Discord Logo"
-                        width={19}
-                        height={19}
-                    />
-                </NextLink>
-                <NextLink href={"/"}>
-                    <NextImage
-                        src="/instagram.png"
-                        alt="Discord Logo"
-                        width={19}
-                        height={19}
-                    />
-                </NextLink>
+            <div className="flex space-x-3.5 flex-row items-center">
+                {socialLinks.map((link, index) => (
+                    <Link href={link.href} key={index} className="opacity-70 hover:opacity-100 transition duration-500">
+                        <NextImage
+                            src={link.src}
+                            alt={link.alt}
+                            width={19}
+                            height={19}
+                        />
+                    </Link>
+                ))}
             </div>           
 
         </footer>

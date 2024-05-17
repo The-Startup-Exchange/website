@@ -17,7 +17,7 @@ const CTA = () => {
           <h1 className={`text-[#000] text-[24px] leading-[100%] ${plus_jakarta_sans_extrabold.className}`}>Apply to join</h1>
           <h1 className={`text-[#000] text-[16px] tracking-tighter ${messina_book.className}`}>the F24 cohort</h1>
         </Button>
-        <Button variant="outline" className="rounded-xl flex-col items-center w-[272px] py-14 space-y-1.5">
+        <Button href="https://discord.gg/6nXvx6fG6V" variant="outline" className="rounded-xl flex-col items-center w-[272px] py-14 space-y-1.5">
           <h1 className={`text-[24px] leading-[100%] ${plus_jakarta_sans_extrabold.className}`}>Join our discord</h1>
           <h1 className={`text-[#7E7E7E] text-[16px] tracking-tighter ${messina_book.className}`}>for announcements</h1>
         </Button>
