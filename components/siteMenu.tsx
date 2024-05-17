@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { messina_book, messina_semibold } from "./fonts";
+import { messina_book, messina_semibold } from "../app/fonts";
 
 const navItems = [
   {

@@ -5,7 +5,7 @@ import { messina_book, messina_semibold } from "./fonts";
 import { useRef } from "react";
 import NextImage from "next/image";
 import Link from "next/link";
-import SiteMenu from "./siteMenu";
+import SiteMenu from "../components/siteMenu";
 
 export default function Header() {
     const navRef = useRef<HTMLDivElement>(null);
@@ -15,7 +15,7 @@ export default function Header() {
       };
     return (
       <>
-        <header className="flex w-full justify-between align-center items-center flex-row border-[#242424] border-b pb-3.5 py-5 px-12">
+        <header className="flex w-full justify-between align-center items-center flex-row border-[#242424] border-b pb-3.5 py-5 px-12 sticky top-0 z-50 bg-black">
           <div>
             <Link href="/">
               <NextImage
