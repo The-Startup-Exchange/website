@@ -13,7 +13,7 @@ const navItems = [
   },
   {
     name: "EVENTS",
-    link: "/events",
+    link: "https://lu.ma/sxevents",
   },
   {
     name: "DONATE",
@@ -35,9 +35,15 @@ const SiteMenu = ({ useBold = false }) => {
   return (
     <div className="flex flex-row space-x-8 items-center">
       {navItems.map((item) => (
-        <Link key={item.link} href={item.link}>
-          <h2 className={`${fontClass} text-[15px] transition duration-500 hover:text-[#414141]`}>{item.name}</h2>
-        </Link>
+        item.name === "EVENTS" ? (
+          <a key={item.link} href={item.link} target="_blank" rel="noopener noreferrer">
+            <h2 className={`${fontClass} text-[15px] transition duration-500 hover:text-[#414141]`}>{item.name}</h2>
+          </a>
+        ) : (
+          <Link key={item.link} href={item.link}>
+            <h2 className={`${fontClass} text-[15px] transition duration-500 hover:text-[#414141]`}>{item.name}</h2>
+          </Link>
+        )
       ))}
     </div>
   );
