@@ -29,7 +29,7 @@ const Header = () => {
             </Link>
           </div>
           <SiteMenu useBold={true}/>
-          <Button variant="secondary" className="rounded-xl py-3 px-5">
+          <Button href="https://docs.google.com/forms/d/1K4TKHANO3iWyFM51OqRXBqT1wP2FTYEjE1pdz6559Y0/viewform?edit_requested=true" variant="secondary" className="rounded-xl py-3 px-5">
             <div className={`${messina_semibold.className} font-bold`}>
                 JOIN THE COMMUNITY
             </div>

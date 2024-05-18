@@ -19,15 +19,25 @@ const AboutPage = () => {
     return (
         <>
             <Header />
-            <div className={`flex flex-col items-center align-center justify-center w-full px-32 py-16 ${theme === 'dark' ? 'text-white bg-black' : 'text-black bg-white'}`}>
+            <div className={`flex flex-col w-full items-center pb-12 justify-center ${theme === 'dark' ? 'text-white bg-black' : 'text-black bg-white'}`}>
+                <div className={`flex flex-col w-[94%] py-32 px-12 ${theme === 'dark' ? 'border-[#242424]' : 'border-[#E0E0E0]'} border-x items-start justify-center gap-y-4`}>
+                    <h1 className={`w-full text-start text-[21px] pb-16 leading-[125%] ${messina_book.className}`}>ABOUT US</h1>
+                    <div className={`flex flex-row w-full space-x-16 items-center ${plus_jakarta_sans_regular.className}`}>
+                        <p className="text-[48px] w-[50%] leading-[125%] ">
+                            Who we are
+                        </p>
+                        <p className={`text-[18px] w-[50%] align-end justify-end leading-[140%] ${plus_jakarta_sans_thin.className}`}>
+                        We are a nonprofit community that empowers university students to become successful startup founders through accountability, mentorship, personal development, and rapid iteration of their ideas.
+                        </p>
+                    </div>
+                </div>
                 <div className="py-28">
-                    <h1 className={`w-full text-center text-[21px] pb-16 leading-[125%] ${messina_book.className}`}>ABOUT US</h1>
                     <div className={`flex flex-col w-full px-56 space-y-12 text-start align-end justify-end items-end ${plus_jakarta_sans_regular.className}`}>
                         <p className="text-[36px] leading-[125%] ">
                             Startup Exchange is on a mission to create a universally accessible space for university students to become startup founders.
                         </p>
                         <p className={`text-[18px] w-[60%] align-end justify-end leading-[140%] ${plus_jakarta_sans_thin.className}`}>
-                        We are a nonprofit community that empowers university students to become successful startup founders through accountability, mentorship, personal development, and rapid iteration of their ideas.
+                        Our goal is to empower students with an ambition to change the world to reach their full potential. 
                         </p>
                     </div>
                 </div>
@@ -71,3 +81,9 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
+
+
+/// at sx, our team is solving a couple of problems.
+// 1. we're debunking what it takes to get an idea off the ground
+// we're giving students an opportunity to connect with students at different campuses
+// we're helping students to navigate balancing school and their startup  

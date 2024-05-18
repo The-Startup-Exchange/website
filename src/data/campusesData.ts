@@ -1,0 +1,128 @@
+import Images from '../assets/images';
+
+export const campuses = [
+    {
+      name: 'Startup Exchange at Georgia Tech',
+      uni: 'Georgia Tech',
+      pictureName: Images.uiuc_sundays,
+      logo: Images.georgiaTech,
+      description: 'a space for georgia tech makers, builders, & creators to exchange their ideas.',
+      link: 'https://tinyurl.com/startupexchangegt',
+      items: [
+        {
+          id: 1,
+          name: 'Ishan',
+          designation: 'CS @ UIUC',
+          image: Images.ishan,
+          socialsLink: 'https://x.com/_ishand_',
+        },
+        {
+          id: 2,
+          name: 'Aryan',
+          designation: 'CS @ UIUC',
+          image: Images.aryan,
+          socialsLink: 'https://x.com/Aryan_Gandhi101',
+        },
+        {
+          id: 3,
+          name: 'Keshav',
+          designation: 'CS @ UIUC',
+          image: Images.keshav,
+          socialsLink: 'https://x.com/krimson_wings',
+        },
+      ],
+    },
+    {
+      name: 'buildIllinois',
+      uni: 'University of Illinois Urbana-Champaign',
+      pictureName: Images.uiuc_sundays,
+      logo: Images.uiuc,
+      description: 'the community for artists, founders, and creatives at UIUC.',
+      link: 'https://lu.ma/buildillinois',
+      items: [
+        {
+          id: 1,
+          name: 'Ishan',
+          designation: 'CS @ UIUC',
+          image: Images.ishan,
+          socialsLink: 'https://x.com/_ishand_',
+        },
+        {
+          id: 2,
+          name: 'Aryan',
+          designation: 'CS @ UIUC',
+          image: Images.aryan,
+          socialsLink: 'https://x.com/Aryan_Gandhi101',
+        },
+        {
+          id: 3,
+          name: 'Keshav',
+          designation: 'CS @ UIUC',
+          image: Images.keshav,
+          socialsLink: 'https://x.com/krimson_wings',
+        },
+      ],
+    },
+    {
+      name: 'V1Michigan',
+      uni: 'University of Michigan',
+      pictureName: Images.uiuc_sundays,
+      logo: Images.uiuc,
+      description: 'the community for artists, founders, and creatives at UIUC.',
+      link: 'https://lu.ma/buildillinois',
+      items: [
+        {
+          id: 1,
+          name: 'Ishan',
+          designation: 'CS @ UIUC',
+          image: Images.ishan,
+          socialsLink: 'https://x.com/_ishand_',
+        },
+        {
+          id: 2,
+          name: 'Aryan',
+          designation: 'CS @ UIUC',
+          image: Images.aryan,
+          socialsLink: 'https://x.com/Aryan_Gandhi101',
+        },
+        {
+          id: 3,
+          name: 'Keshav',
+          designation: 'CS @ UIUC',
+          image: Images.keshav,
+          socialsLink: 'https://x.com/krimson_wings',
+        },
+      ],
+    },
+    {
+      name: 'rev at Northeastern',
+      uni: 'Northeastern University',
+      pictureName: Images.uiuc_sundays,
+      logo: Images.uiuc,
+      description: 'the community for artists, founders, and creatives at UIUC.',
+      link: 'https://lu.ma/buildillinois',
+      items: [
+        {
+          id: 1,
+          name: 'Ishan',
+          designation: 'CS @ UIUC',
+          image: Images.ishan,
+          socialsLink: 'https://x.com/_ishand_',
+        },
+        {
+          id: 2,
+          name: 'Aryan',
+          designation: 'CS @ UIUC',
+          image: Images.aryan,
+          socialsLink: 'https://x.com/Aryan_Gandhi101',
+        },
+        {
+          id: 3,
+          name: 'Keshav',
+          designation: 'CS @ UIUC',
+          image: Images.keshav,
+          socialsLink: 'https://x.com/krimson_wings',
+        },
+      ],
+    },
+  ];

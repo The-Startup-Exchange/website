@@ -60,9 +60,9 @@ const BuildersInSX = () => {
                 <p className={`${styles.textColor} text-[36px] leading-[150%] ${plus_jakarta_sans_medium.className}`}>Our community helps you grow from -1 to 1.</p>
             </div>
             <div
-              className="flex flex-row w-full px-12 items-start justify-between lg:space-y-4 space-y-0">
+              className="flex flex-row w-full px-12 justify-between align-center items-center">
                 <h1 className={`${styles.textColor} w-[85%] text-[58px] leading-[125%] ${plus_jakarta_sans_medium.className}`}> Builders in SX</h1>
-                <Button variant="outline" className="rounded-xl py-3 px-5">
+                <Button href="/community" variant="outline" className="rounded-xl py-3 px-5">
                   <div className={`${messina_book.className} font-bold`}>
                   VIEW ALL {'>'}
                   </div>

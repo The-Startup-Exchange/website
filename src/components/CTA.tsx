@@ -17,7 +17,7 @@ const CTA = () => {
     </div>
     <div className="flex flex-row w-full justify-between">
       <div className="flex flex-row px-28 items-start w-full space-x-6">
-        <Button variant="secondary" className="rounded-xl flex-col items-center w-[272px] py-14 space-y-1.5">
+        <Button href="https://docs.google.com/forms/d/1K4TKHANO3iWyFM51OqRXBqT1wP2FTYEjE1pdz6559Y0/viewform?edit_requested=true" variant="secondary" className="rounded-xl flex-col items-center w-[272px] py-14 space-y-1.5">
           <h1 className={`text-[#000] text-[24px] leading-[100%] ${plus_jakarta_sans_extrabold.className}`}>Apply to join</h1>
           <h1 className={`text-[#000] text-[16px] tracking-tighter ${messina_book.className}`}>the F24 cohort</h1>
         </Button>
