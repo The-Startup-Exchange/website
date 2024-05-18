@@ -7,6 +7,21 @@
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
+    --background-light: 255 100% 100%;
+    --foreground-light: 0 0% 0%;
+    --card-light: 255 100% 100%;
+    --card-foreground-light: 0 0% 0%;
+    --primary-light: 0 0% 100%;
+    --primary-foreground-light: 0 0% 0%;
+    --secondary-light: 0 0% 100%;
+    --secondary-foreground-light: 0 0% 0%;
+    --muted-light: 0 0% 100%;
+    --muted-foreground-light: 0 0% 0%;
+    --accent-light: 0 0% 100%;
+    --accent-foreground-light: 0 0% 0%;
+    --destructive-light: 0 0% 100%;
+    --destructive-foreground-light: 0 0% 0%;
+
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
  

@@ -1,13 +1,17 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import {
     plus_jakarta_sans_extrabold,
     plus_jakarta_sans_medium,
     messina_book
 } from '../app/fonts';
+import { useTheme } from '../context/ThemeContext';
 
 const CTA = () => {
+  const { styles } = useTheme();
   return (
-    <div className="flex flex-col w-[94%] py-[75px] border-[#242424] border-x items-start justify-start gap-y-20">
+    <div className={`flex flex-col w-[94%] py-[75px] ${styles.borderColor} border-x items-start justify-start gap-y-20 ${styles.backgroundColor} ${styles.textColor}`}>
     <div className="flex flex-row px-28 items-start w-full">
       <h1 className={`text-[#FFFFFF] w-[70%] text-[58px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>Join the Startup Exchange community</h1>
     </div>

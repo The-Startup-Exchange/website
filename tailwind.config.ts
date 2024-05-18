@@ -30,16 +30,10 @@ const config = {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
+        background: { DEFAULT: "hsl(var(--background))", light: "hsl(var(--background-light))" },
+        foreground: { DEFAULT: "hsl(var(--foreground))", light: "hsl(var(--foreground-light))" },
+        primary: { DEFAULT: "hsl(var(--primary))", light: "hsl(var(--primary-light))", foreground: "hsl(var(--primary-foreground))", foregroundLight: "hsl(var(--primary-foreground-light))" },
+        secondary: { DEFAULT: "hsl(var(--secondary))", light: "hsl(var(--secondary-light))", foreground: "hsl(var(--secondary-foreground))", foregroundLight: "hsl(var(--secondary-foreground-light))" },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",

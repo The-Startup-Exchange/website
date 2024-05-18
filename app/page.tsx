@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Header from "./header";
@@ -13,19 +15,22 @@ import {
   messina_book
 } from './fonts';
 import DashedDivider from "../components/dashedDivider";
-import BuildersInSX from "../components/buildersInSX";
+import BuildersInSX from "../components/BuildersInSX";
 import BottomMenu from "../components/BottomMenu";
 import CTA from "../components/CTA";
 import FAQs from "../components/FAQs";
 import AlumniPrograms from "../components/AlumniPrograms";
 import ParticipatingCampuses from "../components/ParticipatingCampuses";
 import Hero from "../components/Hero";
+import { useTheme } from '../context/ThemeContext';
 
-export default function Home() {
+const Home = () => {
+  const { theme } = useTheme();
+
   return (
     <>
       <Header />
-      <main className="flex h-screen min-w-screen flex-col items-center">
+      <main className={`flex h-screen min-w-screen flex-col items-center ${theme === 'dark' ? 'bg-black' : 'bg-white'}`}>
         <Hero/>
         <DashedDivider/>
         <BuildersInSX/>
@@ -43,4 +48,6 @@ export default function Home() {
       </main>
     </>
   );
-}
+};
+
+export default Home;
