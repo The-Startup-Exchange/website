@@ -18,7 +18,7 @@ export const AnimatedTooltip = ({
     name: string;
     designation: string;
     image: string;
-    link: string;
+    socialsLink: string;
   }[];
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -78,7 +78,7 @@ export const AnimatedTooltip = ({
                 <div className="text-white text-xs">{item.designation}</div>
               </motion.div>
             )}
-            <Link href={item.link}>
+            <a href={item.socialsLink} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
               <Image
                 onMouseMove={handleMouseMove}
                 height={30}
@@ -87,7 +87,7 @@ export const AnimatedTooltip = ({
                 alt={item.name}
                 className="object-cover !m-0 !p-0 object-top rounded-full h-[36px] w-[36px] border-2 group-hover:scale-105 group-hover:z-30 border-black  relative transition duration-500"
               />
-            </Link>
+            </a>
           </div>
         ))}
       </div>
