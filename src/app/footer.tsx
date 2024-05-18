@@ -2,28 +2,29 @@
 
 import { messina_book } from "./fonts";
 import { useRef } from "react";
-import NextImage from "next/image";
+import Image from "next/image";
+import Images from "../assets/images";
 import Link from "next/link";
 
 const socialLinks = [
     {
         href: "https://discord.gg/6nXvx6fG6V",
-        src: "/icons/discord.png",
+        src: Images.discord,
         alt: "Discord Logo"
     },
     {
         href: "https://www.linkedin.com/company/thestartupexchange",
-        src: "/icons/linkedin.png",
+        src: Images.linkedin,
         alt: "Linkedin Logo"
     },
     {
         href: "https://x.com/startupxchange",
-        src: "/icons/twitter.png",
+        src: Images.twitter,
         alt: "Twitter Logo"
     },
     {
         href: "https://www.instagram.com/startupexchange",
-        src: "/icons/instagram.png",
+        src: Images.instagram,
         alt: "Instagram Logo"
     },
 ]
@@ -43,7 +44,7 @@ export default function Footer() {
             <div className="flex space-x-3.5 flex-row items-center">
                 {socialLinks.map((link, index) => (
                     <Link href={link.href} key={index} className="opacity-70 hover:opacity-100 transition duration-500">
-                        <NextImage
+                        <Image
                             src={link.src}
                             alt={link.alt}
                             width={19}

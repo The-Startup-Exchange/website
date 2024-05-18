@@ -32,16 +32,16 @@ export const plus_jakarta_sans_extrabold = Plus_Jakarta_Sans({
 });
 
 export const druk_wide = localFont({
-    src: "./Druk-Wide-Bold.ttf",
+    src: "../../public/fonts/Druk-Wide-Bold.ttf",
     display: "swap",
 });
 
 export const messina_book = localFont({
-  src: "./MessinaSansMono-Book.ttf",
+  src: "../../public/fonts/MessinaSansMono-Book.ttf",
   display: "swap",
 });
 
 export const messina_semibold = localFont({
-  src: "./MessinaSansMono-SemiBold.ttf",
+  src: "../../public/fonts/MessinaSansMono-SemiBold.ttf",
   display: "swap",
 });
