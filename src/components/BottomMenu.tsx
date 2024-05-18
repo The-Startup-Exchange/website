@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Images from '../assets/images';
 import SiteMenu from "./siteMenu";
 import {
     plus_jakarta_sans_extrabold
@@ -9,7 +10,7 @@ const BottomMenu = () => {
         <div className="flex flex-col w-[94%] py-[52px] border-[#242424] border-x items-center justify-center">
           <div className="flex flex-col px-28 py-28 items-center align-center justify-center w-full">
             <Image
-                src="/sxLogo.png"
+                src={Images.sxLogo}
                 alt="SX Full Logo"
                 width={200}
                 height={200}

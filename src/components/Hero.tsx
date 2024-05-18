@@ -8,6 +8,7 @@ import {
 } from '../app/fonts';
 import { Badge, badgeVariants } from "@/components/ui/badge";
 import Image from "next/image";
+import Images from '../assets/images';
 
 const Hero = () => {
     const { theme, toggleTheme } = useTheme();
@@ -22,9 +23,9 @@ const Hero = () => {
                 <div className="flex flex-col w-full gap-y-4">
                     <button onClick={toggleTheme} className={`p-2 m-2 border absolute right-14 top-20 rounded-lg ${theme === 'dark' ? 'border-[#242424]' : 'border-[#E0E0E0]'}`}>
                         {theme === 'dark' ? (
-                            <Image src="/dark.png" alt="Light Mode" width={18} height={18} />
+                            <Image src={Images.darkMode} alt="Light Mode" width={18} height={18} />
                         ) : (
-                            <Image src="/light.png" alt="Dark Mode" width={18} height={18} />
+                            <Image src={Images.lightMode} alt="Dark Mode" width={18} height={18} />
                         )}
                     </button>
                     <div className="flex flex-col w-full items-start justify-start lg:space-y-4 space-y-0">

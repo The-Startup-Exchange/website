@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { messina_book } from "./fonts";
 import { useRef } from "react";
 import NextImage from "next/image";
@@ -9,22 +8,22 @@ import Link from "next/link";
 const socialLinks = [
     {
         href: "https://discord.gg/6nXvx6fG6V",
-        src: "/discord.png",
+        src: "/icons/discord.png",
         alt: "Discord Logo"
     },
     {
         href: "https://www.linkedin.com/company/thestartupexchange",
-        src: "/linkedin.png",
+        src: "/icons/linkedin.png",
         alt: "Linkedin Logo"
     },
     {
         href: "https://x.com/startupxchange",
-        src: "/twitter.png",
+        src: "/icons/twitter.png",
         alt: "Twitter Logo"
     },
     {
         href: "https://www.instagram.com/startupexchange",
-        src: "/instagram.png",
+        src: "/icons/instagram.png",
         alt: "Instagram Logo"
     },
 ]

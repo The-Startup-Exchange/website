@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Images from '../assets/images';
 import {
     plus_jakarta_sans_medium,
 } from '../app/fonts';
@@ -7,11 +8,11 @@ import {
 const programLogos = [
     { name: "forbes", href: "https://forbes.com/" },
     { name: "buildspace", href: "https://buildspace.so/" },
-    { name: "kp", href: "https://fellows.kleinerperkins.com/" },
+    { name: "kleinerPerkins", href: "https://fellows.kleinerperkins.com/" },
     { name: "contrary", href: "https://www.contrary.com/partners" },
 
     { name: "zfellows", href: "https://www.zfellows.com/" },
-    { name: "8vc", href: "https://www.8vc.com/fellowships" },
+    { name: "eightVC", href: "https://www.8vc.com/fellowships" },
     { name: "antler", href: "https://www.antler.co/" },
     { name: "commit", href: "" },
 
@@ -38,7 +39,7 @@ const AlumniPrograms = () => {
                   <div className="flex flex-row w-full border-r border-dashed border-[#323232] py-24 px-12 align-center items-center justify-center">
                     <Link href={item.href}>
                       <Image
-                        src={`/${item.name}.png`}
+                        src={Images[item.name]}
                         alt={item.name}
                         width={200}
                         height={200}

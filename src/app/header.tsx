@@ -7,6 +7,7 @@ import NextImage from "next/image";
 import Link from "next/link";
 import SiteMenu from "../components/siteMenu";
 import { useTheme } from '../context/ThemeContext';
+import Images from '../assets/images';
 
 const Header = () => {
     const navRef = useRef<HTMLDivElement>(null);
@@ -20,7 +21,7 @@ const Header = () => {
           <div>
             <Link href="/">
               <NextImage
-                  src="/sx-full-logo.png"
+                  src={Images.sx_full_logo}
                   alt="SX Full Logo"
                   width={136}
                   height={27}
