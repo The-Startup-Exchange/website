@@ -7,7 +7,9 @@ import { useTheme } from '../../context/ThemeContext';
 import {
     plus_jakarta_sans_extrabold,
     plus_jakarta_sans_bold,
-    plus_jakarta_sans_regular
+    plus_jakarta_sans_regular,
+    plus_jakarta_sans_thin,
+    messina_book
 } from '../../app/fonts';
 
 
@@ -18,14 +20,16 @@ const AboutPage = () => {
         <>
             <Header />
             <div className={`flex flex-col items-center align-center justify-center w-full px-32 py-16 ${theme === 'dark' ? 'text-white bg-black' : 'text-black bg-white'}`}>
-                <h1 className={`w-full text-center text-[70px] pb-16 leading-[125%] ${plus_jakarta_sans_extrabold.className}`}>About us</h1>
-                <div className={`flex flex-col w-full px-56 space-y-8 text-start leading-[175%] ${plus_jakarta_sans_regular.className}`}>
-                    <p>
-                    Startup Exchange (SX) is a nonprofit community that empowers university students to become successful startup founders through accountability, mentorship, personal development, and rapid iteration of their ideas.
-                    </p>
-                    <p>
-                        Our mission is to create a universally accessible space for university students to become startup founders.
-                    </p>
+                <div className="py-28">
+                    <h1 className={`w-full text-center text-[21px] pb-16 leading-[125%] ${messina_book.className}`}>ABOUT US</h1>
+                    <div className={`flex flex-col w-full px-56 space-y-12 text-start align-end justify-end items-end ${plus_jakarta_sans_regular.className}`}>
+                        <p className="text-[36px] leading-[125%] ">
+                            Startup Exchange is on a mission to create a universally accessible space for university students to become startup founders.
+                        </p>
+                        <p className={`text-[18px] w-[60%] align-end justify-end leading-[140%] ${plus_jakarta_sans_thin.className}`}>
+                        We are a nonprofit community that empowers university students to become successful startup founders through accountability, mentorship, personal development, and rapid iteration of their ideas.
+                        </p>
+                    </div>
                 </div>
                 <h1 className={`w-full text-center text-[48px] leading-[125%] py-16 ${plus_jakarta_sans_bold.className}`}>Our story</h1>
                 <div className={`flex flex-col w-full px-56 space-y-8 text-start leading-[175%] ${plus_jakarta_sans_regular.className}`}>

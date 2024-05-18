@@ -1,6 +1,12 @@
 import localFont from 'next/font/local'
 import { Plus_Jakarta_Sans } from 'next/font/google'
 
+export const plus_jakarta_sans_thin = Plus_Jakarta_Sans({
+    weight: '200',  // Thin
+    subsets: ['latin'],
+    display: 'swap',
+});
+
 export const plus_jakarta_sans_regular = Plus_Jakarta_Sans({
     weight: '400',  // Regular
     subsets: ['latin'],
