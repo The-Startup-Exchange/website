@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
+import Link from "next/link";
 import {
   motion,
   useTransform,
@@ -17,6 +18,7 @@ export const AnimatedTooltip = ({
     name: string;
     designation: string;
     image: string;
+    link: string;
   }[];
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -39,52 +41,56 @@ export const AnimatedTooltip = ({
 
   return (
     <>
-      {items.map((item, idx) => (
-        <div
-          className="-mr-4  relative group"
-          key={item.name}
-          onMouseEnter={() => setHoveredIndex(item.id)}
-          onMouseLeave={() => setHoveredIndex(null)}
-        >
-          {hoveredIndex === item.id && (
-            <motion.div
-              initial={{ opacity: 0, y: 20, scale: 0.6 }}
-              animate={{
-                opacity: 1,
-                y: 0,
-                scale: 1,
-                transition: {
-                  type: "spring",
-                  stiffness: 260,
-                  damping: 10,
-                },
-              }}
-              exit={{ opacity: 0, y: 20, scale: 0.6 }}
-              style={{
-                translateX: translateX,
-                rotate: rotate,
-                whiteSpace: "nowrap",
-              }}
-              className="absolute -top-16 -left-1/2 translate-x-1/2 flex text-xs  flex-col items-center justify-center rounded-md bg-black z-50 shadow-xl px-4 py-2"
-            >
-              <div className="absolute inset-x-10 z-30 w-[20%] -bottom-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent h-px " />
-              <div className="absolute left-10 w-[40%] z-30 -bottom-px bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px " />
-              <div className="font-bold text-white relative z-30 text-base">
-                {item.name}
-              </div>
-              <div className="text-white text-xs">{item.designation}</div>
-            </motion.div>
-          )}
-          <Image
-            onMouseMove={handleMouseMove}
-            height={100}
-            width={100}
-            src={item.image}
-            alt={item.name}
-            className="object-cover !m-0 !p-0 object-top rounded-full h-14 w-14 border-2 group-hover:scale-105 group-hover:z-30 border-white  relative transition duration-500"
-          />
-        </div>
-      ))}
+      <div className="flex flex-row">
+        {items.map((item, idx) => (
+          <div
+            className="relative group -mr-4"
+            key={item.name}
+            onMouseEnter={() => setHoveredIndex(item.id)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            {hoveredIndex === item.id && (
+              <motion.div
+                initial={{ opacity: 0, y: 20, scale: 0.6 }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  scale: 1,
+                  transition: {
+                    type: "spring",
+                    stiffness: 260,
+                    damping: 10,
+                  },
+                }}
+                exit={{ opacity: 0, y: 20, scale: 0.6 }}
+                style={{
+                  translateX: translateX,
+                  rotate: rotate,
+                  whiteSpace: "nowrap",
+                }}
+                className="absolute -top-16 -left-1/2 translate-x-1/2 flex text-xs  flex-col items-center justify-center rounded-md bg-black z-50 shadow-xl px-4 py-2"
+              >
+                <div className="absolute inset-x-10 z-30 w-[20%] -bottom-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent h-px " />
+                <div className="absolute left-10 w-[40%] z-30 -bottom-px bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px " />
+                <div className="font-bold text-white relative z-30 text-base">
+                  {item.name}
+                </div>
+                <div className="text-white text-xs">{item.designation}</div>
+              </motion.div>
+            )}
+            <Link href={item.link}>
+              <Image
+                onMouseMove={handleMouseMove}
+                height={30}
+                width={30}
+                src={item.image}
+                alt={item.name}
+                className="object-cover !m-0 !p-0 object-top rounded-full h-[36px] w-[36px] border-2 group-hover:scale-105 group-hover:z-30 border-black  relative transition duration-500"
+              />
+            </Link>
+          </div>
+        ))}
+      </div>
     </>
   );
 };
