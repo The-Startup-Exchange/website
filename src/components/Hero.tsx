@@ -29,7 +29,7 @@ const Hero = () => {
                         )}
                     </button>
                     <div className="flex flex-col w-full items-start justify-start lg:space-y-4 space-y-0">
-                        <Link href="" className={badgeVariants({ variant: "outlineimg" })}>ImmerseGT is happening this spring</Link>
+                        <Link href="" className={badgeVariants({ variant: "outlineimg" })}>→ Attend our summer meetups in SF, NYC, and ATL.</Link>
                         <h1 className={`w-[85%] text-[70px] leading-[125%] ${plus_jakarta_sans_extrabold.className} ${theme === 'dark' ? 'text-white' : 'text-black'}`}>The path to moving your ideas forward awaits.</h1>
                         <p className={`text-[24px] leading-[150%] ${plus_jakarta_sans_regular.className} ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>SX offers students the community and mentors that enable them to become full-time founders. 
                         Sign up to hear about cool builders, campus communities, and upcoming events.</p>

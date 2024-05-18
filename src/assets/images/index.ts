@@ -21,10 +21,12 @@ import unusual from './alumniPrograms/unusual.png';
 import zfellows from './alumniPrograms/zfellows.png';
 
 import uiuc from './colleges/uiuc.png';
+import georgiaTech from './colleges/georgiaTech.png';
 
-import aryan from './organizers/aryan.jpeg';
-import ishan from './organizers/ishan.jpeg';
-import keshav from './organizers/keshav.jpeg';
+import aryan from './people/aryan.jpeg';
+import ishan from './people/ishan.jpeg';
+import keshav from './people/keshav.jpeg';
+import vik from './people/vik.png';
 
 import uiuc_sundays from './participatingCampuses/uiuc_sundays.png';
 
@@ -41,6 +43,7 @@ type ImagesType = {
     twitter: StaticImageData;
     eightVC: StaticImageData;
     antler: StaticImageData;
+    georgiaTech: StaticImageData;
     buildspace: StaticImageData;
     commit: StaticImageData;
     contrary: StaticImageData;
@@ -55,6 +58,7 @@ type ImagesType = {
     aryan: StaticImageData;
     ishan: StaticImageData;
     keshav: StaticImageData;
+    vik: StaticImageData;
     uiuc_sundays: StaticImageData;
     sx_full_logo: StaticImageData;
     sxLogo: StaticImageData;
@@ -81,12 +85,14 @@ const Images: ImagesType = {
     unusual,
     zfellows,
     uiuc,
+    georgiaTech,
     aryan,
     ishan,
     keshav,
     uiuc_sundays,
     sx_full_logo,
     sxLogo,
+    vik,
 };
 
 export default Images;
