@@ -42,6 +42,31 @@ export const partners = [
         href: 'https://www.atlantaga.gov/',
     },
     {
+        name: 'mayoClinic',
+        logo: Images.mayoClinic,
+        href: 'https://www.mayoclinic.org/',
+    },
+    {
+        name: 'contrary',
+        logo: Images.contrary,
+        href: 'https://www.contrary.com/',
+    },
+    {
+        name: 'gt',
+        logo: Images.gt,
+        href: 'https://gatech.edu/',
+    },
+    {
+        name: 'prizePicks',
+        logo: Images.prizePicks,
+        href: 'https://www.prizepicks.com',
+    },
+    {
+        name: 'mlh',
+        logo: Images.mlh,
+        href: 'https://mlh.io/',
+    },
+    {
         name: 'finc',
         logo: Images.finc,
         href: 'https://www.f.inc',
@@ -52,24 +77,19 @@ export const partners = [
         href: 'https://www.dormroomfund.com/',
     },
     {
-        name: 'mayoClinic',
-        logo: Images.mayoClinic,
-        href: 'https://www.mayoclinic.org/',
+        name: 'roboflow',
+        logo: Images.roboflow,
+        href: 'https://www.roboflow.com/',
     },
+    // {
+    //     name: 'gtCoC',
+    //     logo: Images.gtCoC,
+    //     href: 'https://cc.gatech.edu/',
+    // },
     {
-        name: 'prizePicks',
-        logo: Images.prizePicks,
-        href: 'https://www.prizepicks.com',
-    },
-    {
-        name: 'abc',
-        logo: Images.abc,
-        href: 'https://atlantachain.io/',
-    },
-    {
-        name: 'arnav',
-        logo: Images.arnav,
-        href: 'https://www.arnav.com',
+        name: 'homeDepot',
+        logo: Images.homeDepot,
+        href: 'https://www.homedepot.com/',
     },
     {
         name: 'tempus',
@@ -82,9 +102,14 @@ export const partners = [
         logo: Images.mailchimp,
         href: 'https://www.mailchimp.com',
     },
+    // {
+    //     name: 'gtPubP',
+    //     logo: Images.gtPubP,
+    //     href: 'https://www.spp.gatech.edu/',
+    // },
     {
-        name: 'createX',
-        logo: Images.createX,
+        name: 'gtCreateX',
+        logo: Images.gtCreateX,
         href: 'https://create-x.gatech.edu/',
     },
     {
@@ -102,7 +127,16 @@ export const partners = [
         logo: Images.icxr,
         href: 'https://www.icxr.org/',
     },
-
+    {
+        name: 'abc',
+        logo: Images.abc,
+        href: 'https://atlantachain.io/',
+    },
+    {
+        name: 'arnav',
+        logo: Images.arnav,
+        href: 'https://www.arnav.com',
+    },
     {
         name: 'oneTrust',
         logo: Images.oneTrust,
@@ -159,5 +193,20 @@ export const partners = [
         logo: Images.celsius,
         href: 'https://www.celsius.com',
     },
+    {
+        name: 'katalyst',
+        logo: Images.katalyst,
+        href: 'https://www.katalyststreet.com/',
+    },
+    // {
+    //     name: 'gtSustainableX',
+    //     logo: Images.gtSustainableX,
+    //     href: 'https://sustain-x.gatech.edu/',
+    // },
+    // {
+    //     name: 'gtRay',
+    //     logo: Images.gtRay,
+    //     href: 'https://www.scheller.gatech.edu/centers-and-initiatives/ray-c-anderson-center-for-sustainable-business/index.html',
+    // },
 ]
 

@@ -58,21 +58,31 @@ import biolocity from './partnerLogos/biolocity.webp';
 import celsius from './partnerLogos/celsius.webp';
 import cityAtlanta from './partnerLogos/cityAtlanta.png';
 // contrary
-import createX from './partnerLogos/createX.webp';
+import gt from './partnerLogos/gt.png';
+import gtCreateX from './partnerLogos/gtCreateX.webp';
+import gtCoC from './partnerLogos/gtCoC.webp';
+import gtPubP from './partnerLogos/gtPubP.webp';
+import gtRay from './partnerLogos/gtRay.webp';
+import gtSustainableX from './partnerLogos/gtSustainableX.webp';
 import drf from './partnerLogos/drf.webp';
 import drive from './partnerLogos/drive.webp';
 import finc from './partnerLogos/finc.webp';
 import fusen from './partnerLogos/fusen.webp';
 import google from './partnerLogos/google.webp';
+import homeDepot from './partnerLogos/homeDepot.webp';
 import huggingFace from './partnerLogos/huggingFace.webp';
 import icxr from './partnerLogos/icxr.webp';
+import katalyst from './partnerLogos/katalyst.png';
 import mailchimp from './partnerLogos/mailchimp.png';
 import mayoClinic from './partnerLogos/mayoClinic.png';
+import mlh from './partnerLogos/mlh.png';
 import nvidia from './partnerLogos/nvidia.webp';
 import oneTrust from './partnerLogos/oneTrust.webp';
 import overtime from './partnerLogos/overtime.webp';
 import portal from './partnerLogos/portal.webp';
 import prizePicks from './partnerLogos/prizePicks.webp';
+import prodia from './partnerLogos/prodia.webp';
+import roboflow from './partnerLogos/roboflow.png';
 import startupAtlanta from './partnerLogos/startupAtlanta.webp';
 import stord from './partnerLogos/stord.webp';
 import tempus from './partnerLogos/tempus.png';
@@ -211,21 +221,31 @@ type ImagesType = {
     biolocity: StaticImageData;
     celsius: StaticImageData;
     cityAtlanta: StaticImageData;
-    createX: StaticImageData;
+    gt: StaticImageData;
+    gtCreateX: StaticImageData;
+    gtCoC: StaticImageData;
+    gtPubP: StaticImageData;
+    gtRay: StaticImageData;
+    gtSustainableX: StaticImageData;
     drf: StaticImageData;
     drive: StaticImageData;
     finc: StaticImageData;
     fusen: StaticImageData;
     google: StaticImageData;
+    homeDepot: StaticImageData;
     huggingFace: StaticImageData;
     icxr: StaticImageData;
+    katalyst: StaticImageData;
     mailchimp: StaticImageData;
     mayoClinic: StaticImageData;
+    mlh: StaticImageData;
     nvidia: StaticImageData;
     oneTrust: StaticImageData;
     overtime: StaticImageData;
     portal: StaticImageData;
     prizePicks: StaticImageData;
+    prodia: StaticImageData;
+    roboflow: StaticImageData;
     startupAtlanta: StaticImageData;
     stord: StaticImageData;
     tempus: StaticImageData;
@@ -323,21 +343,31 @@ const Images: ImagesType = {
     biolocity,
     celsius,
     cityAtlanta,
-    createX,
+    gt,
+    gtCreateX,
+    gtCoC,
+    gtPubP,
+    gtRay,
+    gtSustainableX,
     drf,
     drive,
     finc,
     fusen,
     google,
+    homeDepot,
     huggingFace,
     icxr,
+    katalyst,
     mailchimp,
     mayoClinic,
+    mlh,
     nvidia,
     oneTrust,
     overtime,
     portal,
     prizePicks,
+    prodia,
+    roboflow,
     startupAtlanta,
     stord,
     tempus,

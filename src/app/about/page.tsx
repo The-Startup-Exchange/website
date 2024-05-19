@@ -25,6 +25,7 @@ import {
 const AboutPage = () => {
     const { theme } = useTheme();
     const numRows = Math.ceil(team.length / 2);
+    const numPartnerRows = Math.ceil(partners.length / 5);
   
     return (
         <>
@@ -141,11 +142,11 @@ const AboutPage = () => {
                 <div className={`flex flex-col w-[94%] space-y-12 ${theme === 'dark' ? 'border-[#242424]' : 'border-[#E0E0E0]'} border-x justify-start gap-y-4`}>
                     <div className="px-12 w-full flex flex-col space-y-12 justify-end py-12">
                         <p className={`${messina_light.className} w-full justify-end text-end items-end`}>Previous partners</p>
-                        <p className={`${plus_jakarta_sans_extrabold.className} w-full justify-end text-start text-[36px] items-end`}>Trusted by leading investors, startups, and corporations.</p>
+                        <p className={`${plus_jakarta_sans_extrabold.className} w-full justify-end text-start text-[36px] items-end`}>Trusted by leading investors, startups, corporations, and institutions.</p>
                         <p className={`${plus_jakarta_sans_thin.className} w-[60%] text-[18px]`}>We actively collaborate with new partners to bring new and exciting opportunities to the builders in our community. Partnerships range from community events and sponsorship to marketing and recruitment opportunities.</p>
                     </div>
                     <div className={`flex flex-col ${theme === 'dark' ? 'border-[#323232]' : 'border-[#e0e0e0]'} border-[#242424] border-dashed border-t items-start justify-start`}>
-                        {Array.from({ length: numRows }, (_, rowIndex) => (
+                        {Array.from({ length: numPartnerRows }, (_, rowIndex) => (
                         <div className={`flex flex-row w-full border-b border-dashed ${theme === 'dark' ? 'border-[#323232]' : 'border-[#e0e0e0]'}`}>
                             {partners.slice(rowIndex * 5, (rowIndex + 1) * 5).map(partner => (
                             <div className={`flex flex-row w-full border-r border-dashed ${theme === 'dark' ? 'border-[#323232]' : 'border-[#e0e0e0]'} py-10 px-12 align-center items-center justify-center`}>
