@@ -8,8 +8,8 @@ const navItems = [
     link: "/community",
   },
   {
-    name: "CHAPTERS",
-    link: "/chapters",
+    name: "CAMPUSES",
+    link: "/campuses",
   },
   {
     name: "EVENTS",

@@ -24,9 +24,9 @@ const ParticipatingCampuses = () => {
                 <div className={`flex flex-row w-full items-start justify-center ${rowIndex % 2 === 0 ? 'space-x-12' : 'space-x-reverse space-x-12'}`}>
                   {rowIndex % 2 === 0 ? (
                     <>
-                      <Image src={Images.uiuc_sundays} alt="uiuc_sundays" width={225} height={225}/>
+                      <Image src={campus.pictureName} alt="uiuc_sundays" width={225} height={225}/>
                       <div className="flex flex-col space-y-4">
-                        <Image src={campus.logo} alt="uiuc" width={100} height={27}/>
+                        <Image src={campus.logo} alt="logo" width={54} height={54}/>
                         <h1 className={`text-[#FFFFFF] w-[85%] text-[32px] leading-[125%] ${plus_jakarta_sans_extrabold.className}`}>{campus.name}</h1>
                         <h1 className={`text-[#FFFFFF] w-[85%] text-[16px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>{campus.description}</h1>
                         <AnimatedTooltip items={campus.items.map(item => ({ ...item, image: item.image.src }))}/>
@@ -35,12 +35,12 @@ const ParticipatingCampuses = () => {
                   ) : (
                     <>
                       <div className="flex flex-col space-y-4">
-                        <Image src={Images.uiuc} alt="uiuc" width={100} height={27}/>
+                        <Image src={campus.logo} alt="logo" width={54} height={54}/>
                         <h1 className={`text-[#FFFFFF] w-[85%] text-[32px] leading-[125%] ${plus_jakarta_sans_extrabold.className}`}>{campus.name}</h1>
                         <h1 className={`text-[#FFFFFF] w-[85%] text-[16px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>{campus.description}</h1>
                         <AnimatedTooltip items={campus.items.map(item => ({ ...item, image: item.image.src }))}/>
                       </div>
-                      <Image src={Images.uiuc_sundays} alt="uiuc_sundays" width={225} height={225}/>
+                      <Image src={campus.pictureName} alt="uiuc_sundays" width={225} height={225}/>
                     </>
                   )}
                 </div>

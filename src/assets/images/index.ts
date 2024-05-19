@@ -23,12 +23,27 @@ import zfellows from './alumniPrograms/zfellows.png';
 import uiuc from './colleges/uiuc.png';
 import georgiaTech from './colleges/georgiaTech.png';
 
+import buildIllinois from './partnerLogos/buildIllinois.png';
+import rev from './partnerLogos/rev.png';
+import sxgt from './partnerLogos/sxgt.png';
+import v1Michigan from './partnerLogos/v1Michigan.png';
+
 import aryan from './people/aryan.jpeg';
 import ishan from './people/ishan.jpeg';
 import keshav from './people/keshav.jpeg';
 import vik from './people/vik.png';
+import harish from './people/harish.jpeg';
+import varoon from './people/varoon.jpeg';
+import adi from './people/adi.jpeg';
+import sebastian from './people/sebastian.jpeg';
+import shrey from './people/shrey.jpeg';
+import allen from './people/allen.jpeg';
+import dev from './people/dev.jpeg';
 
 import uiuc_sundays from './participatingCampuses/uiuc_sundays.png';
+import sxgt_team from './participatingCampuses/sxgt_team.jpg';
+import rev_retreat from './participatingCampuses/rev_retreat.jpeg';
+import v1michigan_team from './participatingCampuses/v1michigan_team.png';
 
 import sx_full_logo from './sxLogos/sx-full-logo.png';
 import sxLogo from './sxLogos/sxLogo.png';
@@ -62,6 +77,20 @@ type ImagesType = {
     uiuc_sundays: StaticImageData;
     sx_full_logo: StaticImageData;
     sxLogo: StaticImageData;
+    buildIllinois: StaticImageData;
+    rev: StaticImageData;
+    sxgt: StaticImageData;
+    v1Michigan: StaticImageData;
+    harish: StaticImageData;
+    varoon: StaticImageData;
+    adi: StaticImageData;
+    sxgt_team: StaticImageData;
+    rev_retreat: StaticImageData;
+    v1michigan_team: StaticImageData;
+    sebastian: StaticImageData;
+    shrey: StaticImageData;
+    allen: StaticImageData;
+    dev: StaticImageData;
 };
 
 
@@ -93,6 +122,20 @@ const Images: ImagesType = {
     sx_full_logo,
     sxLogo,
     vik,
+    buildIllinois,
+    rev,
+    sxgt,
+    v1Michigan,
+    harish,
+    varoon,
+    adi,
+    sxgt_team,
+    rev_retreat,
+    v1michigan_team,
+    sebastian,
+    shrey,
+    allen,
+    dev,
 };
 
 export default Images;

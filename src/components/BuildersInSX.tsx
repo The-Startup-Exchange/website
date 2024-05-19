@@ -3,50 +3,13 @@ import { useTheme } from '../context/ThemeContext';
 import Image from "next/image";
 import Images from '../assets/images';
 import Link from "next/link";
+import { builders } from '../data/buildersData';
 
 import {
     plus_jakarta_sans_medium,
     plus_jakarta_sans_semibold,
     messina_book
 } from '../app/fonts';
-
-const builders = [
-  {
-    oneLiner: "Vik is using AI agents to build the easiest way for nontechnical folks to learn technical skills.",
-    category: "DEVELOPER TOOLS",
-    pic: Images.vik,
-    college: Images.georgiaTech,
-    link: "https://twitter.com/therealvikranth",
-  },
-  {
-    oneLiner: "Vik is using AI agents to build the easiest way for nontechnical folks to learn technical skills.",
-    category: "DEVELOPER TOOLS",
-    pic: Images.vik,
-    college: Images.georgiaTech,
-    link: "https://twitter.com/therealvikranth",
-  },
-  {
-    oneLiner: "Vik is using AI agents to build the easiest way for nontechnical folks to learn technical skills.",
-    category: "DEVELOPER TOOLS",
-    pic: Images.vik,
-    college: Images.georgiaTech,
-    link: "https://twitter.com/therealvikranth",
-  },
-  {
-    oneLiner: "Vik is using AI agents to build the easiest way for nontechnical folks to learn technical skills.",
-    category: "DEVELOPER TOOLS",
-    pic: Images.vik,
-    college: Images.georgiaTech,
-    link: "https://twitter.com/therealvikranth",
-  },
-  {
-    oneLiner: "Vik is using AI agents to build the easiest way for nontechnical folks to learn technical skills.",
-    category: "DEVELOPER TOOLS",
-    pic: Images.vik,
-    college: Images.georgiaTech,
-    link: "https://twitter.com/therealvikranth",
-  },
-];
 
 const BuildersInSX = () => {
   const { styles } = useTheme();
