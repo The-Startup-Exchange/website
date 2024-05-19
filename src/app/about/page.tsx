@@ -42,7 +42,7 @@ const AboutPage = () => {
                     </div>
                 </div>
                 <h1 className={`w-full text-center text-[48px] leading-[125%] py-16 ${plus_jakarta_sans_bold.className}`}>Our story</h1>
-                <div className={`flex flex-col w-full px-56 space-y-8 text-start leading-[175%] ${plus_jakarta_sans_regular.className}`}>
+                <div className={`flex flex-col w-full px-80 space-y-8 text-start leading-[175%] ${plus_jakarta_sans_regular.className}`}>
                     <p>
                         We’re on a mission to better define college entrepreneurship. While college is an exciting time to work on your craziest ideas, many students feel lost in the process of developing their ideas. We’re here to change that.
                     </p>
