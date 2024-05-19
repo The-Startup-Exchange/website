@@ -42,7 +42,7 @@ const Campuses = () => {
                         {campuses.slice(rowIndex * 2, (rowIndex + 1) * 2).map((campus) => (
                             <Link href={campus.link} className={`flex flex-col w-[50%] align-start space-y-6 text-start ${plus_jakarta_sans_regular.className}`}>
                                 <div className="relative w-full h-full">
-                                    <Image src={campus.pictureName} alt={campus.name} width={560} height={448}/>
+                                    <Image src={campus.pictureName} alt={campus.name} width={560} height={448} objectFit="cover"/>
                                     <div className="absolute inset-0 bg-black opacity-0 hover:opacity-60 flex items-center justify-center transition-opacity duration-300">
                                         <Image src={campus.logo} alt="Logo" width={100} height={100} />
                                     </div>

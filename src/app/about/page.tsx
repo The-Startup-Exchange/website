@@ -37,41 +37,28 @@ const AboutPage = () => {
                             Startup Exchange is on a mission to create a universally accessible space for university students to become startup founders.
                         </p>
                         <p className={`text-[18px] w-[60%] align-end justify-end leading-[140%] ${plus_jakarta_sans_thin.className}`}>
-                        Our goal is to empower students with an ambition to change the world to reach their full potential. 
+                            We envision a reality where builders can figure out how to succesfully build and grow a startup idea, regardless of what college they attend.
                         </p>
                     </div>
                 </div>
                 <h1 className={`w-full text-center text-[48px] leading-[125%] py-16 ${plus_jakarta_sans_bold.className}`}>Our story</h1>
                 <div className={`flex flex-col w-full px-56 space-y-8 text-start leading-[175%] ${plus_jakarta_sans_regular.className}`}>
                     <p>
-                        We’re on a mission to redefine college entrepreneurship from the ground up. College is an exciting time to work on your craziest ideas and for finding like-minded peers to solve interesting problems together. ~40% of co-founders meet in college, according to MIT.
+                        We’re on a mission to better define college entrepreneurship. While college is an exciting time to work on your craziest ideas, many students feel lost in the process of developing their ideas. We’re here to change that.
                     </p>
                     <p>
                         Startup Exchange began as a club at Georgia Tech, gathering makers, builders, and creatives in the library every week to discuss their most ambitious startup ideas. Over 10 years, students from this group went on to start a variety of companies, collectively valued at over $4.5B.
                     </p>
                     <p>
-                        In 2023, our community expanded significantly, attracting attention from hundreds of students around the Atlanta area, and from universities nationwide. These students echoed a common sentiment of misguided initiatives and lack of community at their campuses, expressing a strong desire for a new space for builders of all kinds to be brought together.
+                        As our community expanded in 2023 through our events, we attracted thousands of students from universities nationwide who expressed a need for a new space that prioritizes the rapid iteration of shipping fast, and that attracts genuine and passionate people.
                     </p>
                     <p>
-                        Supporting all stages of growth, pain points from student builders across the nation have shed a noticeable disconnect between the practical aspects of developing and iterating an idea and the theoretical principles that currently shape college entrepreneurship ecosystems.
+                       SX is committed to cultivating communities at campuses in need, and supporting established communities. By bringing together organizers from universities nationwide, our team understands the unique challenges that every campus faces when it comes to building a community of like-minded entrepreneurs.
                     </p>
                     <p>
-                        In response, SX is committed to bridging this gap, providing targeted support to both new initiatives and well-established organizations. After collecting broadened insights from different universities, our team understands that each level of ecosystem development has its unique challenges and opportunities. The insight and resources we offer are meticulously designed to ensure that both emerging and existing groups not only overcome these challenges, but also capitalize on opportunities to realize their full potential and impact.
-                    </p>
+                        Our mission is to create dynamic, inclusive communities where students can find like-minded peers, fostering close-knit collaboration and meaningful connections that encourage them to further invest in their entrepreneurial journey.                    </p>
                     <p>
-                        Envisioning the future of college entrepreneurship, our team is dedicated to redefining the pathway for college students in entrepreneurship.
-                    </p>
-                    <p>
-                        We aim to reform the shortcomings of current college entrepreneurship ecosystems, which often included misguided advice or fail to provide the community support crucial for peer-to-peer learning and idea validation.
-                    </p>
-                    <p>
-                        We recognize that many student entrepreneurs often lack the quality mentorship or resources to fully develop their ideas, whether to secure venture backing or to identify and solidify a proven market presence. To address this, we provide not just mentorship but also strategic guidance to help students refine their concepts, validate their business models, and steer clear of common pitfalls.
-                    </p>
-                    <p>
-                        Beyond offering sound mentorship, a key part of our mission is to create dynamic, inclusive communities where students can find like-minded peers to work on meaningful problems with. This includes granularity on how we establish, support, and advance community, which is crucial for encouraging students to invest further in their path in entrepreneurship.
-                    </p>
-                    <p>
-                        Startup Exchange is crafting the ultimate playbook for ambitious university students. Our work aims to enable close-knit collaboration, high-quality mentorship, and meaningful connections with like-minded peers.
+                        We centralize a network of domain experts, startups, mentors, and investors that enable students to go from -1 to 1.
                     </p>
                 </div>
             </div>

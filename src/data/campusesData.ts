@@ -99,8 +99,8 @@ export const campuses = [
       uni: 'Northeastern University',
       pictureName: Images.rev_retreat,
       logo: Images.rev,
-      description: 'the community for artists, founders, and creatives at UIUC.',
-      link: 'https://linktr.ee/revschool',
+      description: 'rev is Northeastern\'s space where students collaborate to work on side projects and take any idea from inception to reality.',
+      link: 'https://www.rev.school/',
       items: [
         {
           id: 1,
