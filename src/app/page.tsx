@@ -42,7 +42,7 @@ const Home = () => {
         <FAQs/>
         <DashedDivider/>
         <CTA/>
-        <DashedDivider/>
+        {/* <DashedDivider/> */}
         <BottomMenu/>
         <Footer/>
       </main>

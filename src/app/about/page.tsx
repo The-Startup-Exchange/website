@@ -154,7 +154,6 @@ const AboutPage = () => {
                                 <Image
                                     src={theme === 'dark' ? Images[partner.name] : (partner.black ? Images[partner.black] : Images[partner.name])}
                                     alt={partner.name}
-
                                     height={42}
                                     className="opacity-80 hover:opacity-100 transition duration-500"
                                     style={{ maxWidth: '100%', height: 'auto' }}

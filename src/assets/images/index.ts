@@ -43,6 +43,8 @@ import zfellowsBlack from './alumniPrograms/zfellowsBlack.png';
 import uiuc from './colleges/uiuc.png';
 import georgiaTech from './colleges/georgiaTech.png';
 
+import rocket from "./communityPics/rocket.png";
+
 import buildIllinois from './partnerLogos/buildIllinois.png';
 import rev from './partnerLogos/rev.png';
 import sxgt from './partnerLogos/sxgt.png';
@@ -90,8 +92,6 @@ import tsq from './partnerLogos/tsq.webp';
 import ventureAtlanta from './partnerLogos/ventureAtlanta.webp';
 import ventureLab from './partnerLogos/ventureLab.webp';
 
-
-
 import buildIllinoisBlack from './partnerLogos/buildIllinoisBlack.png';
 import revBlack from './partnerLogos/revBlack.png';
 import sxgtBlack from './partnerLogos/sxgtBlack.png';
@@ -122,7 +122,6 @@ import vikTeam from './people/vik.webp';
 import varoonTeam from './people/varoonBW.jpeg';
 import lucasTeam from './people/lucas.jpeg';
 
-
 import uiuc_sundays from './participatingCampuses/uiuc_sundays.png';
 import sxgt_team from './participatingCampuses/sxgt_team.jpg';
 import rev_retreat from './participatingCampuses/rev_retreat.jpeg';
@@ -135,6 +134,7 @@ import sxLogoBlack from './sxLogos/sxLogoBlack.png';
 
 type ImagesType = {
     [key: string]: StaticImageData;
+    rocket: StaticImageData;
     darkMode: StaticImageData;
     lightMode: StaticImageData;
     discord: StaticImageData;
@@ -257,6 +257,7 @@ type ImagesType = {
 
 
 const Images: ImagesType = {
+    rocket,
     darkMode,
     lightMode,
     discord,

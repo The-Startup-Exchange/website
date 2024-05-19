@@ -9,9 +9,18 @@ import {
 const BottomMenu = () => {
   const { theme, styles } = useTheme();
     return (
-        <div className={`flex flex-col w-[100%] ${styles.textColor} ${styles.backgroundColor}`}>
-          <div className={`${styles.borderColor} mx-11 py-[52px] border-x`}>
-            <div className={`flex flex-col px-28 py-28 items-center align-center justify-center`}>
+        <div className={`relative flex flex-col w-full ${styles.textColor} ${styles.backgroundColor}`}>
+          {/* Background image */}
+          <div className={`absolute inset-0 z-0 ${theme === 'dark' ? 'opacity-40' : 'opacity-20'}`}>
+            <Image
+                src={Images.rocket}
+                alt="Background Rocket"
+                layout="fill"
+                objectFit="cover"
+            />
+          </div>
+          <div className={`${styles.borderColor} mx-11 py-[52px] border-x border-t z-10`}>
+            <div className={`flex flex-col px-28 py-28 items-center align-center justify-center z-10`}>
               <Image
                   src={theme === 'dark' ? Images.sxLogo : Images.sxLogoBlack}
                   alt="SX Full Logo"
@@ -20,7 +29,7 @@ const BottomMenu = () => {
               />
               <h1 className={`text-[14px] leading-[125%] ${plus_jakarta_sans_extrabold.className}`}>STARTUP EXCHANGE</h1>
             </div>
-            <div className="flex flex-row w-full items-center align-center justify-center">
+            <div className="flex flex-row w-full items-center align-center justify-center z-10">
               <SiteMenu />
             </div>
           </div>
@@ -29,5 +38,3 @@ const BottomMenu = () => {
   }
   
   export default BottomMenu;
-  
-  
