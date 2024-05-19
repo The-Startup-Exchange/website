@@ -1,11 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import { useTheme } from '../../context/ThemeContext';
 import { useState } from 'react';
 import {
     messina_book,
     plus_jakarta_sans_medium
-} from '../app/fonts';
+} from '../../app/fonts';
 
 const faqs = [
     { 
@@ -39,11 +40,12 @@ const faqs = [
 ];
 
 const FAQs = () => {
+  const { theme, styles } = useTheme();
   return (
-    <div className="flex flex-col w-[94%] py-[75px] border-[#242424] border-x items-start justify-start gap-y-4 ">
-    <div className="flex flex-row px-28 items-start w-full">
-      <h1 className={`text-[#FFFFFF] w-[50%] text-[58px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>FAQs</h1>
-      <div className="flex flex-col w-full border-[#323232] border-t items-start justify-start">
+    <div className={`flex flex-col w-full items-start justify-start gap-y-4 ${styles.backgroundColor} ${styles.textColor}`}>
+    <div className={`flex flex-row px-28 py-[75px] mx-11 border-x items-start ${styles.borderColor}`}>
+      <h1 className={`w-[50%] text-[58px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>FAQs</h1>
+      <div className={`flex flex-col w-full ${theme === 'dark' ? 'border-[#323232]' : 'border-[#e0e0e0]'} border-t items-start justify-start`}>
         {faqs.map((item, index) => (
           <FAQItem key={index} item={item} />
         ))}
@@ -55,7 +57,7 @@ const FAQs = () => {
 
 const FAQItem = ({ item }) => {
     const [isVisible, setIsVisible] = useState(false);
-  
+    const { theme } = useTheme();
     const descriptionStyle = {
       maxHeight: isVisible ? '200px' : '0px', // Adjust '200px' as needed
       overflow: 'hidden',
@@ -70,7 +72,7 @@ const FAQItem = ({ item }) => {
             <h1 className={`text-[#A0A0A0] text-[24px] leading-[125%] ${plus_jakarta_sans_medium.className} ${isVisible ? 'rotate-90' : ''} transition duration-500`}>
             →
             </h1>
-            <h1 className={`text-[#FFFFFF] text-[24px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>
+            <h1 className={`${theme === 'dark' ? 'text-white' : 'text-black'} text-[24px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>
               {item.text}
             </h1>
         </div>

@@ -1,7 +1,8 @@
 "use client";
 
-import { messina_book } from "./fonts";
+import { messina_book } from "../app/fonts";
 import { useRef } from "react";
+import { useTheme } from '../context/ThemeContext';
 import Image from "next/image";
 import Images from "../assets/images";
 import Link from "next/link";
@@ -31,14 +32,15 @@ const socialLinks = [
 
 export default function Footer() {
     const navRef = useRef<HTMLDivElement>(null);
+    const { theme } = useTheme();
 
     const showNavBar = () => {
         navRef.current ? navRef.current.classList.toggle("responsive_nav") : null;
       };
     return (
       <>
-        <footer className="flex w-full justify-center mx-auto flex-row border-dashed border-[#414141] border-t py-7 px-16 space-x-4">
-            <div className={`${messina_book.className} flex flex-row gap-x-4 text-[#A1A1A1] tracking-tight items-center`}>
+        <footer className={`flex w-full justify-center mx-auto flex-row border-dashed border-t py-7 px-16 space-x-4 ${theme === 'dark' ? 'text-[#A1A1A1] bg-black border-[#414141]' : 'text-black bg-white border-[#E0E0E0]'}`}>
+            <div className={`${messina_book.className} flex flex-row gap-x-4 tracking-tight items-center`}>
                 © 2024 STARTUP EXCHANGE. ALL RIGHTS RESERVED
             </div> 
             <div className="flex space-x-3.5 flex-row items-center">

@@ -1,11 +1,12 @@
 "use client";
 
 import React from 'react';
-import Header from "../header";
-import Footer from "../footer";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
 import Image from "next/image";
 import Images from "../../assets/images";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import DashedDivider from "@/components/dashedDivider";
 import { useTheme } from '../../context/ThemeContext';
 import { team } from '../../data/teamData';
@@ -88,15 +89,15 @@ const AboutPage = () => {
                     </div>
                 </div>
                 <DashedDivider />
-                <div className={`flex flex-col w-[94%] space-y-12 ${theme === 'dark' ? 'border-[#242424]' : 'border-[#E0E0E0]'} border-x justify-center gap-y-4`}>
+                <div className={`flex flex-col w-[94%] space-y-12 ${theme === 'dark' ? 'border-[#242424]' : 'border-[#E0E0E0]'} border-x justify-start gap-y-4`}>
                     <div className="px-12 w-full flex justify-end py-12">
                         <p className={`${messina_light.className} w-full justify-end text-start items-end`}>Our team</p>
                     </div>
-                    <div className={`flex flex-col space-y-8 px-12 justify-start gap-y-4`}>
+                    <div className={`flex flex-col px-12 justify-start space-y-16`}>
                         {Array.from({ length: numRows }, (_, rowIndex) => (
-                            <div className={`flex flex-row p-20 justify-between gap-x-16`}>
+                            <div className={`flex flex-row px-20 gap-x-28`}>
                                 {team.slice(rowIndex * 4, (rowIndex + 1) * 4).map((teamMember) => (
-                                    <div className={`flex flex-col align-start w-[25%] space-y-6 text-start`}>
+                                    <div className={`flex flex-col align-start w-[20%] space-y-6 text-start`}>
                                         <div className="relative w-full h-full">
                                             <Image src={teamMember.image} alt={teamMember.name} width={250} height={250}/>
                                         </div>
@@ -130,7 +131,12 @@ const AboutPage = () => {
                             </div>
                         ))}
                     </div>
+                    <div className="px-32 pb-28 w-full flex justify-between space-x-12 items-center">
+                            <p className={`${plus_jakarta_sans_extrabold.className} text-[32px] w-full`}>Join us and shape the future of college entrepreneurship.</p>
+                            <Button href="/" variant="secondary">View open positions</Button>
+                        </div>
                 </div>
+                <DashedDivider />
             </div>
             <Footer />
         </>

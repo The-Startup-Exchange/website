@@ -51,6 +51,18 @@ export const team = [
         personal: 'https://omjha.com/',
     },
     {
+        name: 'Wyatt',
+        image: Images.wyattTeam,
+        role: 'EVENTS',
+        linkedin: 'https://www.linkedin.com/in/wyatt-bunch/',
+    },
+    {
+        name: 'Lucas',
+        image: Images.lucasTeam,
+        role: 'COMPLIANCE',
+        linkedin: 'https://www.linkedin.com/in/lucas-goldfarb/',
+    },
+    {
         name: 'Varun',
         image: Images.varunTeam,
         role: 'Community',

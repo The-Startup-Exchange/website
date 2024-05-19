@@ -51,6 +51,7 @@ import omTeam from './people/om.webp';
 import riaTeam from './people/riaPatel.webp';
 import vikTeam from './people/vik.webp';
 import varoonTeam from './people/varoonBW.jpeg';
+import lucasTeam from './people/lucas.jpeg';
 
 
 import uiuc_sundays from './participatingCampuses/uiuc_sundays.png';
@@ -58,8 +59,10 @@ import sxgt_team from './participatingCampuses/sxgt_team.jpg';
 import rev_retreat from './participatingCampuses/rev_retreat.jpeg';
 import v1michigan_team from './participatingCampuses/v1michigan_team.png';
 
-import sx_full_logo from './sxLogos/sx-full-logo.png';
+import sxFull from './sxLogos/sxFull.png';
+import sxFullBlack from './sxLogos/sxFullBlack.png';
 import sxLogo from './sxLogos/sxLogo.png';
+import sxLogoBlack from './sxLogos/sxLogoBlack.png';
 
 type ImagesType = {
     [key: string]: StaticImageData;
@@ -88,7 +91,7 @@ type ImagesType = {
     keshav: StaticImageData;
     vik: StaticImageData;
     uiuc_sundays: StaticImageData;
-    sx_full_logo: StaticImageData;
+    sxFull: StaticImageData;
     sxLogo: StaticImageData;
     buildIllinois: StaticImageData;
     rev: StaticImageData;
@@ -115,6 +118,9 @@ type ImagesType = {
     vikTeam: StaticImageData;
     varoonTeam: StaticImageData;
     paperclip: StaticImageData;
+    lucasTeam: StaticImageData;
+    sxFullBlack: StaticImageData;
+    sxLogoBlack: StaticImageData;
 };
 
 
@@ -143,7 +149,7 @@ const Images: ImagesType = {
     ishan,
     keshav,
     uiuc_sundays,
-    sx_full_logo,
+    sxFull,
     sxLogo,
     vik,
     buildIllinois,
@@ -170,7 +176,10 @@ const Images: ImagesType = {
     riaTeam,
     vikTeam,
     varoonTeam,
-    paperclip
+    paperclip,
+    lucasTeam,
+    sxFullBlack,
+    sxLogoBlack,
 };
 
 export default Images;

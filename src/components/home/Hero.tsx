@@ -1,14 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { useTheme } from '../context/ThemeContext'; // Adjust the path as necessary
+import { useTheme } from '../../context/ThemeContext'; // Adjust the path as necessary
 import {
     plus_jakarta_sans_extrabold,
     plus_jakarta_sans_regular
-} from '../app/fonts';
+} from '../../app/fonts';
 import { Badge, badgeVariants } from "@/components/ui/badge";
 import Image from "next/image";
-import Images from '../assets/images';
+import Images from '../../assets/images';
 
 const Hero = () => {
     const { theme, toggleTheme } = useTheme();

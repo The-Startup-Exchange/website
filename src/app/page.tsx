@@ -2,8 +2,8 @@
 
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import Header from "./header";
-import Footer from "./footer";
+import Header from "../components/header";
+import Footer from "../components/footer";
 import { Badge, badgeVariants } from "@/components/ui/badge"
 import Link from "next/link";
 import {
@@ -15,13 +15,13 @@ import {
   messina_book
 } from './fonts';
 import DashedDivider from "../components/dashedDivider";
-import BuildersInSX from "../components/BuildersInSX";
-import BottomMenu from "../components/BottomMenu";
-import CTA from "../components/CTA";
-import FAQs from "../components/FAQs";
-import AlumniPrograms from "../components/AlumniPrograms";
-import ParticipatingCampuses from "../components/ParticipatingCampuses";
-import Hero from "../components/Hero";
+import BuildersInSX from "../components/home/BuildersInSX";
+import BottomMenu from "../components/home/BottomMenu";
+import CTA from "../components/home/CTA";
+import FAQs from "../components/home/FAQs";
+import AlumniPrograms from "../components/home/AlumniPrograms";
+import ParticipatingCampuses from "../components/home/ParticipatingCampuses";
+import Hero from "../components/home/Hero";
 import { useTheme } from '../context/ThemeContext';
 
 const Home = () => {

@@ -1,9 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
-import Images from '../assets/images';
+import Images from '../../assets/images';
+import { useTheme } from '../../context/ThemeContext';
 import {
     plus_jakarta_sans_medium,
-} from '../app/fonts';
+} from '../../app/fonts';
 
 const programLogos = [
     { name: "forbes", href: "https://forbes.com/" },
@@ -24,19 +25,19 @@ const programLogos = [
 
 const AlumniPrograms = () => {
     const numRows = Math.ceil(programLogos.length / 4);
-  
+    const { theme, styles } = useTheme();
     return (
-      <div className="flex flex-col w-[94%] py-[75px] border-[#242424] border-x items-start justify-start text-6xl font-bold gap-y-4">
-        <div className="flex flex-col w-full">
+      <div className={`flex flex-col w-full ${styles.backgroundColor} ${styles.textColor} gap-y-4`}>
+        <div className={`flex flex-col mx-11 py-[75px] ${styles.borderColor} border-x`}>
           <div className="flex flex-col w-full px-12 items-start justify-start lg:space-y-10 space-y-0">
-            <h1 className={`text-[#FFFFFF] w-[85%] text-[58px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>SX alumni are backed by the best.</h1>
-            <h2 className={`text-[#FFFFFF] w-[85%] text-[24px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>→ See what members are up to this summer.</h2>
+            <h1 className={`w-[85%] text-[58px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>SX alumni are backed by the best.</h1>
+            <h2 className={`w-[85%] text-[24px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>→ See what members are up to this summer.</h2>
           </div>
-          <div className="flex flex-col my-[75px] border-[#323232] border-dashed border-t items-start justify-start">
+          <div className={`flex flex-col my-[75px] ${theme === 'dark' ? 'border-[#323232]' : 'border-[#e0e0e0]'} border-[#242424] border-dashed border-t items-start justify-start`}>
             {Array.from({ length: numRows }, (_, rowIndex) => (
-              <div className="flex flex-row w-full border-b border-dashed border-[#323232]">
+              <div className={`flex flex-row w-full border-b border-dashed ${theme === 'dark' ? 'border-[#323232]' : 'border-[#e0e0e0]'}`}>
                 {programLogos.slice(rowIndex * 4, (rowIndex + 1) * 4).map(item => (
-                  <div className="flex flex-row w-full border-r border-dashed border-[#323232] py-24 px-12 align-center items-center justify-center">
+                  <div className={`flex flex-row w-full border-r border-dashed ${theme === 'dark' ? 'border-[#323232]' : 'border-[#e0e0e0]'} py-24 px-12 align-center items-center justify-center`}>
                     <Link href={item.href}>
                       <Image
                         src={Images[item.name]}

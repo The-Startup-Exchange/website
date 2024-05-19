@@ -1,11 +1,11 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { messina_book, messina_semibold } from "./fonts";
+import { messina_book, messina_semibold } from "../app/fonts";
 import { useRef } from "react";
 import NextImage from "next/image";
 import Link from "next/link";
-import SiteMenu from "../components/siteMenu";
+import SiteMenu from "./siteMenu";
 import { useTheme } from '../context/ThemeContext';
 import Images from '../assets/images';
 
@@ -21,7 +21,7 @@ const Header = () => {
           <div>
             <Link href="/">
               <NextImage
-                  src={Images.sx_full_logo}
+                  src={theme === 'dark' ? Images.sxFull : Images.sxFullBlack}
                   alt="SX Full Logo"
                   width={136}
                   height={27}
@@ -29,7 +29,7 @@ const Header = () => {
             </Link>
           </div>
           <SiteMenu useBold={true}/>
-          <Button href="https://docs.google.com/forms/d/1K4TKHANO3iWyFM51OqRXBqT1wP2FTYEjE1pdz6559Y0/viewform?edit_requested=true" variant="secondary" className="rounded-xl py-3 px-5">
+          <Button href="https://docs.google.com/forms/d/1K4TKHANO3iWyFM51OqRXBqT1wP2FTYEjE1pdz6559Y0/viewform?edit_requested=true" variant="dark" className="rounded-xl py-3 px-5">
             <div className={`${messina_semibold.className} font-bold`}>
                 JOIN THE COMMUNITY
             </div>

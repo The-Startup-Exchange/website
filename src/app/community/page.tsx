@@ -1,7 +1,7 @@
 "use client";
 
-import Header from "../header";
-import Footer from "../footer";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
 import Image from "next/image";
 import Images from "../../assets/images";
 import Link from "next/link";
