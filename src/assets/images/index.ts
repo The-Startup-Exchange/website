@@ -47,11 +47,46 @@ import buildIllinois from './partnerLogos/buildIllinois.png';
 import rev from './partnerLogos/rev.png';
 import sxgt from './partnerLogos/sxgt.png';
 import v1Michigan from './partnerLogos/v1Michigan.png';
+import fifteenSeventeen from './partnerLogos/fifteenSeventeen.png';
+import fourDao from './partnerLogos/fourDao.webp';
+import anthropic from './partnerLogos/anthropic.webp';
+import atdc from './partnerLogos/atdc.webp';
+import abc from './partnerLogos/abc.webp';
+import arnav from './partnerLogos/arnav.webp';
+import bcgX from './partnerLogos/bcgX.webp';
+import biolocity from './partnerLogos/biolocity.webp';
+import celsius from './partnerLogos/celsius.webp';
+import cityAtlanta from './partnerLogos/cityAtlanta.webp';
+// contrary
+import createX from './partnerLogos/createX.webp';
+import drf from './partnerLogos/drf.webp';
+import drive from './partnerLogos/drive.webp';
+import finc from './partnerLogos/finc.webp';
+import fusen from './partnerLogos/fusen.webp';
+import google from './partnerLogos/google.webp';
+import huggingFace from './partnerLogos/huggingFace.webp';
+import icxr from './partnerLogos/icxr.webp';
+import mailchimp from './partnerLogos/mailchimp.webp';
+import mayoClinic from './partnerLogos/mayoClinic.png';
+import nvidia from './partnerLogos/nvidia.webp';
+import oneTrust from './partnerLogos/oneTrust.webp';
+import overtime from './partnerLogos/overtime.webp';
+import portal from './partnerLogos/portal.webp';
+import prizePicks from './partnerLogos/prizePicks.webp';
+import startupAtlanta from './partnerLogos/startupAtlanta.webp';
+import stord from './partnerLogos/stord.webp';
+import tempus from './partnerLogos/tempus.png';
+import tsq from './partnerLogos/tsq.webp';
+import ventureAtlanta from './partnerLogos/ventureAtlanta.webp';
+import ventureLab from './partnerLogos/ventureLab.webp';
+
+
 
 import buildIllinoisBlack from './partnerLogos/buildIllinoisBlack.png';
 import revBlack from './partnerLogos/revBlack.png';
 import sxgtBlack from './partnerLogos/sxgtBlack.png';
 import v1MichiganBlack from './partnerLogos/v1MichiganBlack.png';
+import tempusBlack from './partnerLogos/tempusBlack.png';
 
 import aryan from './people/aryan.jpeg';
 import ishan from './people/ishan.jpeg';
@@ -166,6 +201,38 @@ type ImagesType = {
     linkedinBlack: StaticImageData;
     twitterBlack: StaticImageData;
     paperclipBlack: StaticImageData;
+    fifteenSeventeen: StaticImageData;
+    fourDao: StaticImageData;
+    anthropic: StaticImageData;
+    atdc: StaticImageData;
+    abc: StaticImageData;
+    arnav: StaticImageData;
+    bcgX: StaticImageData;
+    biolocity: StaticImageData;
+    celsius: StaticImageData;
+    cityAtlanta: StaticImageData;
+    createX: StaticImageData;
+    drf: StaticImageData;
+    drive: StaticImageData;
+    finc: StaticImageData;
+    fusen: StaticImageData;
+    google: StaticImageData;
+    huggingFace: StaticImageData;
+    icxr: StaticImageData;
+    mailchimp: StaticImageData;
+    mayoClinic: StaticImageData;
+    nvidia: StaticImageData;
+    oneTrust: StaticImageData;
+    overtime: StaticImageData;
+    portal: StaticImageData;
+    prizePicks: StaticImageData;
+    startupAtlanta: StaticImageData;
+    stord: StaticImageData;
+    tempus: StaticImageData;
+    tempusBlack: StaticImageData;
+    tsq: StaticImageData;
+    ventureAtlanta: StaticImageData;
+    ventureLab: StaticImageData;
 };
 
 
@@ -246,6 +313,38 @@ const Images: ImagesType = {
     linkedinBlack,
     twitterBlack,
     paperclipBlack,
+    fifteenSeventeen,
+    fourDao,
+    anthropic,
+    atdc,
+    abc,
+    arnav,
+    bcgX,
+    biolocity,
+    celsius,
+    cityAtlanta,
+    createX,
+    drf,
+    drive,
+    finc,
+    fusen,
+    google,
+    huggingFace,
+    icxr,
+    mailchimp,
+    mayoClinic,
+    nvidia,
+    oneTrust,
+    overtime,
+    portal,
+    prizePicks,
+    startupAtlanta,
+    stord,
+    tempus,
+    tempusBlack,
+    tsq,
+    ventureAtlanta,
+    ventureLab,
 };
 
 export default Images;

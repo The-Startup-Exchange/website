@@ -9,6 +9,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import DashedDivider from "@/components/dashedDivider";
 import { useTheme } from '../../context/ThemeContext';
+import { partners } from '../../data/partnerData';
 import { team } from '../../data/teamData';
 import {
     plus_jakarta_sans_extrabold,
@@ -111,17 +112,17 @@ const AboutPage = () => {
                                             <div className="flex flex-row space-x-4">
                                                 {teamMember.twitter && (
                                                     <Link href={teamMember.twitter}>
-                                                        <Image src={Images.twitter} alt="Twitter" width={18} height={18} className="opacity-60 hover:opacity-100 transition duration-500"/>
+                                                        <Image src={theme === 'dark' ? Images.twitter : Images.twitterBlack} alt="Twitter" width={18} height={18} className="opacity-60 hover:opacity-100 transition duration-500"/>
                                                     </Link>
                                                 )}
                                                 {teamMember.linkedin && (
                                                     <Link href={teamMember.linkedin}>
-                                                        <Image src={Images.linkedin} alt="LinkedIn" width={18} height={18} className="opacity-60 hover:opacity-100 transition duration-500"/>
+                                                        <Image src={theme === 'dark' ? Images.linkedin : Images.linkedinBlack} alt="LinkedIn" width={18} height={18} className="opacity-60 hover:opacity-100 transition duration-500"/>
                                                     </Link>
                                                 )}
                                                 {teamMember.personal && (
                                                     <Link href={teamMember.personal}>
-                                                        <Image src={Images.paperclip} alt="Additional Link" width={18} height={18} className="opacity-60 hover:opacity-100 transition duration-500"/>
+                                                        <Image src={theme === 'dark' ? Images.paperclip : Images.paperclipBlack} alt="Additional Link" width={18} height={18} className="opacity-60 hover:opacity-100 transition duration-500"/>
                                                     </Link>
                                                 )}
                                             </div>
@@ -137,6 +138,34 @@ const AboutPage = () => {
                         </div>
                 </div>
                 <DashedDivider />
+                <div className={`flex flex-col w-[94%] space-y-12 ${theme === 'dark' ? 'border-[#242424]' : 'border-[#E0E0E0]'} border-x justify-start gap-y-4`}>
+                    <div className="px-12 w-full flex justify-end py-12">
+                        <p className={`${messina_light.className} w-full justify-end text-start items-end`}>Trusted by leading investors, startups, and corporations.</p>
+                    </div>
+                    <div className={`flex flex-col my-[75px] ${theme === 'dark' ? 'border-[#323232]' : 'border-[#e0e0e0]'} border-[#242424] border-dashed border-t items-start justify-start`}>
+                        {Array.from({ length: numRows }, (_, rowIndex) => (
+                        <div className={`flex flex-row w-full border-b border-dashed ${theme === 'dark' ? 'border-[#323232]' : 'border-[#e0e0e0]'}`}>
+                            {partners.slice(rowIndex * 4, (rowIndex + 1) * 4).map(partner => (
+                            <div className={`flex flex-row w-full border-r border-dashed ${theme === 'dark' ? 'border-[#323232]' : 'border-[#e0e0e0]'} py-24 px-12 align-center items-center justify-center`}>
+                                <Link href={partner.href}>
+                                <Image
+                                    src={theme === 'dark' ? Images[partner.name] : (partner.black ? Images[partner.black] : Images[partner.name])}
+                                    alt={partner.name}
+                                    width={200}
+                                    height={200}
+                                    className="opacity-80 hover:opacity-100 transition duration-500"
+                                />
+                                </Link>
+                            </div>
+                            ))}
+                        </div>
+                        ))}
+                    </div>
+                    <div className="px-32 pb-28 w-full flex justify-between space-x-12 items-center">
+                            <p className={`${plus_jakarta_sans_extrabold.className} text-[32px] w-full`}>Join us and shape the future of college entrepreneurship.</p>
+                            <Button href="/" variant="secondary">View open positions</Button>
+                        </div>
+                </div>
             </div>
             <Footer />
         </>
