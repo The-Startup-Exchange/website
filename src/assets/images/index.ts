@@ -56,7 +56,7 @@ import arnav from './partnerLogos/arnav.webp';
 import bcgX from './partnerLogos/bcgX.webp';
 import biolocity from './partnerLogos/biolocity.webp';
 import celsius from './partnerLogos/celsius.webp';
-import cityAtlanta from './partnerLogos/cityAtlanta.webp';
+import cityAtlanta from './partnerLogos/cityAtlanta.png';
 // contrary
 import createX from './partnerLogos/createX.webp';
 import drf from './partnerLogos/drf.webp';
@@ -66,7 +66,7 @@ import fusen from './partnerLogos/fusen.webp';
 import google from './partnerLogos/google.webp';
 import huggingFace from './partnerLogos/huggingFace.webp';
 import icxr from './partnerLogos/icxr.webp';
-import mailchimp from './partnerLogos/mailchimp.webp';
+import mailchimp from './partnerLogos/mailchimp.png';
 import mayoClinic from './partnerLogos/mayoClinic.png';
 import nvidia from './partnerLogos/nvidia.webp';
 import oneTrust from './partnerLogos/oneTrust.webp';
