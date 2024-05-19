@@ -142,18 +142,19 @@ const AboutPage = () => {
                     <div className="px-12 w-full flex flex-col space-y-12 justify-end py-12">
                         <p className={`${messina_light.className} w-full justify-end text-end items-end`}>Previous partners</p>
                         <p className={`${plus_jakarta_sans_extrabold.className} w-full justify-end text-start text-[36px] items-end`}>Trusted by leading investors, startups, and corporations.</p>
+                        <p className={`${plus_jakarta_sans_thin.className} w-[60%] text-[18px]`}>We actively collaborate with new partners to bring new and exciting opportunities to the builders in our community. Partnerships range from community events and sponsorship to marketing and recruitment opportunities.</p>
                     </div>
                     <div className={`flex flex-col ${theme === 'dark' ? 'border-[#323232]' : 'border-[#e0e0e0]'} border-[#242424] border-dashed border-t items-start justify-start`}>
                         {Array.from({ length: numRows }, (_, rowIndex) => (
                         <div className={`flex flex-row w-full border-b border-dashed ${theme === 'dark' ? 'border-[#323232]' : 'border-[#e0e0e0]'}`}>
                             {partners.slice(rowIndex * 5, (rowIndex + 1) * 5).map(partner => (
-                            <div className={`flex flex-row w-full border-r border-dashed ${theme === 'dark' ? 'border-[#323232]' : 'border-[#e0e0e0]'} py-12 px-12 align-center items-center justify-center`}>
-                                <Link href={partner.href}>
+                            <div className={`flex flex-row w-full border-r border-dashed ${theme === 'dark' ? 'border-[#323232]' : 'border-[#e0e0e0]'} py-10 px-12 align-center items-center justify-center`}>
+                                <Link href={partner.href} target="_blank" rel="noopener noreferrer">
                                 <Image
                                     src={theme === 'dark' ? Images[partner.name] : (partner.black ? Images[partner.black] : Images[partner.name])}
                                     alt={partner.name}
 
-                                    height={54}
+                                    height={42}
                                     className="opacity-80 hover:opacity-100 transition duration-500"
                                     style={{ maxWidth: '100%', height: 'auto' }}
                                 />
@@ -163,9 +164,9 @@ const AboutPage = () => {
                         </div>
                         ))}
                     </div>
-                    <div className="px-32 pb-28 w-full flex justify-between space-x-12 items-center">
-                            <p className={`${plus_jakarta_sans_extrabold.className} text-[32px] w-full`}>Join us and shape the future of college entrepreneurship.</p>
-                            <Button href="/" variant="secondary">View open positions</Button>
+                    <div className="px-12 pb-28 w-full flex justify-between space-x-12 align-center items-center">
+                            <p className={`${plus_jakarta_sans_extrabold.className} text-[32px] w-full`}>Interested in partnering with us?</p>
+                            <Button href="mailto:hello@startup.exchange" variant="secondary">Contact us</Button>
                         </div>
                 </div>
             </div>

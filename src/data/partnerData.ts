@@ -2,14 +2,19 @@ import Images from '../assets/images';
 
 export const partners = [
     {
-        name: 'fifteenSeventeen',
-        logo: Images.fifteenSeventeen,
-        href: 'https://www.1517fund.com/',
+        name: 'google',
+        logo: Images.google,
+        href: 'https://www.google.com',
     },
     {
-        name: 'fourDao',
-        logo: Images.fourDao,
-        href: 'https://www.404dao.io',
+        name: 'nvidia',
+        logo: Images.nvidia,
+        href: 'https://www.nvidia.com/en-us/',
+    },
+    {
+        name: 'huggingFace',
+        logo: Images.huggingFace,
+        href: 'https://huggingface.co/',
     },
     {
         name: 'anthropic',
@@ -17,54 +22,24 @@ export const partners = [
         href: 'https://www.anthropic.com',
     },
     {
-        name: 'atdc',
-        logo: Images.atdc,
-        href: 'https://www.atdc.com',
-    },
-    {
-        name: 'abc',
-        logo: Images.abc,
-        href: 'https://www.arnav.com',
-    },
-    {
-        name: 'arnav',
-        logo: Images.arnav,
-        href: 'https://www.arnav.com',
-    },
-    {
-        name: 'bcgX',
-        logo: Images.bcgX,
-        href: 'https://www.bcgX.com',
-    },
-    {
-        name: 'biolocity',
-        logo: Images.biolocity,
-        href: 'https://www.biolocity.com',
-    },
-    {
-        name: 'celsius',
-        logo: Images.celsius,
-        href: 'https://www.celsius.com',
-    },
-    {
-        name: 'createX',
-        logo: Images.createX,
-        href: 'https://www.create-x.gatech.edu',
-    },
-    {
-        name: 'cityAtlanta',
-        logo: Images.cityAtlanta,
-        href: 'https://www.cityatlanta.com',
-    },
-    {
-        name: 'drf',
-        logo: Images.drf,
-        href: 'https://www.drf.com',
+        name: 'fifteenSeventeen',
+        logo: Images.fifteenSeventeen,
+        href: 'https://www.1517fund.com/',
     },
     {
         name: 'drive',
         logo: Images.drive,
-        href: 'https://www.driveCapital.com',
+        href: 'https://drivecapital.com/',
+    },
+    {
+        name: 'bcgX',
+        logo: Images.bcgX,
+        href: 'https://www.bcg.com/x',
+    },
+    {
+        name: 'cityAtlanta',
+        logo: Images.cityAtlanta,
+        href: 'https://www.atlantaga.gov/',
     },
     {
         name: 'finc',
@@ -72,24 +47,35 @@ export const partners = [
         href: 'https://www.f.inc',
     },
     {
-        name: 'fusen',
-        logo: Images.fusen,
-        href: 'https://www.fusenworld.com',
+        name: 'drf',
+        logo: Images.drf,
+        href: 'https://www.dormroomfund.com/',
     },
     {
-        name: 'google',
-        logo: Images.google,
-        href: 'https://www.google.com',
+        name: 'mayoClinic',
+        logo: Images.mayoClinic,
+        href: 'https://www.mayoclinic.org/',
     },
     {
-        name: 'huggingFace',
-        logo: Images.huggingFace,
-        href: 'https://www.huggingface.com',
+        name: 'prizePicks',
+        logo: Images.prizePicks,
+        href: 'https://www.prizepicks.com',
     },
     {
-        name: 'icxr',
-        logo: Images.icxr,
-        href: 'https://www.icxr.com',
+        name: 'abc',
+        logo: Images.abc,
+        href: 'https://atlantachain.io/',
+    },
+    {
+        name: 'arnav',
+        logo: Images.arnav,
+        href: 'https://www.arnav.com',
+    },
+    {
+        name: 'tempus',
+        logo: Images.tempus,
+        black: Images.tempusBlack,
+        href: 'https://www.tempus.com',
     },
     {
         name: 'mailchimp',
@@ -97,19 +83,30 @@ export const partners = [
         href: 'https://www.mailchimp.com',
     },
     {
-        name: 'mayoClinic',
-        logo: Images.mayoClinic,
-        href: 'https://www.mayoClinic.com',
+        name: 'createX',
+        logo: Images.createX,
+        href: 'https://create-x.gatech.edu/',
     },
     {
-        name: 'nvidia',
-        logo: Images.nvidia,
-        href: 'https://www.nvidia.com',
+        name: 'fusen',
+        logo: Images.fusen,
+        href: 'https://fusen.world/',
     },
+    {
+        name: 'atdc',
+        logo: Images.atdc,
+        href: 'https://www.atdc.org',
+    },
+    {
+        name: 'icxr',
+        logo: Images.icxr,
+        href: 'https://www.icxr.org/',
+    },
+
     {
         name: 'oneTrust',
         logo: Images.oneTrust,
-        href: 'https://www.oneTrust.com',
+        href: 'https://www.onetrust.com',
     },
     {
         name: 'overtime',
@@ -119,17 +116,13 @@ export const partners = [
     {
         name: 'portal',
         logo: Images.portal,
-        href: 'https://www.oneTrust.com',
+        href: 'https://www.portalinnovations.com/',
     },
-    {
-        name: 'prizePicks',
-        logo: Images.prizePicks,
-        href: 'https://www.prizepicks.com',
-    },
+
     {
         name: 'startupAtlanta',
         logo: Images.startupAtlanta,
-        href: 'https://www.startupAtlanta.com',
+        href: 'https://www.startupatlanta.com',
     },
     {
         name: 'stord',
@@ -137,25 +130,34 @@ export const partners = [
         href: 'https://www.stord.com',
     },
     {
-        name: 'tempus',
-        logo: Images.tempus,
-        black: Images.tempusBlack,
-        href: 'https://www.tempus.com',
+        name: 'biolocity',
+        logo: Images.biolocity,
+        href: 'https://biolocity.gatech.edu/',
+    },
+    {
+        name: 'fourDao',
+        logo: Images.fourDao,
+        href: 'https://www.404dao.io',
     },
     {
         name: 'tsq',
         logo: Images.tsq,
-        href: 'https://www.tsq.com',
+        href: 'https://www.techsquareatl.com/',
     },
     {
         name: 'ventureAtlanta',
         logo: Images.ventureAtlanta,
-        href: 'https://www.ventureatlanta.com',
+        href: 'https://www.ventureatlanta.org/',
     },
     {
         name: 'ventureLab',
         logo: Images.ventureLab,
-        href: 'https://www.ventureLab.com',
+        href: 'https://venturelab.gatech.edu/',
+    },
+    {
+        name: 'celsius',
+        logo: Images.celsius,
+        href: 'https://www.celsius.com',
     },
 ]
 
