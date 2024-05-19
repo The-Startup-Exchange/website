@@ -11,21 +11,25 @@ const socialLinks = [
     {
         href: "https://discord.gg/6nXvx6fG6V",
         src: Images.discord,
+        blackSrc: Images.discordBlack,
         alt: "Discord Logo"
     },
     {
         href: "https://www.linkedin.com/company/thestartupexchange",
         src: Images.linkedin,
+        blackSrc: Images.linkedinBlack,
         alt: "Linkedin Logo"
     },
     {
         href: "https://x.com/startupxchange",
         src: Images.twitter,
+        blackSrc: Images.twitterBlack,
         alt: "Twitter Logo"
     },
     {
         href: "https://www.instagram.com/startupexchange",
         src: Images.instagram,
+        blackSrc: Images.instagramBlack,
         alt: "Instagram Logo"
     },
 ]
@@ -47,7 +51,7 @@ export default function Footer() {
                 {socialLinks.map((link, index) => (
                     <Link href={link.href} key={index} className="opacity-70 hover:opacity-100 transition duration-500">
                         <Image
-                            src={link.src}
+                            src={theme === 'dark' ? link.src : link.blackSrc}
                             alt={link.alt}
                             width={19}
                             height={19}

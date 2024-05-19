@@ -37,7 +37,7 @@ const BuildersInSX = () => {
               {builders.slice(rowIndex * 5, (rowIndex + 1) * 5).map((builder) => (
               <div className="flex flex-col w-[307px]">
                 <div className={`relative border rounded-t-xl ${styles.borderColor}`}>
-                  <Image src={builder.pic} height={238} width={307} className="rounded-t-xl" alt="sx" />
+                  <Image src={builder.pic} height={238} width={307} className={`rounded-t-xl ${styles.borderColor}`} alt="sx" />
                   <p className={`absolute bottom-2 right-2 text-[14px] ${messina_book.className}`}>{builder.category}</p>
                 </div>
                 <div className={`border border-dashed rounded-b-xl p-5 space-y-4 ${styles.borderColor}`}>

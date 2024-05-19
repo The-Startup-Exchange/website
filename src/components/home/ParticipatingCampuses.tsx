@@ -27,7 +27,7 @@ const ParticipatingCampuses = () => {
                     <>
                       <Image src={campus.pictureName} alt="uiuc_sundays" width={225} height={225}/>
                       <div className="flex flex-col space-y-4">
-                        <Image src={campus.logo} alt="logo" width={54} height={54}/>
+                      <Image src={theme === 'light' ? campus.blackLogo : campus.logo} alt="logo" width={54} height={54}/>
                         <h1 className={`w-[85%] text-[32px] leading-[125%] ${plus_jakarta_sans_extrabold.className}`}>{campus.name}</h1>
                         <h1 className={`w-[85%] text-[16px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>{campus.description}</h1>
                         <AnimatedTooltip items={campus.items.map(item => ({ ...item, image: item.image.src }))}/>
@@ -36,7 +36,7 @@ const ParticipatingCampuses = () => {
                   ) : (
                     <>
                       <div className="flex flex-col space-y-4">
-                        <Image src={campus.logo} alt="logo" width={54} height={54}/>
+                        <Image src={theme === 'light' ? campus.blackLogo : campus.logo} alt="logo" width={54} height={54}/>
                         <h1 className={`w-[85%] text-[32px] leading-[125%] ${plus_jakarta_sans_extrabold.className}`}>{campus.name}</h1>
                         <h1 className={`w-[85%] text-[16px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>{campus.description}</h1>
                         <AnimatedTooltip items={campus.items.map(item => ({ ...item, image: item.image.src }))}/>

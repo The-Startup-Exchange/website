@@ -8,6 +8,12 @@ import linkedin from './icons/linkedin.png';
 import twitter from './icons/twitter.png';
 import paperclip from './icons/paperclip.png';
 
+import discordBlack from './icons/discordBlack.png';
+import instagramBlack from './icons/instagramBlack.png';
+import linkedinBlack from './icons/linkedinBlack.png';
+import twitterBlack from './icons/twitterBlack.png';
+import paperclipBlack from './icons/paperclipBlack.png';
+
 import eightVC from './alumniPrograms/8vc.png';
 import antler from './alumniPrograms/antler.png';
 import buildspace from './alumniPrograms/buildspace.png';
@@ -21,6 +27,19 @@ import reactor from './alumniPrograms/reactor.png';
 import unusual from './alumniPrograms/unusual.png';
 import zfellows from './alumniPrograms/zfellows.png';
 
+import eightVCBlack from './alumniPrograms/8vcBlack.png';
+import antlerBlack from './alumniPrograms/antlerBlack.png';
+import buildspaceBlack from './alumniPrograms/buildspaceBlack.png';
+import commitBlack from './alumniPrograms/commitBlack.png';
+import contraryBlack from './alumniPrograms/contraryBlack.png';
+import forbesBlack from './alumniPrograms/forbesBlack.png';
+import kleinerPerkinsBlack from './alumniPrograms/kpBlack.png';
+import neoBlack from './alumniPrograms/neoBlack.png';
+import ondeckBlack from './alumniPrograms/ondeckBlack.png';
+import reactorBlack from './alumniPrograms/reactorBlack.png';
+import unusualBlack from './alumniPrograms/unusualBlack.png';
+import zfellowsBlack from './alumniPrograms/zfellowsBlack.png';
+
 import uiuc from './colleges/uiuc.png';
 import georgiaTech from './colleges/georgiaTech.png';
 
@@ -28,6 +47,11 @@ import buildIllinois from './partnerLogos/buildIllinois.png';
 import rev from './partnerLogos/rev.png';
 import sxgt from './partnerLogos/sxgt.png';
 import v1Michigan from './partnerLogos/v1Michigan.png';
+
+import buildIllinoisBlack from './partnerLogos/buildIllinoisBlack.png';
+import revBlack from './partnerLogos/revBlack.png';
+import sxgtBlack from './partnerLogos/sxgtBlack.png';
+import v1MichiganBlack from './partnerLogos/v1MichiganBlack.png';
 
 import aryan from './people/aryan.jpeg';
 import ishan from './people/ishan.jpeg';
@@ -121,6 +145,27 @@ type ImagesType = {
     lucasTeam: StaticImageData;
     sxFullBlack: StaticImageData;
     sxLogoBlack: StaticImageData;
+    eightVCBlack: StaticImageData;
+    antlerBlack: StaticImageData;
+    buildspaceBlack: StaticImageData;
+    commitBlack: StaticImageData;
+    contraryBlack: StaticImageData;
+    forbesBlack: StaticImageData;
+    kleinerPerkinsBlack: StaticImageData;
+    neoBlack: StaticImageData;
+    ondeckBlack: StaticImageData;
+    reactorBlack: StaticImageData;
+    unusualBlack: StaticImageData;
+    zfellowsBlack: StaticImageData;
+    buildIllinoisBlack: StaticImageData;
+    revBlack: StaticImageData;
+    sxgtBlack: StaticImageData;
+    v1MichiganBlack: StaticImageData;
+    discordBlack: StaticImageData;
+    instagramBlack: StaticImageData;
+    linkedinBlack: StaticImageData;
+    twitterBlack: StaticImageData;
+    paperclipBlack: StaticImageData;
 };
 
 
@@ -180,6 +225,27 @@ const Images: ImagesType = {
     lucasTeam,
     sxFullBlack,
     sxLogoBlack,
+    eightVCBlack,
+    antlerBlack,
+    buildspaceBlack,
+    commitBlack,
+    contraryBlack,
+    forbesBlack,
+    kleinerPerkinsBlack,
+    neoBlack,
+    ondeckBlack,
+    reactorBlack,
+    unusualBlack,
+    zfellowsBlack,
+    buildIllinoisBlack,
+    revBlack,
+    sxgtBlack,
+    v1MichiganBlack,
+    discordBlack,
+    instagramBlack,
+    linkedinBlack,
+    twitterBlack,
+    paperclipBlack,
 };
 
 export default Images;

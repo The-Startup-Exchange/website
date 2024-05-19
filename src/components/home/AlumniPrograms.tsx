@@ -7,20 +7,18 @@ import {
 } from '../../app/fonts';
 
 const programLogos = [
-    { name: "forbes", href: "https://forbes.com/" },
-    { name: "buildspace", href: "https://buildspace.so/" },
-    { name: "kleinerPerkins", href: "https://fellows.kleinerperkins.com/" },
-    { name: "contrary", href: "https://www.contrary.com/partners" },
-
-    { name: "zfellows", href: "https://www.zfellows.com/" },
-    { name: "eightVC", href: "https://www.8vc.com/fellowships" },
-    { name: "antler", href: "https://www.antler.co/" },
-    { name: "commit", href: "" },
-
-    { name: "neo", href: "https://neo.com/" },
-    { name: "ondeck", href: "https://www.beondeck.com/" },
-    { name: "reactor", href: "https://www.floodgate.com/" },
-    { name: "unusual", href: "https://www.unusual.vc/" },
+  { name: "forbes", black: "forbesBlack", href: "https://forbes.com/" },
+  { name: "buildspace", black: "buildspaceBlack", href: "https://buildspace.so/" },
+  { name: "kleinerPerkins", black: "kleinerPerkinsBlack", href: "https://fellows.kleinerperkins.com/" },
+  { name: "contrary", black: "contraryBlack", href: "https://www.contrary.com/partners" },
+  { name: "zfellows", black: "zfellowsBlack", href: "https://www.zfellows.com/" },
+  { name: "eightVC", black: "eightVCBlack", href: "https://www.8vc.com/fellowships" },
+  { name: "antler", black: "antlerBlack", href: "https://www.antler.co/" },
+  { name: "commit", black: "commitBlack", href: "" },
+  { name: "neo", black: "neoBlack", href: "https://neo.com/" },
+  { name: "ondeck", black: "ondeckBlack", href: "https://www.beondeck.com/" },
+  { name: "reactor", black: "reactorBlack", href: "https://www.floodgate.com/" },
+  { name: "unusual", black: "unusualBlack", href: "https://www.unusual.vc/" },
 ];
 
 const AlumniPrograms = () => {
@@ -40,7 +38,7 @@ const AlumniPrograms = () => {
                   <div className={`flex flex-row w-full border-r border-dashed ${theme === 'dark' ? 'border-[#323232]' : 'border-[#e0e0e0]'} py-24 px-12 align-center items-center justify-center`}>
                     <Link href={item.href}>
                       <Image
-                        src={Images[item.name]}
+                        src={theme === 'dark' ? Images[item.name] : Images[item.black]}
                         alt={item.name}
                         width={200}
                         height={200}
