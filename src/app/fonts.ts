@@ -42,6 +42,11 @@ export const druk_wide = localFont({
     display: "swap",
 });
 
+export const messina_light = localFont({
+    src: "../../public/fonts/MessinaSansMono-Light.ttf",
+    display: "swap",
+});
+
 export const messina_book = localFont({
   src: "../../public/fonts/MessinaSansMono-Book.ttf",
   display: "swap",
@@ -50,4 +55,9 @@ export const messina_book = localFont({
 export const messina_semibold = localFont({
   src: "../../public/fonts/MessinaSansMono-SemiBold.ttf",
   display: "swap",
+});
+
+export const messina_bold = localFont({
+    src: "../../public/fonts/MessinaSansMono-Bold.ttf",
+    display: "swap",
 });

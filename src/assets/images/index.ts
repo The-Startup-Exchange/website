@@ -6,6 +6,7 @@ import discord from './icons/discord.png';
 import instagram from './icons/instagram.png';
 import linkedin from './icons/linkedin.png';
 import twitter from './icons/twitter.png';
+import paperclip from './icons/paperclip.png';
 
 import eightVC from './alumniPrograms/8vc.png';
 import antler from './alumniPrograms/antler.png';
@@ -39,6 +40,18 @@ import sebastian from './people/sebastian.jpeg';
 import shrey from './people/shrey.jpeg';
 import allen from './people/allen.jpeg';
 import dev from './people/dev.jpeg';
+
+import adiTeam from './people/adi.webp';
+import carterTeam from './people/carter.webp';
+import wyattTeam from './people/wyatt.webp';
+import varunTeam from './people/varunSendilraj.webp';
+import xanderTeam from './people/xander.webp';
+import sathvikTeam from './people/sathvik.webp';
+import omTeam from './people/om.webp';
+import riaTeam from './people/riaPatel.webp';
+import vikTeam from './people/vik.webp';
+import varoonTeam from './people/varoonBW.jpeg';
+
 
 import uiuc_sundays from './participatingCampuses/uiuc_sundays.png';
 import sxgt_team from './participatingCampuses/sxgt_team.jpg';
@@ -91,6 +104,17 @@ type ImagesType = {
     shrey: StaticImageData;
     allen: StaticImageData;
     dev: StaticImageData;
+    adiTeam: StaticImageData;
+    carterTeam: StaticImageData;
+    wyattTeam: StaticImageData;
+    varunTeam: StaticImageData;
+    xanderTeam: StaticImageData;
+    sathvikTeam: StaticImageData;
+    omTeam: StaticImageData;
+    riaTeam: StaticImageData;
+    vikTeam: StaticImageData;
+    varoonTeam: StaticImageData;
+    paperclip: StaticImageData;
 };
 
 
@@ -136,6 +160,17 @@ const Images: ImagesType = {
     shrey,
     allen,
     dev,
+    adiTeam,
+    carterTeam,
+    wyattTeam,
+    varunTeam,
+    xanderTeam,
+    sathvikTeam,
+    omTeam,
+    riaTeam,
+    vikTeam,
+    varoonTeam,
+    paperclip
 };
 
 export default Images;
