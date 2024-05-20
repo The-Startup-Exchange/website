@@ -35,7 +35,7 @@ const BottomMenu = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-row w-full">
+        <div className={`flex flex-row w-full ${styles.backgroundColor}`}>
           <div className={`${styles.borderColor} md:mx-11 mx-5 py-[24px] w-full border-x border-t z-10`}>
           </div>
         </div>

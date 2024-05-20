@@ -7,6 +7,7 @@ import { builders } from '../../data/buildersData';
 
 import {
     plus_jakarta_sans_medium,
+    plus_jakarta_sans_regular,
     plus_jakarta_sans_semibold,
     messina_book
 } from '../../app/fonts';
@@ -15,11 +16,11 @@ const BuildersInSX = () => {
   const { styles, theme } = useTheme();
   return (
     <div className={`flex flex-col w-[100%] ${styles.textColor} ${styles.backgroundColor}`}>
-      <div className={`flex flex-col md:mx-11 mx-5 py-[75px] gap-y-24 ${styles.borderColor} border-x`}>
+      <div className={`flex flex-col md:mx-11 mx-5 py-[75px] gap-y-20 ${styles.borderColor} border-x`}>
         <div
-          className="flex flex-col w-full items-start px-12 justify-start space-y-10">
+          className={`flex flex-col w-full items-start px-12 justify-start border-b pb-24 space-y-10 ${styles.borderColor}`}>
             <h1 className={`md:w-[85%] md:text-[58px] text-[32px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>SX is a community for the most ambitious college students looking to become full-time founders.</h1>
-            <p className={`md:text-[32px] text-[18px] leading-[150%] ${plus_jakarta_sans_medium.className}`}>Our community helps you grow from -1 to 1.</p>
+            <p className={`md:text-[32px] ${theme === 'dark' ? 'text-gray-400' : 'text-black'} text-[18px] leading-[150%] ${plus_jakarta_sans_regular.className}`}>Our community helps you grow from -1 to 1.</p>
         </div>
         <div
           className="flex flex-row w-full px-12 justify-between align-center items-center">
@@ -37,13 +38,13 @@ const BuildersInSX = () => {
                   <div key={index} className={`flex flex-col min-w-[200px] max-w-[250px] ${index === builders.length - 1 ? 'mr-[-20px]' : ''}`}>
                     <div className={`relative border ${styles.borderColor} border-dashed`} style={{ height: '238px' }}>
                       <Image src={builder.pic} layout="fill" objectFit="cover" className={``} alt="sx" />
-                      <p className={`absolute bottom-2 right-2 text-[14px] ${messina_book.className}`}>{builder.category}</p>
+                      <p className={`absolute bottom-2 right-2 text-gray-200 text-[14px] ${messina_book.className}`}>{builder.category}</p>
                     </div>
                     <div className={`border border-dashed p-5 space-y-4 ${styles.borderColor}`}>
                         <p className={`text-[15px] leading-[150%] ${styles.textColor} ${plus_jakarta_sans_semibold.className}`} style={{ minHeight: '70px' }}>{builder.oneLiner}</p>
                         <div className="flex flex-row justify-between items-center">
                             <Link href={builder.link} target="_blank" rel="noopener noreferrer">
-                                <div className="rounded-full border border-[#242424] bg-transparent text-white hover:text-black hover:bg-white hover:bg-opacity-80 transition duration-500 px-3 py-1">
+                                <div className={`rounded-full border ${theme === 'dark' ? 'border-[#242424] text-white hover:text-black hover:bg-white hover:bg-opacity-80' : 'border-[#e0e0e0] text-black hover:bg-gray-300 hover:bg-opacity-40'} bg-transparent transition duration-500 px-3 py-1`}>
                                     <div className={`${messina_book.className} text-xl font-bold`}>
                                         →
                                     </div>

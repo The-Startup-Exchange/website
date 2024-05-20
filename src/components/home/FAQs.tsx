@@ -83,8 +83,8 @@ const FAQs = () => {
 
   return (
     <div className={`flex flex-col w-full items-start justify-start gap-y-4 ${styles.backgroundColor} ${styles.textColor}`}>
-      <div className={`flex flex-col md:flex-row px-6 md:px-28 space-y-8 md:space-y-0 py-[75px] md:md:mx-11 mx-5 border-x items-start ${styles.borderColor}`}>
-        <h1 className={`w-[50%] md:text-[58px] text-[32px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>FAQs</h1>
+      <div className={`flex flex-col md:flex-row px-6 md:px-12 space-y-8 md:space-y-0 py-[75px] md:mx-11 mx-5 border-x items-start ${styles.borderColor}`}>
+        <h1 className={`w-[60%] md:text-[58px] text-[32px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>FAQs</h1>
         <div className={`flex flex-col w-full ${theme === 'dark' ? 'border-[#323232]' : 'border-[#e0e0e0]'} border-t items-start justify-start`}>
           {faqs.map((item, index) => (
             <FAQItem key={index} item={item} />

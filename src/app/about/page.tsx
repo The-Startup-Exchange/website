@@ -77,13 +77,13 @@ const AboutPage = () => {
                                 Startup Exchange began as a club at Georgia Tech, gathering makers, builders, and creatives in the library every week to discuss their most ambitious startup ideas. Over 10 years, students from this group went on to start a variety of companies, collectively valued at over $4.5B.
                             </p>
                             <p>
-                                As our community expanded in 2023 through our events, we attracted thousands of students from universities nationwide who expressed a need for a new space that prioritizes the rapid iteration of shipping fast, and that attracts genuine and passionate people.
+                                Through several hackathons and demo days in 2023, we attracted thousands of students from universities nationwide -- most of which expressed a need for a new space that prioritizes the rapid iteration of shipping fast, and that attracts people genuinely passionate and serious about pursuing their ideas.
                             </p>
                             <p>
                             SX is committed to cultivating communities at campuses in need, and supporting established communities. By bringing together organizers from universities nationwide, our team understands the unique challenges that every campus faces when it comes to building a community of like-minded entrepreneurs.
                             </p>
                             <p>
-                                Our mission is to create dynamic, inclusive communities where students can find like-minded peers, fostering close-knit collaboration and meaningful connections that encourage them to further invest in their entrepreneurial journey.                    </p>
+                                We're working with student organizations and institutions across the US to foster close-knit, inclusive communities where students can form meaningful relationships that encourage them to further invest in their entrepreneurial journey.                    </p>
                         </div>
                     </div>
                     <div className="items-end px-56 pb-28">

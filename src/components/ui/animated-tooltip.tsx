@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import Link from "next/link";
+import { useTheme } from "../../context/ThemeContext";
 import {
   motion,
   useTransform,
@@ -38,6 +39,8 @@ export const AnimatedTooltip = ({
     const halfWidth = event.target.offsetWidth / 2;
     x.set(event.nativeEvent.offsetX - halfWidth); // set the x value, which is then used in transform and rotate
   };
+
+  const { theme } = useTheme();
 
   return (
     <>
@@ -85,7 +88,7 @@ export const AnimatedTooltip = ({
                 width={30}
                 src={item.image}
                 alt={item.name}
-                className="object-cover !m-0 !p-0 object-top rounded-full h-[36px] w-[36px] border-2 group-hover:scale-105 group-hover:z-30 border-black  relative transition duration-500"
+                className={`object-cover !m-0 !p-0 object-top rounded-full h-[36px] w-[36px] border-2 group-hover:scale-105 group-hover:z-30 ${theme === 'dark' ? 'border-black' : 'border-[#e0e0e0]'}  relative transition duration-500`}
               />
             </a>
           </div>

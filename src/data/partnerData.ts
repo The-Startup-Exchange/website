@@ -57,9 +57,9 @@ export const partners = [
         href: 'https://gatech.edu/',
     },
     {
-        name: 'prizePicks',
-        logo: Images.prizePicks,
-        href: 'https://www.prizepicks.com',
+        name: 'msftStartups',
+        logo: Images.msftStartups,
+        href: 'https://www.microsoft.com/en-us/startups',
     },
     {
         name: 'mlh',
@@ -98,9 +98,9 @@ export const partners = [
         href: 'https://www.tempus.com',
     },
     {
-        name: 'mailchimp',
-        logo: Images.mailchimp,
-        href: 'https://www.mailchimp.com',
+        name: 'ef',
+        logo: Images.ef,
+        href: 'https://www.joinef.com/',
     },
     // {
     //     name: 'gtPubP',
@@ -128,9 +128,9 @@ export const partners = [
         href: 'https://www.icxr.org/',
     },
     {
-        name: 'abc',
-        logo: Images.abc,
-        href: 'https://atlantachain.io/',
+        name: 'mailchimp',
+        logo: Images.mailchimp,
+        href: 'https://www.mailchimp.com',
     },
     {
         name: 'arnav',
@@ -143,6 +143,11 @@ export const partners = [
         href: 'https://www.onetrust.com',
     },
     {
+        name: 'prizePicks',
+        logo: Images.prizePicks,
+        href: 'https://www.prizepicks.com',
+    },
+    {
         name: 'overtime',
         logo: Images.overtime,
         href: 'https://www.overtime.tv',
@@ -153,6 +158,17 @@ export const partners = [
         href: 'https://www.portalinnovations.com/',
     },
 
+
+    {
+        name: 'tsq',
+        logo: Images.tsq,
+        href: 'https://www.techsquareatl.com/',
+    },
+    {
+        name: 'tsv',
+        logo: Images.tsv,
+        href: 'https://techsquareventures.com/',
+    },
     {
         name: 'startupAtlanta',
         logo: Images.startupAtlanta,
@@ -174,16 +190,6 @@ export const partners = [
         href: 'https://www.404dao.io',
     },
     {
-        name: 'tsq',
-        logo: Images.tsq,
-        href: 'https://www.techsquareatl.com/',
-    },
-    {
-        name: 'ventureAtlanta',
-        logo: Images.ventureAtlanta,
-        href: 'https://www.ventureatlanta.org/',
-    },
-    {
         name: 'ventureLab',
         logo: Images.ventureLab,
         href: 'https://venturelab.gatech.edu/',
@@ -192,6 +198,11 @@ export const partners = [
         name: 'celsius',
         logo: Images.celsius,
         href: 'https://www.celsius.com',
+    },
+    {
+        name: 'abc',
+        logo: Images.abc,
+        href: 'https://atlantachain.io/',
     },
     {
         name: 'katalyst',

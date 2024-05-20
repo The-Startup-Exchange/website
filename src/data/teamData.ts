@@ -4,7 +4,7 @@ export const team = [
     {
         name: 'Carter',
         image: Images.carterTeam,
-        role: 'Co-Founder',
+        role: 'Founder',
         twitter: 'https://x.com/cartercote_',
         linkedin: 'https://www.linkedin.com/in/carter-cote/',
         personal: 'https://www.cartercote.com/',
@@ -12,7 +12,7 @@ export const team = [
     {
         name: 'Vik',
         image: Images.vikTeam,
-        role: 'Co-Founder',
+        role: 'Community',
         twitter: 'https://x.com/therealvikranth',
         linkedin: 'https://www.linkedin.com/in/vikranth-keerthipati/',
         personal: 'https://vikranth.dev/',
@@ -57,12 +57,6 @@ export const team = [
         linkedin: 'https://www.linkedin.com/in/wyatt-bunch/',
     },
     {
-        name: 'Lucas',
-        image: Images.lucasTeam,
-        role: 'COMPLIANCE',
-        linkedin: 'https://www.linkedin.com/in/lucas-goldfarb/',
-    },
-    {
         name: 'Varun',
         image: Images.varunTeam,
         role: 'Community',
@@ -75,5 +69,11 @@ export const team = [
         role: 'Marketing',
         twitter: 'https://x.com/vikvang1',
         linkedin: 'https://www.linkedin.com/in/sathvik-vangavolu/',
+    },
+    {
+        name: 'Lucas',
+        image: Images.lucasTeam,
+        role: 'COMPLIANCE',
+        linkedin: 'https://www.linkedin.com/in/lucas-goldfarb/',
     },
 ]

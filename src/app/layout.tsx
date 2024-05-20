@@ -10,7 +10,7 @@ export const metadata = {
     default: "Startup Exchange | The path to moving your ideas forward awaits.",
     template: "%s | Startup Exchange",
   },
-  description: "SX offers students the community and mentors that enable them to become full-time founders. Sign up to hear about cool builders, campus communities, and upcoming events.",
+  description: "SX offers college students the community and mentors that enable them to become full-time founders. Sign up to hear about cool builders, campus communities, and upcoming events.",
 };
 
 export default function RootLayout({

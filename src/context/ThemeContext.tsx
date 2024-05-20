@@ -21,7 +21,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   const [theme, setTheme] = useState<Theme>('dark');
 
   const styles: ThemeStyles = {
-    backgroundColor: theme === 'dark' ? 'bg-black' : 'bg-white',
+    backgroundColor: theme === 'dark' ? 'bg-black' : 'bg-[#FAFAFA]',
     textColor: theme === 'dark' ? 'text-white' : 'text-black',
     borderColor: theme === 'dark' ? 'border-[#242424]' : 'border-[#e0e0e0]',
     dashedBorderColor: theme === 'dark' ? 'border-[#353535]' : 'border-[#E0E0E0]',

@@ -50,7 +50,7 @@ const Header = () => {
                         </SheetTrigger>
                         <SheetContent side="top" className="bg-[#111111] w-full p-12 space-y-4">
                             <SiteMenu useBold={true} vertical={true} />
-                            <Button href="https://docs.google.com/forms/d/1K4TKHANO3iWyFM51OqRXBqT1wP2FTYEjE1pdz6559Y0/viewform?edit_requested=true" variant="dark" className="rounded-xl py-3 px-5 mt-4">
+                            <Button href="https://docs.google.com/forms/d/1K4TKHANO3iWyFM51OqRXBqT1wP2FTYEjE1pdz6559Y0/viewform?edit_requested=true" variant="dark" className="rounded-xl py-2 px-5 mt-4">
                                 <div className={`${messina_semibold.className} text-[12px] md:text-normal tracking-tight`}>
                                     JOIN THE COMMUNITY
                                 </div>
@@ -60,7 +60,7 @@ const Header = () => {
                 ) : (
                     <>
                         <SiteMenu useBold={true} />
-                        <Button href="https://docs.google.com/forms/d/1K4TKHANO3iWyFM51OqRXBqT1wP2FTYEjE1pdz6559Y0/viewform?edit_requested=true" variant="dark" className="rounded-xl py-3 px-5">
+                        <Button href="https://docs.google.com/forms/d/1K4TKHANO3iWyFM51OqRXBqT1wP2FTYEjE1pdz6559Y0/viewform?edit_requested=true" variant="dark" className="rounded-xl py-2 px-5">
                           <div className={`${messina_semibold.className} text-[12px] md:text-normal tracking-tight`}>
                             JOIN THE COMMUNITY
                           </div>

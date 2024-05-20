@@ -46,6 +46,7 @@ import harvard from './colleges/harvard.webp';
 import nyu from './colleges/nyu.webp';
 
 import rocket from "./communityPics/rocket.png";
+import communityRev from "./communityPics/communityRev.jpeg";
 
 import buildIllinois from './partnerLogos/buildIllinois.png';
 import rev from './partnerLogos/rev.png';
@@ -70,6 +71,7 @@ import gtRay from './partnerLogos/gtRay.webp';
 import gtSustainableX from './partnerLogos/gtSustainableX.webp';
 import drf from './partnerLogos/drf.webp';
 import drive from './partnerLogos/drive.webp';
+import ef from './partnerLogos/ef.png';
 import finc from './partnerLogos/finc.webp';
 import fusen from './partnerLogos/fusen.webp';
 import google from './partnerLogos/google.webp';
@@ -79,6 +81,7 @@ import icxr from './partnerLogos/icxr.webp';
 import katalyst from './partnerLogos/katalyst.png';
 import mailchimp from './partnerLogos/mailchimp.png';
 import mayoClinic from './partnerLogos/mayoClinic.png';
+import msftStartups from './partnerLogos/msftStartups.webp';
 import mlh from './partnerLogos/mlh.png';
 import nvidia from './partnerLogos/nvidia.webp';
 import oneTrust from './partnerLogos/oneTrust.webp';
@@ -91,6 +94,7 @@ import startupAtlanta from './partnerLogos/startupAtlanta.webp';
 import stord from './partnerLogos/stord.webp';
 import tempus from './partnerLogos/tempus.png';
 import tsq from './partnerLogos/tsq.webp';
+import tsv from './partnerLogos/tsv.webp';
 import ventureAtlanta from './partnerLogos/ventureAtlanta.webp';
 import ventureLab from './partnerLogos/ventureLab.webp';
 
@@ -118,22 +122,22 @@ import ali from './people/ali.jpeg';
 import joe from './people/joe.jpeg';
 import ayushi from './people/ayushi.jpeg';
 
-import adiTeam from './people/adi.webp';
+import adiTeam from './people/adi.jpeg';
 import carterTeam from './people/carter.webp';
 import wyattTeam from './people/wyatt.webp';
 import varunTeam from './people/varunSendilraj.webp';
 import xanderTeam from './people/xander.webp';
-import sathvikTeam from './people/sathvik.webp';
+import sathvikTeam from './people/sathvik.jpeg';
 import omTeam from './people/om.webp';
-import riaTeam from './people/riaPatel.webp';
+import riaTeam from './people/riaPatel.jpeg';
 import vikTeam from './people/vik.webp';
 import varoonTeam from './people/varoonBW.jpeg';
 import lucasTeam from './people/lucas.jpeg';
 
-import uiuc_sundays from './participatingCampuses/uiuc_sundays.png';
+import uiuc_sundays from './participatingCampuses/uiuc_sundays.jpg';
 import sxgt_team from './participatingCampuses/sxgt_team.jpg';
 import rev_retreat from './participatingCampuses/rev_retreat.jpeg';
-import v1michigan_team from './participatingCampuses/v1michigan_team.png';
+import v1michigan_team from './participatingCampuses/v1michigan_team.jpeg';
 
 import sxFull from './sxLogos/sxFull.png';
 import sxFullBlack from './sxLogos/sxFullBlack.png';
@@ -239,6 +243,7 @@ type ImagesType = {
     gtSustainableX: StaticImageData;
     drf: StaticImageData;
     drive: StaticImageData;
+    ef: StaticImageData;
     finc: StaticImageData;
     fusen: StaticImageData;
     google: StaticImageData;
@@ -248,6 +253,7 @@ type ImagesType = {
     katalyst: StaticImageData;
     mailchimp: StaticImageData;
     mayoClinic: StaticImageData;
+    msftStartups: StaticImageData;
     mlh: StaticImageData;
     nvidia: StaticImageData;
     oneTrust: StaticImageData;
@@ -261,6 +267,7 @@ type ImagesType = {
     tempus: StaticImageData;
     tempusBlack: StaticImageData;
     tsq: StaticImageData;
+    tsv: StaticImageData;
     ventureAtlanta: StaticImageData;
     ventureLab: StaticImageData;
     ysabelle: StaticImageData;
@@ -269,6 +276,7 @@ type ImagesType = {
     ali: StaticImageData;
     joe: StaticImageData;
     ayushi: StaticImageData;
+    communityRev: StaticImageData;
 };
 
 
@@ -370,6 +378,7 @@ const Images: ImagesType = {
     gtSustainableX,
     drf,
     drive,
+    ef,
     finc,
     fusen,
     google,
@@ -380,6 +389,7 @@ const Images: ImagesType = {
     mailchimp,
     mayoClinic,
     mlh,
+    msftStartups,
     nvidia,
     oneTrust,
     overtime,
@@ -392,6 +402,7 @@ const Images: ImagesType = {
     tempus,
     tempusBlack,
     tsq,
+    tsv,
     ventureAtlanta,
     ventureLab,
     ysabelle,
@@ -400,6 +411,7 @@ const Images: ImagesType = {
     ali,
     joe,
     ayushi,
+    communityRev,
 };
 
 export default Images;

@@ -1,6 +1,6 @@
 "use client";
 
-import { messina_book } from "../app/fonts";
+import { messina_light } from "../app/fonts";
 import { useRef } from "react";
 import { useTheme } from '../context/ThemeContext';
 import Image from "next/image";
@@ -43,13 +43,13 @@ export default function Footer() {
       };
     return (
       <>
-        <footer className={`flex w-full justify-center mx-auto flex-row border-dashed border-t py-7 px-2 md:px-16 space-x-4 ${theme === 'dark' ? 'text-[#A1A1A1] bg-black border-[#414141]' : 'text-black bg-white border-[#E0E0E0]'}`}>
-            <div className={`${messina_book.className} text-[12px] md:text-[16px] flex flex-row gap-x-4 tracking-tight items-center`}>
+        <footer className={`flex w-full justify-center mx-auto flex-row border-dashed border-t py-6 px-2 md:px-16 space-x-4 ${theme === 'dark' ? 'text-[#A1A1A1] bg-black border-[#414141]' : 'text-black bg-white border-[#E0E0E0]'}`}>
+            <div className={`${messina_light.className} text-[12px] md:text-[13px] flex flex-row gap-x-4 tracking-tight items-center`}>
                 © 2024 STARTUP EXCHANGE. ALL RIGHTS RESERVED
             </div> 
             <div className="flex space-x-1.5 md:space-x-3.5 flex-row items-center">
                 {socialLinks.map((link, index) => (
-                    <Link href={link.href} key={index} className="opacity-70 hover:opacity-100 transition duration-500">
+                    <Link href={link.href} key={index} className="opacity-40 hover:opacity-100 transition duration-500">
                         <Image
                             src={theme === 'dark' ? link.src : link.blackSrc}
                             alt={link.alt}
