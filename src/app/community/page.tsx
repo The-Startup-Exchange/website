@@ -43,11 +43,11 @@ const Community = () => {
                 </div>
                 <DashedDivider />
                 {Array.from({ length: numRows }, (_, rowIndex) => (
-                    <div className={`flex flex-row w-[94%] p-20 ${theme === 'dark' ? 'border-[#242424]' : 'border-[#E0E0E0]'} border-x justify-between gap-x-16`}>
-                        {builders.slice(rowIndex * 4, (rowIndex + 1) * 4).map((builder) => (
-                            <Link href={builder.link} className={`flex flex-col align-start w-[21%] space-y-6 text-start ${plus_jakarta_sans_regular.className}`}>
+                    <div key={rowIndex} className={`flex flex-row w-[94%] p-20 ${theme === 'dark' ? 'border-[#242424]' : 'border-[#E0E0E0]'} border-x justify-between gap-x-16`}>
+                        {builders.slice(rowIndex * 4, (rowIndex + 1) * 4).map((builder, index) => (
+                            <Link key={index} href={builder.link} className={`flex flex-col align-start w-[21%] space-y-6 text-start ${plus_jakarta_sans_regular.className}`}>
                                 <div className="relative w-full h-full">
-                                    <Image  src={builder.pic} alt={builder.category} width={352} height={423}/>
+                                    <Image src={builder.pic} alt={builder.category} width={352} height={423}/>
                                 </div>
                                 <div className="space-y-4">
                                     <p className={`text-[21px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>

@@ -22,7 +22,7 @@ import contrary from './alumniPrograms/contrary.png';
 import forbes from './alumniPrograms/forbes.png';
 import kleinerPerkins from './alumniPrograms/kp.png';
 import neo from './alumniPrograms/neo.png';
-import ondeck from './alumniPrograms/ondeck.png';
+import onDeck from './alumniPrograms/onDeck.png';
 import reactor from './alumniPrograms/reactor.png';
 import unusual from './alumniPrograms/unusual.png';
 import zfellows from './alumniPrograms/zfellows.png';
@@ -35,7 +35,7 @@ import contraryBlack from './alumniPrograms/contraryBlack.png';
 import forbesBlack from './alumniPrograms/forbesBlack.png';
 import kleinerPerkinsBlack from './alumniPrograms/kpBlack.png';
 import neoBlack from './alumniPrograms/neoBlack.png';
-import ondeckBlack from './alumniPrograms/ondeckBlack.png';
+import onDeckBlack from './alumniPrograms/onDeckBlack.png';
 import reactorBlack from './alumniPrograms/reactorBlack.png';
 import unusualBlack from './alumniPrograms/unusualBlack.png';
 import zfellowsBlack from './alumniPrograms/zfellowsBlack.png';
@@ -150,7 +150,7 @@ type ImagesType = {
     forbes: StaticImageData;
     kleinerPerkins: StaticImageData;
     neo: StaticImageData;
-    ondeck: StaticImageData;
+    onDeck: StaticImageData;
     reactor: StaticImageData;
     unusual: StaticImageData;
     zfellows: StaticImageData;
@@ -198,7 +198,7 @@ type ImagesType = {
     forbesBlack: StaticImageData;
     kleinerPerkinsBlack: StaticImageData;
     neoBlack: StaticImageData;
-    ondeckBlack: StaticImageData;
+    onDeckBlack: StaticImageData;
     reactorBlack: StaticImageData;
     unusualBlack: StaticImageData;
     zfellowsBlack: StaticImageData;
@@ -272,7 +272,7 @@ const Images: ImagesType = {
     forbes,
     kleinerPerkins,
     neo,
-    ondeck,
+    onDeck,
     reactor,
     unusual,
     zfellows,
@@ -321,7 +321,7 @@ const Images: ImagesType = {
     forbesBlack,
     kleinerPerkinsBlack,
     neoBlack,
-    ondeckBlack,
+    onDeckBlack,
     reactorBlack,
     unusualBlack,
     zfellowsBlack,

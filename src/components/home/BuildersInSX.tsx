@@ -32,7 +32,7 @@ const BuildersInSX = () => {
         <div className="flex flex-col w-full">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
             {builders.map((builder, index) => (
-              <div className="flex flex-col w-full">
+              <div key={index} className="flex flex-col w-full">
                 <div className={`relative border rounded-t-xl ${styles.borderColor}`}>
                   <Image src={builder.pic} height={238} width={307} className={`rounded-t-xl ${styles.borderColor}`} alt="sx" />
                   <p className={`absolute bottom-2 right-2 text-[14px] ${messina_book.className}`}>{builder.category}</p>

@@ -38,9 +38,9 @@ const Campuses = () => {
                 </div>
                 <DashedDivider />
                 {Array.from({ length: numRows }, (_, rowIndex) => (
-                    <div className={`flex flex-row w-[94%] p-20 ${theme === 'dark' ? 'border-[#242424]' : 'border-[#E0E0E0]'} border-x justify-between gap-x-16`}>
-                        {campuses.slice(rowIndex * 2, (rowIndex + 1) * 2).map((campus) => (
-                            <Link href={campus.link} className={`flex flex-col w-[50%] align-start space-y-6 text-start ${plus_jakarta_sans_regular.className}`}>
+                    <div key={rowIndex} className={`flex flex-row w-[94%] p-20 ${theme === 'dark' ? 'border-[#242424]' : 'border-[#E0E0E0]'} border-x justify-between gap-x-16`}>
+                        {campuses.slice(rowIndex * 2, (rowIndex + 1) * 2).map((campus, index) => (
+                            <Link key={index} href={campus.link} className={`flex flex-col w-[50%] align-start space-y-6 text-start ${plus_jakarta_sans_regular.className}`}>
                                 <div className="relative w-full h-full">
                                     <Image src={campus.pictureName} alt={campus.name} width={560} height={448} objectFit="cover"/>
                                     <div className="absolute inset-0 bg-black opacity-0 hover:opacity-60 flex items-center justify-center transition-opacity duration-300">

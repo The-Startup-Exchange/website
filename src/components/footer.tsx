@@ -44,7 +44,7 @@ export default function Footer() {
     return (
       <>
         <footer className={`flex w-full justify-center mx-auto flex-row border-dashed border-t py-7 px-2 md:px-16 space-x-4 ${theme === 'dark' ? 'text-[#A1A1A1] bg-black border-[#414141]' : 'text-black bg-white border-[#E0E0E0]'}`}>
-            <div className={`${messina_book.className} text-[12px] md:text-normal flex flex-row gap-x-4 tracking-tight items-center`}>
+            <div className={`${messina_book.className} text-[12px] md:text-[16px] flex flex-row gap-x-4 tracking-tight items-center`}>
                 © 2024 STARTUP EXCHANGE. ALL RIGHTS RESERVED
             </div> 
             <div className="flex space-x-1.5 md:space-x-3.5 flex-row items-center">
@@ -53,9 +53,9 @@ export default function Footer() {
                         <Image
                             src={theme === 'dark' ? link.src : link.blackSrc}
                             alt={link.alt}
-                            width={19}
-                            height={19}
-                            className="w-[70%] h-auto md:w-[100%]"
+                            width={17}
+                            height={17}
+                            className="w-[70%] h-auto md:w-[80%]"
                         />
                     </Link>
                 ))}

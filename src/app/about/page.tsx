@@ -97,9 +97,9 @@ const AboutPage = () => {
                     </div>
                     <div className={`flex flex-col px-12 justify-start space-y-16`}>
                         {Array.from({ length: numRows }, (_, rowIndex) => (
-                            <div className={`flex flex-row px-20 gap-x-28`}>
-                                {team.slice(rowIndex * 4, (rowIndex + 1) * 4).map((teamMember) => (
-                                    <div className={`flex flex-col align-start w-[20%] space-y-6 text-start`}>
+                            <div key={rowIndex} className={`flex flex-row px-20 gap-x-28`}>
+                                {team.slice(rowIndex * 4, (rowIndex + 1) * 4).map((teamMember, index) => (
+                                    <div key={index} className={`flex flex-col align-start w-[20%] space-y-6 text-start`}>
                                         <div className="relative w-full h-full">
                                             <Image src={teamMember.image} alt={teamMember.name} width={250} height={250}/>
                                         </div>
@@ -147,12 +147,13 @@ const AboutPage = () => {
                     </div>
                     <div className={`flex flex-col ${theme === 'dark' ? 'border-[#323232]' : 'border-[#e0e0e0]'} border-[#242424] border-dashed border-t items-start justify-start`}>
                         {Array.from({ length: numPartnerRows }, (_, rowIndex) => (
-                        <div className={`flex flex-row w-full border-b border-dashed ${theme === 'dark' ? 'border-[#323232]' : 'border-[#e0e0e0]'}`}>
-                            {partners.slice(rowIndex * 5, (rowIndex + 1) * 5).map(partner => (
-                            <div className={`flex flex-row w-full border-r border-dashed ${theme === 'dark' ? 'border-[#323232]' : 'border-[#e0e0e0]'} py-10 px-12 align-center items-center justify-center`}>
+                        <div key={rowIndex} className={`flex flex-row w-full border-b border-dashed ${theme === 'dark' ? 'border-[#323232]' : 'border-[#e0e0e0]'}`}>
+                            {partners.slice(rowIndex * 5, (rowIndex + 1) * 5).map((partner, index) => (
+                            <div key={index} className={`flex flex-row w-full border-r border-dashed ${theme === 'dark' ? 'border-[#323232]' : 'border-[#e0e0e0]'} py-10 px-12 align-center items-center justify-center`}>
                                 <Link href={partner.href} target="_blank" rel="noopener noreferrer">
                                 <Image
-                                    src={theme === 'dark' ? Images[partner.name] : (partner.black ? Images[partner.black] : Images[partner.name])}
+                                    // src={theme === 'dark' ? Images[partner.name] : (partner.black ? Images[partner.black] : Images[partner.name])}
+                                    src={Images[partner.name]}
                                     alt={partner.name}
                                     height={42}
                                     className="opacity-80 hover:opacity-100 transition duration-500"

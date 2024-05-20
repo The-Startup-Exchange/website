@@ -8,6 +8,9 @@ import { useTheme } from '../context/ThemeContext';
 import Images from '../assets/images';
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import {
+  messina_semibold,
+} from '../app/fonts';
 
 const Header = () => {
     const [isMobile, setIsMobile] = useState(false);
@@ -34,7 +37,7 @@ const Header = () => {
                             alt="SX Full Logo"
                             width={136}
                             height={27}
-                            className="w-[55%] md:w-[100%] h-auto"
+                            className="w-[55%] md:w-[80%] h-auto"
                         />
                     </Link>
                 </div>
@@ -48,7 +51,7 @@ const Header = () => {
                         <SheetContent side="top" className="bg-[#111111] w-full p-12 space-y-4">
                             <SiteMenu useBold={true} vertical={true} />
                             <Button href="https://docs.google.com/forms/d/1K4TKHANO3iWyFM51OqRXBqT1wP2FTYEjE1pdz6559Y0/viewform?edit_requested=true" variant="dark" className="rounded-xl py-3 px-5 mt-4">
-                                <div className="font-bold">
+                                <div className={`${messina_semibold.className} text-[12px] md:text-normal tracking-tight`}>
                                     JOIN THE COMMUNITY
                                 </div>
                             </Button>
@@ -58,9 +61,9 @@ const Header = () => {
                     <>
                         <SiteMenu useBold={true} />
                         <Button href="https://docs.google.com/forms/d/1K4TKHANO3iWyFM51OqRXBqT1wP2FTYEjE1pdz6559Y0/viewform?edit_requested=true" variant="dark" className="rounded-xl py-3 px-5">
-                            <div className="font-bold">
-                                JOIN THE COMMUNITY
-                            </div>
+                          <div className={`${messina_semibold.className} text-[12px] md:text-normal tracking-tight`}>
+                            JOIN THE COMMUNITY
+                          </div>
                         </Button>
                     </>
                 )}
