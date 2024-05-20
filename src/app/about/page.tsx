@@ -89,7 +89,7 @@ const AboutPage = () => {
                                 We work closely with student organizations and institutions to create inclusive, close-knit communities where students can form meaningful relationships and gain the support and encouragement they need to pursue their entrepreneurial journeys.
                             </p>
                             <p>
-                                In addition to our work with universities, we actively collaborate with leading investors, startups, corporations, and other institutions to bring new and exciting opportunities to the builders in our community. These partnerships range from community events and sponsorship to marketing and recruitment opportunities, further enhancing the resources and networks available to our members.
+                                In addition to our work with universities, we actively collaborate with leading investors, startups, and corporations to bring new and exciting opportunities to the builders in our community. These partnerships range from community events and sponsorship to marketing and recruitment opportunities, further enhancing the resources and networks available to our members.
                             </p>
                         </div>
                     </div>
