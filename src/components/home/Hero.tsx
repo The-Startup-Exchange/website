@@ -17,7 +17,7 @@ const Hero = () => {
         <div className={`flex flex-col w-[94%] ${theme === 'dark' ? 'bg-black' : 'bg-white'} text-${theme === 'dark' ? 'white' : 'black'}`}>
             <div className={`flex flex-col md:py-56 pt-24 pb-36 ${theme === 'dark' ? 'border-[#242424]' : 'border-[#E0E0E0]'} border-x items-start justify-center gap-y-4 relative`}>
                 <video autoPlay muted loop className="absolute w-full h-full object-cover opacity-60 z-0">
-                    <source src="/sxVideo.mp4" type="video/mp4" />
+                    <source src="/sxVid.mp4" type="video/mp4" />
                 </video>
                 <div className="flex flex-col w-full gap-y-4 px-12 z-10 relative">
                     <button onClick={toggleTheme} className={`p-2 m-2 border absolute md:right-3 md:-top-56 right-4 top-16 rounded-lg ${theme === 'dark' ? 'border-[#949494]' : 'border-[#111111]'}`}>
