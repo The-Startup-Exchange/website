@@ -83,7 +83,7 @@ const AboutPage = () => {
                             SX is committed to cultivating communities at campuses in need, and supporting established communities. By bringing together organizers from universities nationwide, our team understands the unique challenges that every campus faces when it comes to building a community of like-minded entrepreneurs.
                             </p>
                             <p>
-                                We're working with student organizations and institutions across the US to foster close-knit, inclusive communities where students can form meaningful relationships that encourage them to further invest in their entrepreneurial journey.                    </p>
+                                We&apos;re working with student organizations and institutions across the US to foster close-knit, inclusive communities where students can form meaningful relationships that encourage them to further invest in their entrepreneurial journey.                    </p>
                         </div>
                     </div>
                     <div className="items-end px-56 pb-28">

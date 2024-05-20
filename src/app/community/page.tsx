@@ -114,7 +114,7 @@ const Community = () => {
                             Each week, you meet to discuss your progress for the week.
                         </p>
                         <p className={`text-[18px] leading-[140%] ${plus_jakarta_sans_thin.className}`}>
-                            You'll have the chance to present new learnings and gain insights from peers and mentors. Everyone in the program is committed to achieving their semester-defined goals, and developing consistent habits that enable them to achieve those goals.
+                            You&apos;ll have the chance to present new learnings and gain insights from peers and mentors. Everyone in the program is committed to achieving their semester-defined goals, and developing consistent habits that enable them to achieve those goals.
                         </p>
                     </div>
                     <div className="flex flex-row w-full items-start justify-start space-x-8">
@@ -167,10 +167,10 @@ const Community = () => {
                         </p>
                         <div className="flex flex-col space-y-8 px-20">
                             <p className={`text-[18px] leading-[140%] ${plus_jakarta_sans_thin.className}`}>
-                                We won’t teach you how to code a web app, or how to build a guided project. You can find that information on YouTube, ChatGPT, and Google.
+                                We won&apos;t teach you how to code a web app, or how to build a guided project. You can find that information on YouTube, ChatGPT, and Google.
                             </p>
                             <p className={`text-[18px] leading-[140%] ${plus_jakarta_sans_thin.className}`}>
-                                However, when you need guidance on niche questions or want to fill small gaps in your skillset, you'll have the support of your peers and mentors to help you navigate the unique challenges of building your idea.
+                                However, when you need guidance on niche questions or want to fill small gaps in your skillset, you&apos;ll have the support of your peers and mentors to help you navigate the unique challenges of building your idea.
                             </p>
                         </div>
                     </div>

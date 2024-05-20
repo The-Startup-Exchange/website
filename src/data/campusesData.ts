@@ -71,7 +71,7 @@ export const campuses = [
       pictureName: Images.v1michigan_team,
       logo: Images.v1Michigan,
       blackLogo: Images.v1MichiganBlack,
-      description: 'V1 is UMich\'s community for ambitious student builders — engineers, artists, designers, founders, scientists, and more.',
+      description: 'V1 is UMich&apos;s community for ambitious student builders — engineers, artists, designers, founders, scientists, and more.',
       link: 'https://v1michigan.com/',
       items: [
         {
@@ -103,7 +103,7 @@ export const campuses = [
       pictureName: Images.rev_retreat,
       logo: Images.rev,
       blackLogo: Images.revBlack,
-      description: 'rev is Northeastern\'s space where students collaborate to work on side projects and take any idea from inception to reality.',
+      description: 'rev is Northeastern&apos;s space where students collaborate to work on side projects and take any idea from inception to reality.',
       link: 'https://www.rev.school/',
       items: [
         {
