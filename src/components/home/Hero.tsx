@@ -15,9 +15,12 @@ const Hero = () => {
 
     return (
         <div className={`flex flex-col w-[94%] ${theme === 'dark' ? 'bg-black' : 'bg-white'} text-${theme === 'dark' ? 'white' : 'black'}`}>
-            <div className={`flex flex-col md:py-56 pt-24 pb-36 px-12 ${theme === 'dark' ? 'border-[#242424]' : 'border-[#E0E0E0]'} border-x items-start justify-center gap-y-4`}>
-                <div className="flex flex-col w-full gap-y-4">
-                    <button onClick={toggleTheme} className={`p-2 m-2 border absolute md:right-14 md:top-20 right-4 top-16 rounded-lg ${theme === 'dark' ? 'border-[#242424]' : 'border-[#E0E0E0]'}`}>
+            <div className={`flex flex-col md:py-56 pt-24 pb-36 ${theme === 'dark' ? 'border-[#242424]' : 'border-[#E0E0E0]'} border-x items-start justify-center gap-y-4 relative`}>
+                <video autoPlay muted loop className="absolute w-full h-full object-cover opacity-60 z-0">
+                    <source src="/sxVideo.mp4" type="video/mp4" />
+                </video>
+                <div className="flex flex-col w-full gap-y-4 px-12 z-10 relative">
+                    <button onClick={toggleTheme} className={`p-2 m-2 border absolute md:right-3 md:-top-56 right-4 top-16 rounded-lg ${theme === 'dark' ? 'border-[#949494]' : 'border-[#111111]'}`}>
                         {theme === 'dark' ? (
                             <Image src={Images.darkMode} alt="Light Mode" width={18} height={18} />
                         ) : (
@@ -27,7 +30,7 @@ const Hero = () => {
                     <div className="flex flex-col w-full items-start justify-start space-y-6">
                         <Link href="https://docs.google.com/forms/d/1K4TKHANO3iWyFM51OqRXBqT1wP2FTYEjE1pdz6559Y0/viewform?edit_requested=true" className={badgeVariants({ variant: "outlineimg" })}>→ Attend our summer meetups in SF, NYC, and ATL.</Link>
                         <h1 className={`md:w-[85%] w-[100%] md:text-[70px] text-[48px] leading-[110%]  ${plus_jakarta_sans_extrabold.className} ${theme === 'dark' ? 'bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500' : 'text-black'}`}>The path to moving your ideas forward awaits.</h1>
-                        <p className={`md:text-[24px] text-[18px] leading-[150%] ${plus_jakarta_sans_regular.className} ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>SX offers students the community and mentors that enable them to become full-time founders. 
+                        <p className={`md:text-[24px] text-[18px] leading-[150%] ${plus_jakarta_sans_regular.className} ${theme === 'dark' ? 'text-gray-400' : 'text-gray-900'}`}>SX offers students the community and mentors that enable them to become full-time founders. 
                         Sign up to hear about cool builders, campus communities, and upcoming events.</p>
                     </div>
                 </div>

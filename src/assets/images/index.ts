@@ -109,6 +109,11 @@ import sebastian from './people/sebastian.jpeg';
 import shrey from './people/shrey.jpeg';
 import allen from './people/allen.jpeg';
 import dev from './people/dev.jpeg';
+import ysabelle from './people/ysabelle.jpg';
+import matt from './people/matt.jpeg';
+import shreya from './people/shreya.png';
+import ali from './people/ali.jpeg';
+import joe from './people/joe.jpeg';
 
 import adiTeam from './people/adi.webp';
 import carterTeam from './people/carter.webp';
@@ -253,6 +258,11 @@ type ImagesType = {
     tsq: StaticImageData;
     ventureAtlanta: StaticImageData;
     ventureLab: StaticImageData;
+    ysabelle: StaticImageData;
+    matt: StaticImageData;
+    shreya: StaticImageData;
+    ali: StaticImageData;
+    joe: StaticImageData;
 };
 
 
@@ -376,6 +386,11 @@ const Images: ImagesType = {
     tsq,
     ventureAtlanta,
     ventureLab,
+    ysabelle,
+    matt,
+    shreya,
+    ali,
+    joe,
 };
 
 export default Images;

@@ -33,16 +33,16 @@ const BuildersInSX = () => {
           <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
             {builders.map((builder, index) => (
               <div key={index} className="flex flex-col w-full">
-                <div className={`relative border rounded-t-xl ${styles.borderColor}`}>
-                  <Image src={builder.pic} height={238} width={307} className={`rounded-t-xl ${styles.borderColor}`} alt="sx" />
+                <div className={`relative border ${styles.borderColor}`} style={{ height: '238px' }}>
+                  <Image src={builder.pic} layout="fill" objectFit="cover" className={`${styles.borderColor}`} alt="sx" />
                   <p className={`absolute bottom-2 right-2 text-[14px] ${messina_book.className}`}>{builder.category}</p>
                 </div>
-                <div className={`border border-dashed rounded-b-xl p-5 space-y-4 ${styles.borderColor}`}>
-                    <p className={`text-[15px] leading-[150%] ${styles.textColor} ${plus_jakarta_sans_semibold.className}`}>{builder.oneLiner}</p>
+                <div className={`border border-dashed p-5 space-y-4 ${styles.borderColor}`}>
+                    <p className={`text-[15px] leading-[150%] ${styles.textColor} ${plus_jakarta_sans_semibold.className}`} style={{ minHeight: '70px' }}>{builder.oneLiner}</p>
                     <div className="flex flex-row justify-between items-center">
-                        <Image src={builder.college} height={36} width={56} className="h-[36px]" alt="college logo" />
+                        {/* <Image src={builder.college} height={30} width={48} className="w-[15%] h-auto" alt="college logo" /> */}
                         <Link href={builder.link}>
-                            <Button variant="secondary" className="rounded-full p-3.5">
+                            <Button href={builder.link} variant="secondary" className="rounded-full border border-[#242424] bg-transparent text-white hover:text-black p-3.5">
                                 <div className={`${messina_book.className} text-xl font-bold`}>
                                     →
                                 </div>
