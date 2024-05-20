@@ -45,7 +45,7 @@ const Campuses = () => {
                     </div>
                     <div className="items-end px-72 pb-28 space-y-12">
                         <p className={`text-[36px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>
-                            We partner with existing college entrepreneurship organizations, or start new ones on campuses that don't have them.
+                            We partner with existing college entrepreneurship organizations, or start new ones on campuses that don&apos;t have them.
                         </p>
                         <div className="flex flex-row w-full justify-end">
                             <p className={`text-[18px] w-[60%] leading-[140%] ${plus_jakarta_sans_thin.className}`}>
@@ -84,13 +84,13 @@ const Campuses = () => {
                             </ul>
                         </p>
                         <p className={`text-[36px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>
-                            3. If a viable fit, we jam on hosting a "Ship-It" event on their campus.
+                            3. If a viable fit, we jam on hosting a &quot;Ship-It&quot; event on their campus.
                         </p>
                         <p className={`text-[18px] px-12 leading-[175%] ${plus_jakarta_sans_thin.className}`}>
-                            "Ship-It" is an event that our campuses host every week to regularly bring student makers, builders, and creators together. It’s three hours set aside to work on a side project, and to get feedback from others on your idea.
+                            &quot;Ship-It&quot; is an event that our campuses host every week to regularly bring student makers, builders, and creators together. It’s three hours set aside to work on a side project, and to get feedback from others on your idea.
                         </p>
                         <p className={`text-[18px] px-12 leading-[175%] ${plus_jakarta_sans_thin.className}`}>
-                            Organizers are not confined to solely hosting "Ship-It", but it’s our strongly recommended starting point for bringing builders together.
+                            Organizers are not confined to solely hosting &quot;Ship-It&quot;, but it’s our strongly recommended starting point for bringing builders together.
                         </p>
                         <p className={`text-[18px] px-12 leading-[175%] ${plus_jakarta_sans_medium.className}`}>
                             We prioritize organizers who we feel:
@@ -106,7 +106,7 @@ const Campuses = () => {
                             We want a school/organizer to show initiative. Building community is hard and requires passion. So even if a campus has potential, we don’t force it too much.
                         </p>
                         <p className={`text-[36px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>
-                            5. The first "Ship-It" / campus event is hosted!
+                            5. The first &quot;Ship-It&quot; / campus event is hosted!
                         </p>
                         <p className={`text-[18px] px-12 leading-[175%] ${plus_jakarta_sans_thin.className}`}>
                             We help host, and do a retro afterwards.
@@ -133,7 +133,7 @@ const Campuses = () => {
                             </ul>
                         </p>
                         <p className={`text-[18px] px-12 leading-[175%] ${plus_jakarta_sans_thin.className}`}>
-                            We also jam on potential ways to improve the community's experience at "Ship-It."
+                            We also jam on potential ways to improve the community&apos;s experience at &quot;Ship-It.&quot;
                         </p>
                         <p className={`text-[18px] px-12 leading-[175%] ${plus_jakarta_sans_medium.className}`}>
                             Members are walked through tips for improving the event experience including:
