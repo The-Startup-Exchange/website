@@ -42,6 +42,7 @@ import zfellowsBlack from './alumniPrograms/zfellowsBlack.png';
 
 import uiuc from './colleges/uiuc.png';
 import georgiaTech from './colleges/georgiaTech.png';
+import harvard from './colleges/harvard.webp';
 
 import rocket from "./communityPics/rocket.png";
 
@@ -114,6 +115,7 @@ import matt from './people/matt.jpeg';
 import shreya from './people/shreya.png';
 import ali from './people/ali.jpeg';
 import joe from './people/joe.jpeg';
+import ayushi from './people/ayushi.jpeg';
 
 import adiTeam from './people/adi.webp';
 import carterTeam from './people/carter.webp';
@@ -149,6 +151,7 @@ type ImagesType = {
     eightVC: StaticImageData;
     antler: StaticImageData;
     georgiaTech: StaticImageData;
+    harvard: StaticImageData;
     buildspace: StaticImageData;
     commit: StaticImageData;
     contrary: StaticImageData;
@@ -263,6 +266,7 @@ type ImagesType = {
     shreya: StaticImageData;
     ali: StaticImageData;
     joe: StaticImageData;
+    ayushi: StaticImageData;
 };
 
 
@@ -288,6 +292,7 @@ const Images: ImagesType = {
     zfellows,
     uiuc,
     georgiaTech,
+    harvard,
     aryan,
     ishan,
     keshav,
@@ -391,6 +396,7 @@ const Images: ImagesType = {
     shreya,
     ali,
     joe,
+    ayushi,
 };
 
 export default Images;

@@ -137,7 +137,7 @@ const AboutPage = () => {
                     </div>
                     <div className="px-32 pb-28 w-full flex justify-between space-x-12 items-center">
                             <p className={`${plus_jakarta_sans_extrabold.className} text-[32px] w-full`}>Join us and shape the future of college entrepreneurship.</p>
-                            <Button href="/" variant="secondary" className={`px-4 ${messina_semibold.className}`}>VIEW OPEN POSITIONS</Button>
+                            <Button href="https://www.notion.so/startup-exchange/Startup-Exchange-Team-Breakdown-411ccdc0abaf46cfaa09c7eb6c2fb613?pvs=4" variant="secondary" className={`px-4 ${messina_semibold.className}`}>VIEW OPEN POSITIONS</Button>
                         </div>
                 </div>
                 <DashedDivider />

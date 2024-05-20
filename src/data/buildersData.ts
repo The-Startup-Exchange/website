@@ -30,11 +30,19 @@ export const builders = [
         link: "https://www.linkedin.com/in/joseph-metzler-concepci%C3%B3n-ba4377248/",
       },
       {
-        oneLiner: "Ali is buildig an app that redefines how friends share photos.",
+        oneLiner: "Ali is building an app that redefines how friends share photos.",
         category: "CONSUMER SOCIAL",
         pic: Images.ali,
         college: Images.georgiaTech,
         link: "https://www.joinswsh.com/",
       },
+      {
+        oneLiner: "Ayushi is building an ML platform to match diverse patients for clinical trials.",
+        category: "DIGITAL HEALTHCARE",
+        pic: Images.ayushi,
+        college: Images.harvard,
+        link: "https://www.linkedin.com/in/ayushisinhahaha/",
+      },
+
 ]
 

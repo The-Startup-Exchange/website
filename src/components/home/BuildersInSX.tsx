@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useTheme } from '../../context/ThemeContext';
+import Marquee from "react-fast-marquee";
 import Image from "next/image";
 import Link from "next/link";
 import { builders } from '../../data/buildersData';
@@ -30,29 +31,30 @@ const BuildersInSX = () => {
             </Button>
         </div>
         <div className="flex flex-col w-full">
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-            {builders.map((builder, index) => (
-              <div key={index} className="flex flex-col w-full">
-                <div className={`relative border ${styles.borderColor}`} style={{ height: '238px' }}>
-                  <Image src={builder.pic} layout="fill" objectFit="cover" className={`${styles.borderColor}`} alt="sx" />
-                  <p className={`absolute bottom-2 right-2 text-[14px] ${messina_book.className}`}>{builder.category}</p>
-                </div>
-                <div className={`border border-dashed p-5 space-y-4 ${styles.borderColor}`}>
-                    <p className={`text-[15px] leading-[150%] ${styles.textColor} ${plus_jakarta_sans_semibold.className}`} style={{ minHeight: '70px' }}>{builder.oneLiner}</p>
-                    <div className="flex flex-row justify-between items-center">
-                        {/* <Image src={builder.college} height={30} width={48} className="w-[15%] h-auto" alt="college logo" /> */}
-                        <Link href={builder.link}>
-                            <Button href={builder.link} variant="secondary" className="rounded-full border border-[#242424] bg-transparent text-white hover:text-black p-3.5">
-                                <div className={`${messina_book.className} text-xl font-bold`}>
-                                    →
-                                </div>
-                            </Button>
-                        </Link>
+          <Marquee className="gap-x-9" speed={45} loop={0}>
+            <div className="flex flex-row gap-4">
+                {builders.map((builder, index) => (
+                  <div key={index} className={`flex flex-col min-w-[200px] max-w-[250px] ${index === builders.length - 1 ? 'mr-[-20px]' : ''}`}>
+                    <div className={`relative border ${styles.borderColor} border-dashed`} style={{ height: '238px' }}>
+                      <Image src={builder.pic} layout="fill" objectFit="cover" className={``} alt="sx" />
+                      <p className={`absolute bottom-2 right-2 text-[14px] ${messina_book.className}`}>{builder.category}</p>
                     </div>
-                </div>
-              </div>
-            ))}
-          </div>
+                    <div className={`border border-dashed p-5 space-y-4 ${styles.borderColor}`}>
+                        <p className={`text-[15px] leading-[150%] ${styles.textColor} ${plus_jakarta_sans_semibold.className}`} style={{ minHeight: '70px' }}>{builder.oneLiner}</p>
+                        <div className="flex flex-row justify-between items-center">
+                            <Link href={builder.link} target="_blank" rel="noopener noreferrer">
+                                <div className="rounded-full border border-[#242424] bg-transparent text-white hover:text-black hover:bg-white hover:bg-opacity-80 transition duration-500 px-3 py-1">
+                                    <div className={`${messina_book.className} text-xl font-bold`}>
+                                        →
+                                    </div>
+                                </div>
+                            </Link>
+                        </div>
+                    </div>
+                  </div>
+                ))}
+            </div>
+          </Marquee>
         </div>
       </div>
     </div>
