@@ -167,10 +167,10 @@ const AboutPage = () => {
                         </div>
                         ))}
                     </div>
-                    <div className="px-12 pb-28 w-full flex justify-between space-x-12 align-center items-center">
-                            <p className={`${plus_jakarta_sans_extrabold.className} text-[32px] w-full`}>Interested in partnering with us?</p>
-                            <Button href="mailto:hello@startup.exchange" variant="secondary" className={`px-10 ${messina_semibold.className}`}>CONTACT US</Button>
-                        </div>
+                    <div className="px-12 pb-20 pt-4 w-full flex justify-between space-x-12 align-center items-center">
+                        <p className={`${plus_jakarta_sans_extrabold.className} text-[32px] w-full`}>Interested in partnering with us?</p>
+                        <Button href="mailto:hello@startup.exchange" variant="secondary" className={`px-10 ${messina_semibold.className}`}>CONTACT US</Button>
+                    </div>
                 </div>
             </div>
             <Footer />

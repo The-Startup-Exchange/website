@@ -43,6 +43,7 @@ import zfellowsBlack from './alumniPrograms/zfellowsBlack.png';
 import uiuc from './colleges/uiuc.png';
 import georgiaTech from './colleges/georgiaTech.png';
 import harvard from './colleges/harvard.webp';
+import nyu from './colleges/nyu.webp';
 
 import rocket from "./communityPics/rocket.png";
 
@@ -152,6 +153,7 @@ type ImagesType = {
     antler: StaticImageData;
     georgiaTech: StaticImageData;
     harvard: StaticImageData;
+    nyu: StaticImageData;
     buildspace: StaticImageData;
     commit: StaticImageData;
     contrary: StaticImageData;
@@ -293,6 +295,7 @@ const Images: ImagesType = {
     uiuc,
     georgiaTech,
     harvard,
+    nyu,
     aryan,
     ishan,
     keshav,

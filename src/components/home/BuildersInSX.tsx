@@ -19,7 +19,7 @@ const BuildersInSX = () => {
         <div
           className="flex flex-col w-full items-start px-12 justify-start space-y-10">
             <h1 className={`md:w-[85%] md:text-[58px] text-[32px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>SX is a community for the most ambitious college students looking to become full-time founders.</h1>
-            <p className={`md:text-[36px] text-[18px] leading-[150%] ${plus_jakarta_sans_medium.className}`}>Our community helps you grow from -1 to 1.</p>
+            <p className={`md:text-[32px] text-[18px] leading-[150%] ${plus_jakarta_sans_medium.className}`}>Our community helps you grow from -1 to 1.</p>
         </div>
         <div
           className="flex flex-row w-full px-12 justify-between align-center items-center">

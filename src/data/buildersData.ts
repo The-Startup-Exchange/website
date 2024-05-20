@@ -33,7 +33,7 @@ export const builders = [
         oneLiner: "Ali is building an app that redefines how friends share photos.",
         category: "CONSUMER SOCIAL",
         pic: Images.ali,
-        college: Images.georgiaTech,
+        college: Images.nyu,
         link: "https://www.joinswsh.com/",
       },
       {

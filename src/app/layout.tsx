@@ -15,13 +15,10 @@ export const metadata = {
 
 export default function RootLayout({
   children,
-  title = metadata.title.default,
 }: Readonly<{
   children: React.ReactNode;
-  title?: string;
 }>) {
-  const fullTitle = metadata.title.template.replace("%s", title);
-  
+
   return (
     <ThemeProvider>
       <html lang="en">
