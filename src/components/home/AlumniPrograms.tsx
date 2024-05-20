@@ -16,7 +16,7 @@ const programLogos = [
   { name: "antler", black: "antlerBlack", href: "https://www.antler.co/" },
   { name: "commit", black: "commitBlack", href: "" },
   { name: "neo", black: "neoBlack", href: "https://neo.com/" },
-  { name: "ondeck", black: "ondeckBlack", href: "https://www.beondeck.com/" },
+  { name: "onDeck", black: "onDeckBlack", href: "https://www.beondeck.com/" },
   { name: "reactor", black: "reactorBlack", href: "https://www.floodgate.com/" },
   { name: "unusual", black: "unusualBlack", href: "https://www.unusual.vc/" },
 ];
