@@ -67,7 +67,7 @@ const AboutPage = () => {
                     </div>
                     <div className={`flex flex-col space-y-8 justify-center gap-y-4`}>
                         <p className={`text-[36px] text-cent leading-[125%] px-36 ${plus_jakarta_sans_medium.className}`}>
-                            We’re on a mission to better define college entrepreneurship. While college is an exciting time to work on your craziest ideas, many students feel lost in the process of developing their ideas.
+                            We’re looking to better define college entrepreneurship. While college is an exciting time to work on your craziest ideas, many students feel lost in the process of developing their ideas.
                         </p>
                         <p className="px-36">
                             We’re here to change that.
