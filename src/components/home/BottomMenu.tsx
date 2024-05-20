@@ -9,6 +9,7 @@ import {
 const BottomMenu = () => {
   const { theme, styles } = useTheme();
     return (
+      <>
         <div className={`relative flex flex-col w-full ${styles.textColor} ${styles.backgroundColor}`}>
           {/* Background image */}
           <div className={`absolute inset-0 z-0 ${theme === 'dark' ? 'opacity-40' : 'opacity-20'}`}>
@@ -19,7 +20,7 @@ const BottomMenu = () => {
                 objectFit="cover"
             />
           </div>
-          <div className={`${styles.borderColor} mx-11 py-[52px] border-x border-t z-10`}>
+          <div className={`${styles.borderColor} md:mx-11 mx-5 py-[52px] border-x border-t z-10`}>
             <div className={`flex flex-col px-28 py-28 items-center align-center justify-center z-10`}>
               <Image
                   src={theme === 'dark' ? Images.sxLogo : Images.sxLogoBlack}
@@ -34,6 +35,11 @@ const BottomMenu = () => {
             </div>
           </div>
         </div>
+        <div className="flex flex-row w-full">
+          <div className={`${styles.borderColor} md:mx-11 mx-5 py-[24px] w-full border-x border-t z-10`}>
+          </div>
+        </div>
+      </>
     )
   }
   

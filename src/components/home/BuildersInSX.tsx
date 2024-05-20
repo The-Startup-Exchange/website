@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useTheme } from '../../context/ThemeContext';
 import Image from "next/image";
-import Images from '../../assets/images';
 import Link from "next/link";
 import { builders } from '../../data/buildersData';
 
@@ -13,18 +12,17 @@ import {
 
 const BuildersInSX = () => {
   const { styles, theme } = useTheme();
-  const numRows = Math.ceil(builders.length / 5);
   return (
     <div className={`flex flex-col w-[100%] ${styles.textColor} ${styles.backgroundColor}`}>
-      <div className={`flex flex-col mx-11 py-[75px] gap-y-24 ${styles.borderColor} border-x`}>
+      <div className={`flex flex-col md:mx-11 mx-5 py-[75px] gap-y-24 ${styles.borderColor} border-x`}>
         <div
-          className="flex flex-col w-full items-start px-12 justify-start lg:space-y-10 space-y-0">
-            <h1 className={`w-[85%] text-[58px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>SX is a community for the most ambitious college students looking to become full-time founders.</h1>
-            <p className={`text-[36px] leading-[150%] ${plus_jakarta_sans_medium.className}`}>Our community helps you grow from -1 to 1.</p>
+          className="flex flex-col w-full items-start px-12 justify-start space-y-10">
+            <h1 className={`md:w-[85%] md:text-[58px] text-[32px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>SX is a community for the most ambitious college students looking to become full-time founders.</h1>
+            <p className={`md:text-[36px] text-[18px] leading-[150%] ${plus_jakarta_sans_medium.className}`}>Our community helps you grow from -1 to 1.</p>
         </div>
         <div
           className="flex flex-row w-full px-12 justify-between align-center items-center">
-            <h1 className={`${styles.textColor} w-[85%] text-[58px] leading-[125%] ${plus_jakarta_sans_medium.className}`}> Builders in SX</h1>
+            <h1 className={`${styles.textColor} md:w-[85%] md:text-[58px] text-[32px] leading-[125%] ${plus_jakarta_sans_medium.className}`}> Builders in SX</h1>
             <Button href="/community" variant="outline" className={`py-3 px-5 `}>
               <div className={`${messina_book.className} font-bold`}>
               VIEW ALL {'>'}
@@ -32,10 +30,9 @@ const BuildersInSX = () => {
             </Button>
         </div>
         <div className="flex flex-col w-full">
-          {Array.from({ length: numRows }, (_, rowIndex) => (
-            <div className="flex flex-row space-x-3">
-              {builders.slice(rowIndex * 5, (rowIndex + 1) * 5).map((builder) => (
-              <div className="flex flex-col w-[307px]">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+            {builders.map((builder, index) => (
+              <div className="flex flex-col w-full">
                 <div className={`relative border rounded-t-xl ${styles.borderColor}`}>
                   <Image src={builder.pic} height={238} width={307} className={`rounded-t-xl ${styles.borderColor}`} alt="sx" />
                   <p className={`absolute bottom-2 right-2 text-[14px] ${messina_book.className}`}>{builder.category}</p>
@@ -53,10 +50,9 @@ const BuildersInSX = () => {
                         </Link>
                     </div>
                 </div>
-                </div>
-              ))}
-            </div>
-          ))}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
@@ -64,4 +60,3 @@ const BuildersInSX = () => {
 }
 
 export default BuildersInSX
-

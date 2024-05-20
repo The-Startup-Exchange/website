@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { useMediaQuery } from 'react-responsive';
 import { messina_book, messina_semibold } from "../app/fonts";
 
 const navItems = [
@@ -29,11 +30,15 @@ const navItems = [
   },
 ];
 
-const SiteMenu = ({ useBold = false }) => {
+const SiteMenu = ({ useBold = false, vertical = false }) => {
   const fontClass = useBold ? messina_semibold.className : messina_book.className;
+  const isSmallScreen = useMediaQuery({ query: '(max-width: 768px)' });
+
+  // Determine layout based on vertical prop and screen size
+  const layoutClass = vertical || isSmallScreen ? 'flex-col space-y-8' : 'flex-row space-x-8 items-center';
 
   return (
-    <div className="flex flex-row space-x-8 items-center">
+    <div className={`flex ${layoutClass} text-center md:text-left`}>
       {navItems.map((item) => (
         item.name === "EVENTS" ? (
           <a key={item.link} href={item.link} target="_blank" rel="noopener noreferrer">

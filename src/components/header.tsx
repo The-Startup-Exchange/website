@@ -1,41 +1,71 @@
-"use client";
-
-import { Button } from "@/components/ui/button";
-import { messina_book, messina_semibold } from "../app/fonts";
-import { useRef } from "react";
-import NextImage from "next/image";
+import { useState, useEffect, useRef } from "react";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { IoMdClose } from "react-icons/io";
 import Link from "next/link";
+import NextImage from "next/image";
 import SiteMenu from "./siteMenu";
 import { useTheme } from '../context/ThemeContext';
 import Images from '../assets/images';
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 
 const Header = () => {
-    const navRef = useRef<HTMLDivElement>(null);
+    const [isMobile, setIsMobile] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
     const { theme } = useTheme();
-    const showNavBar = () => {
-        navRef.current ? navRef.current.classList.toggle("responsive_nav") : null;
-      };
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     return (
-      <>
-        <header className={`flex w-full justify-between align-center items-center flex-row border-b pb-3.5 py-5 px-12 sticky top-0 z-50 ${theme === 'dark' ? 'bg-black text-white border-[#242424]' : 'bg-white text-black border-[#E0E0E0]'}`}>
-          <div>
-            <Link href="/">
-              <NextImage
-                  src={theme === 'dark' ? Images.sxFull : Images.sxFullBlack}
-                  alt="SX Full Logo"
-                  width={136}
-                  height={27}
-                  />
-            </Link>
-          </div>
-          <SiteMenu useBold={true}/>
-          <Button href="https://docs.google.com/forms/d/1K4TKHANO3iWyFM51OqRXBqT1wP2FTYEjE1pdz6559Y0/viewform?edit_requested=true" variant="dark" className="rounded-xl py-3 px-5">
-            <div className={`${messina_semibold.className} font-bold`}>
-                JOIN THE COMMUNITY
-            </div>
-          </Button>
-        </header>
-      </>
+        <>
+            <header className={`flex w-full justify-between items-center flex-row border-b pb-3.5 py-5 md:px-12 px-4 sticky top-0 z-50 ${theme === 'dark' ? 'bg-black text-white border-[#242424]' : 'bg-white text-black border-[#E0E0E0]'}`}>
+                <div>
+                    <Link href="/">
+                        <NextImage
+                            src={theme === 'dark' ? Images.sxFull : Images.sxFullBlack}
+                            alt="SX Full Logo"
+                            width={136}
+                            height={27}
+                            className="w-[55%] md:w-[100%] h-auto"
+                        />
+                    </Link>
+                </div>
+                {isMobile ? (
+                    <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
+                        <SheetTrigger asChild>
+                            <div className="cursor-pointer">
+                                {menuOpen ? <IoMdClose size={30} /> : <RxHamburgerMenu size={24} />}
+                            </div>
+                        </SheetTrigger>
+                        <SheetContent side="top" className="bg-[#111111] w-full p-12 space-y-4">
+                            <SiteMenu useBold={true} vertical={true} />
+                            <Button href="https://docs.google.com/forms/d/1K4TKHANO3iWyFM51OqRXBqT1wP2FTYEjE1pdz6559Y0/viewform?edit_requested=true" variant="dark" className="rounded-xl py-3 px-5 mt-4">
+                                <div className="font-bold">
+                                    JOIN THE COMMUNITY
+                                </div>
+                            </Button>
+                        </SheetContent>
+                    </Sheet>
+                ) : (
+                    <>
+                        <SiteMenu useBold={true} />
+                        <Button href="https://docs.google.com/forms/d/1K4TKHANO3iWyFM51OqRXBqT1wP2FTYEjE1pdz6559Y0/viewform?edit_requested=true" variant="dark" className="rounded-xl py-3 px-5">
+                            <div className="font-bold">
+                                JOIN THE COMMUNITY
+                            </div>
+                        </Button>
+                    </>
+                )}
+            </header>
+        </>
     );
 };
 

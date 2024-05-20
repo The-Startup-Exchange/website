@@ -43,8 +43,8 @@ const FAQs = () => {
   const { theme, styles } = useTheme();
   return (
     <div className={`flex flex-col w-full items-start justify-start gap-y-4 ${styles.backgroundColor} ${styles.textColor}`}>
-    <div className={`flex flex-row px-28 py-[75px] mx-11 border-x items-start ${styles.borderColor}`}>
-      <h1 className={`w-[50%] text-[58px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>FAQs</h1>
+    <div className={`flex flex-col md:flex-row px-6 md:px-28 space-y-8 md:space-y-0 py-[75px] md:md:mx-11 mx-5 mx-5 border-x items-start ${styles.borderColor}`}>
+      <h1 className={`w-[50%] md:text-[58px] text-[32px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>FAQs</h1>
       <div className={`flex flex-col w-full ${theme === 'dark' ? 'border-[#323232]' : 'border-[#e0e0e0]'} border-t items-start justify-start`}>
         {faqs.map((item, index) => (
           <FAQItem key={index} item={item} />
@@ -67,18 +67,18 @@ const FAQItem = ({ item }) => {
   
     return (
       <div className="w-full">
-        <div className={`flex flex-row w-full ${isVisible ? '' : 'border-b'} border-[#323232] py-12 align-start items-start justify-start space-x-4 cursor-pointer`}
+        <div className={`flex flex-row w-full ${isVisible ? '' : 'border-b'} border-[#323232] md:py-12 py-8 align-start items-start justify-start space-x-4 cursor-pointer`}
              onClick={() => setIsVisible(!isVisible)}>
-            <h1 className={`text-[#A0A0A0] text-[24px] leading-[125%] ${plus_jakarta_sans_medium.className} ${isVisible ? 'rotate-90' : ''} transition duration-500`}>
+            <h1 className={`text-[#A0A0A0] md:text-[24px] text-[20px] leading-[125%] ${plus_jakarta_sans_medium.className} ${isVisible ? 'rotate-90' : ''} transition duration-500`}>
             →
             </h1>
-            <h1 className={`${theme === 'dark' ? 'text-white' : 'text-black'} text-[24px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>
+            <h1 className={`${theme === 'dark' ? 'text-white' : 'text-black'} md:text-[24px] text-[20px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>
               {item.text}
             </h1>
         </div>
         <div style={descriptionStyle}>
-          <div className="flex flex-row w-full border-b border-[#323232] pb-12 align-start items-start justify-start space-x-4">
-            <h1 className={`text-[#7E7E7E] text-[21px] px-[40px] tracking-tight leading-[125%] ${messina_book.className}`}>
+          <div className="flex flex-row w-full border-b border-[#323232] md:pb-12 pb-8 align-start items-start justify-start space-x-4">
+            <h1 className={`text-[#7E7E7E] md:text-[21px] text-[13px] px-[40px] tracking-tight leading-[125%] ${messina_book.className}`}>
               {item.desc}
             </h1>
           </div>
