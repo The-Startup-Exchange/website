@@ -38,7 +38,7 @@ const AlumniPrograms = () => {
                   src={theme === 'dark' ? Images[item.name] : Images[item.black]}
                   alt={item.name}
                   height={60}
-                  className="opacity-80 hover:opacity-100 transition duration-500"
+                  className={`${theme === 'dark' ? 'opacity-80 hover:opacity-100' : 'opacity-80 hover:opacity-40'} transition duration-500`}
                   style={{ maxWidth: '100%', height: 'auto' }}
                 />
               </Link>
