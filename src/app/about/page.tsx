@@ -66,7 +66,7 @@ const AboutPage = () => {
                         <p className={`${messina_light.className} w-full justify-end text-end items-end`}>How we started</p>
                     </div>
                     <div className={`flex flex-col space-y-8 justify-center gap-y-4`}>
-                        <p className="text-[36px] px-36">
+                        <p className={`text-[36px] text-cent leading-[125%] px-36 ${plus_jakarta_sans_medium.className}`}>
                             We’re on a mission to better define college entrepreneurship. While college is an exciting time to work on your craziest ideas, many students feel lost in the process of developing their ideas.
                         </p>
                         <p className="px-36">
@@ -82,6 +82,13 @@ const AboutPage = () => {
                             <p>
                                 Inspired by this feedback and similar sentiments from dozens of students across the US, our team founded Startup Exchange in Fall 2023 with the mission to cultivate entrepreneurial communities at campuses in need and support established ones. Since then, over 7,000 students from more than 40 universities nationwide have attended a Startup Exchange event.
                             </p>
+                        </div>
+                    </div>
+                    <div className={`items-end px-56 pb-28 space-y-8 text-[18px] ${plus_jakarta_sans_thin.className}`}>
+                        <p className={`text-[36px] text-left leading-[125%] py-12 ${plus_jakarta_sans_medium.className}`}>
+                            We centralize a network of domain experts, startups, mentors, and investors that enable students to go from -1 to 1.
+                        </p>
+                        <div className="px-24 space-y-8">
                             <p>
                                 By bringing together organizers from universities across the country, our team understands the unique challenges that every campus faces when building a community of like-minded entrepreneurs.
                             </p>
@@ -92,11 +99,6 @@ const AboutPage = () => {
                                 In addition to our work with universities, we actively collaborate with leading investors, startups, and corporations to bring new and exciting opportunities to the builders in our community. These partnerships range from community events and sponsorship to marketing and recruitment opportunities, further enhancing the resources and networks available to our members.
                             </p>
                         </div>
-                    </div>
-                    <div className="items-end px-56 pb-28">
-                        <p className="text-[36px] text-center leading-[125%] py-12">
-                            We centralize a network of domain experts, startups, mentors, and investors that enable students to go from -1 to 1.
-                        </p>
                     </div>
                 </div>
                 <DashedDivider />
