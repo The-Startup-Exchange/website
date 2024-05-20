@@ -74,16 +74,23 @@ const AboutPage = () => {
                         </p>
                         <div className={`px-80 space-y-8 text-[18px] ${plus_jakarta_sans_thin.className}`}>
                             <p>
-                                Startup Exchange began as a club at Georgia Tech, gathering makers, builders, and creatives in the library every week to discuss their most ambitious startup ideas. Over 10 years, students from this group went on to start a variety of companies, collectively valued at over $4.5B.
+                            Startup Exchange arose from the entrepreneurship student club at Georgia Tech, which gathered makers, builders, and creatives in the library every week to discuss their most ambitious startup ideas. Over 10 years, students from this group went on to start companies collectively valued at over $4.5B. 
                             </p>
                             <p>
-                                Through several hackathons and demo days in 2023, we attracted thousands of students from universities nationwide -- most of which expressed a need for a new space that prioritizes the rapid iteration of shipping fast, and that attracts people genuinely passionate and serious about pursuing their ideas.
+                                Through the club&apos;s extended-reality hackathon in 2023, many of the hundreds of attendees from across the nation expressed a need for a new space that prioritizes rapid iteration and attracts people genuinely passionate about pursuing their ideas.
                             </p>
                             <p>
-                            SX is committed to cultivating communities at campuses in need, and supporting established communities. By bringing together organizers from universities nationwide, our team understands the unique challenges that every campus faces when it comes to building a community of like-minded entrepreneurs.
+                                Inspired by this feedback and similar sentiments from dozens of students across the US, our team founded Startup Exchange in Fall 2023 with the mission to cultivate entrepreneurial communities at campuses in need and support established ones. Since then, over 7,000 students from more than 40 universities nationwide have attended a Startup Exchange event.
                             </p>
                             <p>
-                                We&apos;re working with student organizations and institutions across the US to foster close-knit, inclusive communities where students can form meaningful relationships that encourage them to further invest in their entrepreneurial journey.                    </p>
+                                By bringing together organizers from universities across the country, our team understands the unique challenges that every campus faces when building a community of like-minded entrepreneurs.
+                            </p>
+                            <p>
+                                We work closely with student organizations and institutions to create inclusive, close-knit communities where students can form meaningful relationships and gain the support and encouragement they need to pursue their entrepreneurial journeys.
+                            </p>
+                            <p>
+                                In addition to our work with universities, we actively collaborate with leading investors, startups, corporations, and other institutions to bring new and exciting opportunities to the builders in our community. These partnerships range from community events and sponsorship to marketing and recruitment opportunities, further enhancing the resources and networks available to our members.
+                            </p>
                         </div>
                     </div>
                     <div className="items-end px-56 pb-28">
