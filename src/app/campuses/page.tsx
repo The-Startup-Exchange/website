@@ -8,6 +8,7 @@ import Link from "next/link";
 import DashedDivider from "@/components/dashedDivider";
 import { campuses } from '../../data/campusesData';
 import { useTheme } from '../../context/ThemeContext';
+import { Button } from "@/components/ui/button";
 import {
     plus_jakarta_sans_extrabold,
     plus_jakarta_sans_bold,
@@ -15,7 +16,8 @@ import {
     plus_jakarta_sans_medium,
     plus_jakarta_sans_thin,
     messina_book,
-    messina_light
+    messina_light,
+    messina_semibold
 } from '../fonts';
 
 interface Campus {
@@ -44,7 +46,7 @@ const Campuses = () => {
     return (
         <>
             <Header />
-            <div className={`flex flex-col w-full items-center pb-12 justify-center ${theme === 'dark' ? 'text-white bg-black' : 'text-black bg-white'}`}>
+            <div className={`flex flex-col w-full items-center justify-center ${theme === 'dark' ? 'text-white bg-black' : 'text-black bg-white'}`}>
                 <div className={`flex flex-col w-[94%] py-32 px-12 ${theme === 'dark' ? 'border-[#242424] bg-dot-white/[0.2]' : 'border-[#E0E0E0] bg-dot-black/[0.2]'} border-x items-start justify-center gap-y-4`}>
                     <div className={`absolute pointer-events-none inset-0 flex items-center justify-center ${theme === 'dark' ? 'bg-black' : 'bg-white'} [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]`}></div>
                     <h1 className={`w-full text-start text-[21px] pb-16 leading-[125%] ${messina_book.className}`}>CAMPUSES</h1>
@@ -74,11 +76,57 @@ const Campuses = () => {
                     </div>
                 </div>
                 <DashedDivider />
+                <div className={`w-[94%] md:p-20 p-12 space-y-6  ${theme === 'dark' ? 'border-[#242424]' : 'border-[#E0E0E0]'} border-x `}>
+                    <div className="items-start">
+                        <p className={`text-end ${messina_light.className} md:pb-6 pb-2`}>Participating campuses</p>
+                    </div>
+                    {Array.from({ length: numRows }, (_, rowIndex) => (
+                        <div key={rowIndex} className={`flex flex-col sm:flex-row justify-between md:gap-x-16 gap-y-16`}>
+                            {campuses.slice(rowIndex * 2, (rowIndex + 1) * 2).map((campus, index) => (
+                                <Link key={index} href={campus.link} className={`flex flex-col w-full sm:w-[50%] align-start space-y-6 text-start ${plus_jakarta_sans_regular.className}`}>
+                                    <div className="relative w-full h-full">
+                                        <Image src={campus.pictureName} alt={campus.name} width={560} height={448} objectFit="cover"/>
+                                        <div className="absolute inset-0 bg-black opacity-0 hover:opacity-60 flex items-center justify-center transition-opacity duration-300">
+                                            <Image src={campus.logo} alt="Logo" width={100} height={100} />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p className={`text-[32px] ${plus_jakarta_sans_medium.className}`}>
+                                            {campus.name}
+                                        </p>
+                                        <p className={`text-[14px] ${messina_book.className}`}>
+                                            {campus.uni.toUpperCase()}
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p className={`text-[14px] ${plus_jakarta_sans_regular.className}`}>
+                                            {campus.description}
+                                        </p>
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
+                    ))}
+                    <div className="flex flex-col w-full">
+                        <div className="items-start pb-4 pt-12">
+                            <p className={`${messina_light.className}`}>Coming this fall</p>
+                        </div>
+                        <div className={`flex flex-col w-full ${theme === 'dark' ? 'border-[#323232]' : 'border-[#e0e0e0]'} border-t items-start justify-start`}>
+                            {newCampuses.map((campus, index) => (
+                            <div key={index} className={`flex md:flex-row flex-col space-y-3 md:space-y-0 w-full py-8 border-b md:align-center md:items-center ${theme === 'dark' ? 'border-[#242424]' : 'border-[#e0e0e0]'} justify-between`}>
+                                <h1 className={`${styles.textColor} md:text-[24px] text-[20px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>{campus.orgName}</h1>
+                                <h1 className={`${styles.textColor} md:text-[16px] text-[13px] leading-[125%] ${messina_light.className}`}>{campus.campusName}</h1>
+                            </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+                <DashedDivider />
                 <div className={`flex flex-col w-[94%] z-10 md:space-y-12 space-y-4 ${theme === 'dark' ? 'border-[#242424]' : 'border-[#E0E0E0]'} border-x justify-center gap-y-4`}>
                     <div className="items-start px-12 py-12">
                         <p className={`text-start ${messina_light.className}`}>Our process</p>
                     </div>
-                    <div className="items-end md:px-72 px-12 pb-28 space-y-12">
+                    <div className="items-end md:px-72 px-12 pb-20 space-y-12">
                         <div className="flex flex-col space-y-4">
                             <p className={`text-[36px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>
                                 1. We identify campuses with promising activity of active builders on campus.
@@ -164,53 +212,11 @@ const Campuses = () => {
                             </ul>
                         </p>
                     </div>
+                    <div className={`px-12 py-20 border-t ${styles.borderColor} w-full flex md:flex-row flex-col justify-between md:space-x-12 md:align-center md:items-center`}>
+                        <p className={`${plus_jakarta_sans_extrabold.className} text-[32px] w-full pb-12 md:pb-0`}>Interested in joining our team of organizers?</p>
+                        <Button href="mailto:hello@startup.exchange" variant="secondary" className={`px-10 w-full md:w-auto ${messina_semibold.className}`}>CONTACT US</Button>
+                    </div>
                 </div>
-                <DashedDivider />
-                <div className={`w-[94%] md:p-20 p-12 space-y-6  ${theme === 'dark' ? 'border-[#242424]' : 'border-[#E0E0E0]'} border-x `}>
-                    <div className="items-start">
-                        <p className={`text-end ${messina_light.className} md:pb-6 pb-2`}>Participating campuses</p>
-                    </div>
-                    {Array.from({ length: numRows }, (_, rowIndex) => (
-                        <div key={rowIndex} className={`flex flex-col sm:flex-row justify-between md:gap-x-16 gap-y-16`}>
-                            {campuses.slice(rowIndex * 2, (rowIndex + 1) * 2).map((campus, index) => (
-                                <Link key={index} href={campus.link} className={`flex flex-col w-full sm:w-[50%] align-start space-y-6 text-start ${plus_jakarta_sans_regular.className}`}>
-                                    <div className="relative w-full h-full">
-                                        <Image src={campus.pictureName} alt={campus.name} width={560} height={448} objectFit="cover"/>
-                                        <div className="absolute inset-0 bg-black opacity-0 hover:opacity-60 flex items-center justify-center transition-opacity duration-300">
-                                            <Image src={campus.logo} alt="Logo" width={100} height={100} />
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <p className={`text-[32px] ${plus_jakarta_sans_medium.className}`}>
-                                            {campus.name}
-                                        </p>
-                                        <p className={`text-[14px] ${messina_book.className}`}>
-                                            {campus.uni.toUpperCase()}
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <p className={`text-[14px] ${plus_jakarta_sans_regular.className}`}>
-                                            {campus.description}
-                                        </p>
-                                    </div>
-                                </Link>
-                            ))}
-                        </div>
-                    ))}
-                    <div className="flex flex-col w-full">
-                        <div className="items-start pb-4 pt-12">
-                            <p className={`${messina_light.className}`}>Coming this fall</p>
-                        </div>
-                        <div className={`flex flex-col w-full ${theme === 'dark' ? 'border-[#323232]' : 'border-[#e0e0e0]'} border-t items-start justify-start`}>
-                            {newCampuses.map((campus, index) => (
-                            <div key={index} className={`flex md:flex-row flex-col space-y-3 md:space-y-0 w-full py-8 border-b md:align-center md:items-center ${theme === 'dark' ? 'border-[#242424]' : 'border-[#e0e0e0]'} justify-between`}>
-                                <h1 className={`${styles.textColor} md:text-[24px] text-[20px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>{campus.orgName}</h1>
-                                <h1 className={`${styles.textColor} md:text-[16px] text-[13px] leading-[125%] ${messina_light.className}`}>{campus.campusName}</h1>
-                            </div>
-                            ))}
-                        </div>
-                        </div>
-                    </div>
             </div>
             <Footer />
         </>

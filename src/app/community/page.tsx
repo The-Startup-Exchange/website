@@ -7,6 +7,7 @@ import Images from "../../assets/images";
 import Link from "next/link";
 import DashedDivider from "@/components/dashedDivider";
 import { builders } from '../../data/buildersData';
+import { Button } from "@/components/ui/button";
 import { useTheme } from '../../context/ThemeContext';
 import {
     plus_jakarta_sans_extrabold,
@@ -15,7 +16,8 @@ import {
     plus_jakarta_sans_medium,
     plus_jakarta_sans_thin,
     messina_book,
-    messina_light
+    messina_light,
+    messina_semibold
 } from '../fonts';
 
 const Community = () => {
@@ -25,7 +27,7 @@ const Community = () => {
     return (
         <>
             <Header />
-            <div className={`flex flex-col w-full md:items-center pb-12 md:justify-center ${styles.textColor} ${styles.backgroundColor}`}>
+            <div className={`flex flex-col w-full md:items-center md:justify-center ${styles.textColor} ${styles.backgroundColor}`}>
                 <div className={`flex flex-col w-[94%] py-32 px-12 ${theme === 'dark' ? 'border-[#242424] bg-dot-white/[0.2]' : 'border-[#E0E0E0] bg-dot-black/[0.2]'} border-x items-start justify-center gap-y-4`}>
                     <div className={`absolute pointer-events-none inset-0 flex items-center justify-center ${theme === 'dark' ? 'bg-black' : 'bg-white'} [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]`}></div>
 
@@ -197,6 +199,12 @@ const Community = () => {
                     </div>
                 ))}
                 <DashedDivider />
+                <div className={`flex md:flex-row flex-col w-[94%] z-10 ${theme === 'dark' ? 'border-[#242424]' : 'border-[#E0E0E0]'} border-x space-x-8`}>
+                    <div className={`px-12 py-20 w-full flex md:flex-row flex-col justify-between md:space-x-12 md:align-center md:items-center`}>
+                        <p className={`${plus_jakarta_sans_extrabold.className} text-[32px] w-full pb-12 md:pb-0`}>Interested in joining the community?</p>
+                        <Button href="https://docs.google.com/forms/d/1K4TKHANO3iWyFM51OqRXBqT1wP2FTYEjE1pdz6559Y0/viewform?edit_requested=true" variant="secondary" className={`px-10 w-full md:w-auto ${messina_semibold.className}`}>APPLY FOR F24</Button>
+                    </div>
+                </div>
             </div>
             <Footer />
         </>
