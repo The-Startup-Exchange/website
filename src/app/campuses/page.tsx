@@ -18,9 +18,28 @@ import {
     messina_light
 } from '../fonts';
 
+interface Campus {
+    orgName: string;
+    campusName: string;
+  }
+
 const Campuses = () => {
-    const { theme } = useTheme();
+    const { theme, styles } = useTheme();
     const numRows = Math.ceil(campuses.length / 2);
+    const newCampuses: Campus[] =[
+        {
+          orgName: 'Startup Exchange at Cal',
+          campusName: 'University of California, Berkeley',
+        },
+        {
+          orgName: 'Startup Exchange at Columbia',
+          campusName: 'Columbia University',
+        },
+        {
+          orgName: 'Startup Exchange at UCF',
+          campusName: 'University of Central Florida',
+        },
+    ];
 
     return (
         <>
@@ -178,7 +197,20 @@ const Campuses = () => {
                             ))}
                         </div>
                     ))}
-                </div>
+                    <div className="flex flex-col w-full">
+                        <div className="items-start pb-4 pt-12">
+                            <p className={`${messina_light.className}`}>Coming this fall</p>
+                        </div>
+                        <div className={`flex flex-col w-full ${theme === 'dark' ? 'border-[#323232]' : 'border-[#e0e0e0]'} border-t items-start justify-start`}>
+                            {newCampuses.map((campus, index) => (
+                            <div key={index} className={`flex md:flex-row flex-col space-y-3 md:space-y-0 w-full py-8 border-b md:align-center md:items-center ${theme === 'dark' ? 'border-[#242424]' : 'border-[#e0e0e0]'} justify-between`}>
+                                <h1 className={`${styles.textColor} md:text-[24px] text-[20px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>{campus.orgName}</h1>
+                                <h1 className={`${styles.textColor} md:text-[16px] text-[13px] leading-[125%] ${messina_light.className}`}>{campus.campusName}</h1>
+                            </div>
+                            ))}
+                        </div>
+                        </div>
+                    </div>
             </div>
             <Footer />
         </>
