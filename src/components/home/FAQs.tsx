@@ -53,7 +53,7 @@ const FAQs = () => {
   const faqs: FAQ[] = [
     { 
         text: "What kind of students join the community?",
-        desc: "We want students who are builders and makers. It could be software development, design, engineering, CAD, architecture, real estate, branding, content creation, or absolutely anything." 
+        desc: "We want students who are builders and makers. It could be software development, design, engineering, CAD, architecture, branding, content creation, or absolutely anything." 
     },
     { 
         text: "What type of support can I expect from SX?",
@@ -65,7 +65,7 @@ const FAQs = () => {
     },
     { 
         text: "Is this remote or in-person?",
-        desc: "Our events are in-person in the Atlanta area, and virtual for non-ATL students. This will change in the future as we expand!" 
+        desc: "Our small groups meet remotely, but meet in-person in SF, NYC, CHI, and ATL during each semester! We are also actively planning hackathons in SF, NYC, and ATL." 
     },
     { 
         text: "Is it seriously free?",
