@@ -1,11 +1,13 @@
 import {
   plus_jakarta_sans_medium,
-  plus_jakarta_sans_extrabold
+  plus_jakarta_sans_extrabold,
+  messina_book
 } from '../../app/fonts';
 import { AnimatedTooltip } from '../ui/animated-tooltip';
 import Link from "next/link";
 import Image from "next/image";
 import Images from '../../assets/images';
+import { Button } from '../ui/button';
 import { useTheme } from '../../context/ThemeContext';
 import { campuses } from '../../data/campusesData';
 
@@ -13,9 +15,15 @@ const ParticipatingCampuses = () => {
 const { theme, styles } = useTheme();
 return (
   <div className={`flex flex-col w-full ${styles.backgroundColor} ${styles.textColor} gap-y-4`}>
-    <div className={`flex flex-col md:mx-11 mx-5 px-12 py-[75px] border-x ${styles.borderColor} md:gap-y-24 gap-y-12`}>
-      <div className="flex flex-col w-full items-start justify-start lg:space-y-10 space-y-0">
-          <h1 className={`md:w-[85%] md:text-[58px] text-[32px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>Participating campuses</h1>
+    <div className={`flex flex-col md:mx-11 mx-5 px-12 py-[75px] border-x ${styles.borderColor} md:gap-y-20 gap-y-12`}>
+      <div
+        className="flex flex-row w-full justify-between align-center items-center">
+        <h1 className={`${styles.textColor} md:w-[85%] md:text-[58px] text-[32px] leading-[125%] ${plus_jakarta_sans_medium.className}`}> Participating campuses</h1>
+        <Button href="/community" variant="outline" className={`py-3 px-5  ${theme === 'dark' ? 'bg-black text-white border border-[#232323]' : 'bg-white text-black border border-[#e0e0e0]'}`}>
+          <div className={`${messina_book.className} font-bold`}>
+          VIEW ALL {'>'}
+          </div>
+        </Button>
       </div>
       <div className="flex flex-col md:flex-row md:flex-wrap w-full space-y-12 md:space-y-0">
         {campuses.map((campus, index) => (

@@ -39,7 +39,7 @@ const Community = () => {
                                 Our 0 → 1 program enables students to take meaningful steps with their idea, and to grow as an early-stage founder.
                             </p>
                             <p className={`text-[18px] align-end justify-end leading-[140%] ${plus_jakarta_sans_thin.className}`}>
-                                Connect further through our events and partnered organizations, which help students to turn an idea into an early iteration with users.
+                                Go from -1 to 0 through our events and partnered organizations, which help students to turn an idea into an early iteration with users.
                             </p>
                         </div>
                     </div>

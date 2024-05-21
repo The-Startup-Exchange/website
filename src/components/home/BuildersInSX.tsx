@@ -19,13 +19,13 @@ const BuildersInSX = () => {
       <div className={`flex flex-col md:mx-11 mx-5 py-[75px] gap-y-20 ${styles.borderColor} border-x`}>
         <div
           className={`flex flex-col w-full items-start px-12 justify-start border-b pb-24 space-y-10 ${styles.borderColor}`}>
-            <h1 className={`md:w-[85%] md:text-[58px] text-[32px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>SX is a community for the most ambitious college students looking to become full-time founders.</h1>
+            <h1 className={`md:w-[85%] md:text-[58px] text-[32px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>SX is the community for the most ambitious college students passionate about their ideas.</h1>
             <p className={`md:text-[32px] ${theme === 'dark' ? 'text-gray-400' : 'text-black'} text-[18px] leading-[150%] ${plus_jakarta_sans_regular.className}`}>Our community helps you grow from -1 to 1.</p>
         </div>
         <div
           className="flex flex-row w-full px-12 justify-between align-center items-center">
             <h1 className={`${styles.textColor} md:w-[85%] md:text-[58px] text-[32px] leading-[125%] ${plus_jakarta_sans_medium.className}`}> Builders in SX</h1>
-            <Button href="/community" variant="outline" className={`py-3 px-5 `}>
+            <Button href="/community" variant="outline" className={`py-3 px-5  ${theme === 'dark' ? 'bg-black text-white border border-[#232323]' : 'bg-white text-black border border-[#e0e0e0]'}`}>
               <div className={`${messina_book.className} font-bold`}>
               VIEW ALL {'>'}
               </div>
