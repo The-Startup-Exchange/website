@@ -35,11 +35,11 @@ const AboutPage = () => {
                 <div className={`flex flex-col w-[94%] py-32 px-12 ${theme === 'dark' ? 'border-[#242424] bg-dot-white/[0.2]' : 'border-[#E0E0E0] bg-white bg-dot-black/[0.2] '} border-x items-start justify-center gap-y-4`}>
                     <div className={`absolute pointer-events-none inset-0 flex items-center justify-center ${theme === 'dark' ? 'bg-black' : 'bg-white'} [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]`}></div>
                     <h1 className={`w-full text-start text-[21px] pb-16 leading-[125%] ${messina_book.className}`}>ABOUT US</h1>
-                    <div className={`flex flex-row w-full space-x-16 items-center ${plus_jakarta_sans_regular.className}`}>
-                        <p className="text-[48px] w-[50%] leading-[125%] ">
+                    <div className={`flex flex-col md:flex-row w-full md:space-x-16 space-y-8 md:space-y-0 md:items-center ${plus_jakarta_sans_regular.className}`}>
+                        <p className="md:text-[48px] text-[32px] md:w-[50%] leading-[125%] ">
                             Who we are
                         </p>
-                        <p className={`text-[18px] w-[50%] align-end justify-end leading-[140%] ${plus_jakarta_sans_thin.className}`}>
+                        <p className={`text-[18px] md:w-[50%] align-end justify-end leading-[140%] ${plus_jakarta_sans_thin.className}`}>
                         We are a nonprofit community that empowers university students to become successful startup founders through accountability, mentorship, personal development, and rapid iteration of their ideas.
                         </p>
                     </div>
@@ -49,12 +49,12 @@ const AboutPage = () => {
                     <div className="items-start px-12 py-12">
                         <p className={`${messina_light.className}`}>Empowering do-ers to reach their full potential.</p>
                     </div>
-                    <div className="items-end px-72 pb-28 space-y-12">
-                        <p className="text-[36px] leading-[125%]">
+                    <div className="items-end md:px-72 px-12 pb-28 space-y-12">
+                        <p className="md:text-[36px] text-[32px] leading-[125%]">
                             Startup Exchange is on a mission to create a universally accessible space for university students to become startup founders.
                         </p>
                         <div className="flex flex-row w-full justify-end">
-                            <p className={`text-[18px] w-[60%] leading-[140%] ${plus_jakarta_sans_thin.className}`}>
+                            <p className={`text-[18px] md:w-[60%] leading-[140%] ${plus_jakarta_sans_thin.className}`}>
                                 We envision a reality where builders can figure out how to succesfully build and grow a startup idea, regardless of what college they attend.
                             </p>
                         </div>
@@ -66,13 +66,13 @@ const AboutPage = () => {
                         <p className={`${messina_light.className} w-full justify-end text-end items-end`}>How we started</p>
                     </div>
                     <div className={`flex flex-col space-y-8 justify-center gap-y-4`}>
-                        <p className={`text-[36px] text-cent leading-[125%] px-36 ${plus_jakarta_sans_medium.className}`}>
+                        <p className={`md:text-[36px] text-[32px] text-cent leading-[125%] md:px-36 px-12 ${plus_jakarta_sans_medium.className}`}>
                             We’re looking to better define college entrepreneurship. While college is an exciting time to work on your craziest ideas, many students feel lost in the process of developing their ideas.
                         </p>
-                        <p className="px-36">
+                        <p className="md:px-36 px-12">
                             We’re here to change that.
                         </p>
-                        <div className={`px-80 space-y-8 text-[18px] ${plus_jakarta_sans_thin.className}`}>
+                        <div className={`md:px-80 px-12 space-y-8 text-[18px] ${plus_jakarta_sans_thin.className}`}>
                             <p>
                             Startup Exchange arose from the entrepreneurship student club at Georgia Tech, which gathered makers, builders, and creatives in the library every week to discuss their most ambitious startup ideas. Over 10 years, students from this group went on to start companies collectively valued at over $4.5B. 
                             </p>
@@ -84,11 +84,11 @@ const AboutPage = () => {
                             </p>
                         </div>
                     </div>
-                    <div className={`items-end px-56 pb-28 space-y-8 text-[18px] ${plus_jakarta_sans_thin.className}`}>
-                        <p className={`text-[36px] text-left leading-[125%] py-12 ${plus_jakarta_sans_medium.className}`}>
+                    <div className={`items-end md:px-56 px-12 pb-28 space-y-8 text-[18px] ${plus_jakarta_sans_thin.className}`}>
+                        <p className={`md:text-[36px] text-[32px] text-left leading-[125%] py-12 ${plus_jakarta_sans_medium.className}`}>
                             We centralize a network of domain experts, startups, mentors, and investors that enable students to go from -1 to 1.
                         </p>
-                        <div className="px-24 space-y-8">
+                        <div className="md:px-24 space-y-8">
                             <p>
                                 By bringing together organizers from universities across the country, our team understands the unique challenges that every campus faces when building a community of like-minded entrepreneurs.
                             </p>
@@ -108,11 +108,11 @@ const AboutPage = () => {
                     </div>
                     <div className={`flex flex-col px-12 justify-start space-y-16`}>
                         {Array.from({ length: numRows }, (_, rowIndex) => (
-                            <div key={rowIndex} className={`flex flex-row px-20 gap-x-28`}>
+                            <div key={rowIndex} className={`flex flex-col sm:flex-row md:px-20 md:gap-x-28 gap-y-12 md:gap-y-0`}>
                                 {team.slice(rowIndex * 4, (rowIndex + 1) * 4).map((teamMember, index) => (
-                                    <div key={index} className={`flex flex-col align-start w-[20%] space-y-6 text-start`}>
-                                        <div className="relative w-full h-full">
-                                            <Image src={teamMember.image} alt={teamMember.name} width={250} height={250}/>
+                                    <div key={index} className={`flex flex-col align-start w-full sm:w-1/2 space-y-6 text-start`}>
+                                        <div className="relative w-full h-auto">
+                                            <Image src={teamMember.image} alt={teamMember.name} width="100%" height="auto" layout="responsive"/>
                                         </div>
                                         <div className="space-y-4">
                                             <p className={`text-[21px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>
@@ -144,9 +144,9 @@ const AboutPage = () => {
                             </div>
                         ))}
                     </div>
-                    <div className="px-32 pb-28 w-full flex justify-between space-x-12 items-center">
+                    <div className="md:px-32 px-12 pb-28 w-full flex flex-col md:flex-row justify-between md:space-x-12 md:items-center space-y-12 md:space-y-0">
                             <p className={`${plus_jakarta_sans_extrabold.className} text-[32px] w-full`}>Join us and shape the future of college entrepreneurship.</p>
-                            <Button href="https://www.notion.so/startup-exchange/Startup-Exchange-Team-Breakdown-411ccdc0abaf46cfaa09c7eb6c2fb613?pvs=4" variant="secondary" className={`px-4 ${messina_semibold.className}`}>VIEW OPEN POSITIONS</Button>
+                            <Button href="https://www.notion.so/startup-exchange/Startup-Exchange-Team-Breakdown-411ccdc0abaf46cfaa09c7eb6c2fb613?pvs=4" variant="secondary" className={`w-full md:w-auto px-4 ${messina_semibold.className}`}>VIEW OPEN POSITIONS</Button>
                         </div>
                 </div>
                 <DashedDivider />
@@ -158,12 +158,11 @@ const AboutPage = () => {
                     </div>
                     <div className={`flex flex-col ${theme === 'dark' ? 'border-[#323232]' : 'border-[#e0e0e0]'} border-[#242424] border-dashed border-t items-start justify-start`}>
                         {Array.from({ length: numPartnerRows }, (_, rowIndex) => (
-                        <div key={rowIndex} className={`flex flex-row w-full border-b border-dashed ${theme === 'dark' ? 'border-[#323232]' : 'border-[#e0e0e0]'}`}>
+                        <div key={rowIndex} className={`flex flex-wrap w-full border-b border-dashed ${theme === 'dark' ? 'border-[#323232]' : 'border-[#e0e0e0]'}`}>
                             {partners.slice(rowIndex * 5, (rowIndex + 1) * 5).map((partner, index) => (
-                            <div key={index} className={`flex flex-row w-full border-r border-dashed ${theme === 'dark' ? 'border-[#323232]' : 'border-[#e0e0e0]'} py-10 px-12 align-center items-center justify-center`}>
+                            <div key={index} className={`flex w-full sm:w-1/2 md:w-1/5 border-r border-b md:border-b-0 border-dashed ${theme === 'dark' ? 'border-[#323232]' : 'border-[#e0e0e0]'} py-10 px-12 items-center justify-center`}>
                                 <Link href={partner.href} target="_blank" rel="noopener noreferrer">
                                 <Image
-                                    // src={theme === 'dark' ? Images[partner.name] : (partner.black ? Images[partner.black] : Images[partner.name])}
                                     src={Images[partner.name]}
                                     alt={partner.name}
                                     height={42}
@@ -176,9 +175,9 @@ const AboutPage = () => {
                         </div>
                         ))}
                     </div>
-                    <div className="px-12 pb-20 pt-4 w-full flex justify-between space-x-12 align-center items-center">
-                        <p className={`${plus_jakarta_sans_extrabold.className} text-[32px] w-full`}>Interested in partnering with us?</p>
-                        <Button href="mailto:hello@startup.exchange" variant="secondary" className={`px-10 ${messina_semibold.className}`}>CONTACT US</Button>
+                    <div className="px-12 pb-20 pt-4 w-full flex md:flex-row flex-col justify-between md:space-x-12 md:align-center md:items-center">
+                        <p className={`${plus_jakarta_sans_extrabold.className} text-[32px] w-full pb-12 md:pb-0`}>Interested in partnering with us?</p>
+                        <Button href="mailto:hello@startup.exchange" variant="secondary" className={`px-10 w-full md:w-auto ${messina_semibold.className}`}>CONTACT US</Button>
                     </div>
                 </div>
             </div>

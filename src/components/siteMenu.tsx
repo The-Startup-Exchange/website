@@ -30,15 +30,13 @@ const navItems = [
   },
 ];
 
-const SiteMenu = ({ useBold = false, vertical = false }) => {
+const SiteMenu = ({ useBold = false, vertical = false, textAlign = 'text-center' }) => {
   const fontClass = useBold ? messina_semibold.className : messina_book.className;
   const isSmallScreen = useMediaQuery({ query: '(max-width: 768px)' });
-
-  // Determine layout based on vertical prop and screen size
   const layoutClass = vertical || isSmallScreen ? 'flex-col space-y-8' : 'flex-row space-x-8 items-center';
 
   return (
-    <div className={`flex ${layoutClass} text-center md:text-left`}>
+    <div className={`${textAlign} flex ${layoutClass} md:text-left`}>
       {navItems.map((item) => (
         item.name === "EVENTS" ? (
           <a key={item.link} href={item.link} target="_blank" rel="noopener noreferrer">

@@ -20,7 +20,7 @@ const Hero = () => {
                     <source src="/sxVid.mp4" type="video/mp4" />
                 </video>
                 <div className="flex flex-col w-full gap-y-4 px-12 z-10 relative">
-                    <button onClick={toggleTheme} className={`p-2 m-2 border absolute md:right-3 md:-top-56 right-4 top-16 rounded-lg ${theme === 'dark' ? 'border-[#949494]' : 'border-[#111111]'}`}>
+                    <button onClick={toggleTheme} className={`p-2 m-2 border absolute md:right-3 md:-top-56 right-2 -top-24 rounded-lg ${theme === 'dark' ? 'border-[#949494]' : 'border-[#111111]'}`}>
                         {theme === 'dark' ? (
                             <Image src={Images.darkMode} alt="Light Mode" width={18} height={18} />
                         ) : (

@@ -7,7 +7,7 @@ export const campuses = [
       pictureName: Images.sxgt_team,
       logo: Images.sxgt,
       blackLogo: Images.sxgtBlack,
-      description: 'a space for georgia tech makers, builders, & creators to exchange their ideas.',
+      description: 'A space for Georgia Tech makers, builders, & creators to exchange their ideas.',
       link: 'https://tinyurl.com/startupexchangegt',
       items: [
         {
@@ -39,7 +39,7 @@ export const campuses = [
       pictureName: Images.uiuc_sundays,
       logo: Images.buildIllinois,
       blackLogo: Images.buildIllinoisBlack,
-      description: 'the community for artists, founders, and creatives at UIUC.',
+      description: 'The community for artists, founders, and creatives at UIUC.',
       link: 'https://lu.ma/buildillinois',
       items: [
         {
@@ -71,7 +71,7 @@ export const campuses = [
       pictureName: Images.v1michigan_team,
       logo: Images.v1Michigan,
       blackLogo: Images.v1MichiganBlack,
-      description: 'V1 is UMich&apos;s community for ambitious student builders — engineers, artists, designers, founders, scientists, and more.',
+      description: 'V1 is UMich\'s community for ambitious student builders — engineers, artists, designers, founders, scientists, and more.',
       link: 'https://v1michigan.com/',
       items: [
         {
@@ -103,7 +103,7 @@ export const campuses = [
       pictureName: Images.rev_retreat,
       logo: Images.rev,
       blackLogo: Images.revBlack,
-      description: 'rev is Northeastern&apos;s space where students collaborate to work on side projects and take any idea from inception to reality.',
+      description: 'rev is Northeastern\'s space where students collaborate to work on side projects and take any idea from inception to reality.',
       link: 'https://www.rev.school/',
       items: [
         {
