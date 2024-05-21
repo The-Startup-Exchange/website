@@ -1,5 +1,30 @@
 import localFont from 'next/font/local'
-import { Plus_Jakarta_Sans } from 'next/font/google'
+import { Plus_Jakarta_Sans, Crimson_Text } from 'next/font/google'
+
+export const crimson_regular = Crimson_Text({
+    weight: '400',  // Thin
+    subsets: ['latin'],
+    display: 'swap',
+});
+
+export const crimson_regular_italic = Crimson_Text({
+    weight: '400',  // Thin
+    style: 'italic',
+    subsets: ['latin'],
+    display: 'swap',
+});
+
+export const crimson_semibold = Crimson_Text({
+    weight: '600',  // Thin
+    subsets: ['latin'],
+    display: 'swap',
+});
+
+export const crimson_bold = Crimson_Text({
+    weight: '700',  // Thin
+    subsets: ['latin'],
+    display: 'swap',
+});
 
 export const plus_jakarta_sans_thin = Plus_Jakarta_Sans({
     weight: '200',  // Thin

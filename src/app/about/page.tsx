@@ -17,6 +17,7 @@ import {
     plus_jakarta_sans_regular,
     plus_jakarta_sans_medium,
     plus_jakarta_sans_thin,
+    crimson_regular_italic,
     messina_book,
     messina_light,
     messina_semibold
@@ -49,13 +50,30 @@ const AboutPage = () => {
                     <div className="items-start px-12 py-12">
                         <p className={`${messina_light.className}`}>Empowering do-ers to reach their full potential.</p>
                     </div>
-                    <div className="items-end md:px-72 px-12 pb-28 space-y-12">
+                    <div className="items-end md:px-72 px-12 pb-20 space-y-12">
                         <p className="md:text-[36px] text-[32px] leading-[125%]">
-                            Startup Exchange is on a mission to create a universally accessible space for university students to become startup founders.
+                            Startup Exchange is on a mission to create a <span className={`${crimson_regular_italic.className} tracking-tight text-[42px]`}>{' '}universally accessible space{' '}</span>  for college students to become startup founders.
                         </p>
                         <div className="flex flex-row w-full justify-end">
                             <p className={`text-[18px] md:w-[60%] leading-[140%] ${plus_jakarta_sans_thin.className}`}>
                                 We envision a reality where builders can figure out how to succesfully build and grow a startup idea, regardless of what college they attend.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="items-end md:px-36 px-12 pb-28 space-y-12">
+                        <p className={`md:text-[36px] text-[32px] leading-[125%]`}>
+                            College is inherently a
+                            <span className={`${crimson_regular_italic.className} tracking-tight text-[42px]`}>{' '}linear{' '}</span> 
+                            path. It&apos;s scary to break the path of picking a major and applying to internships like your friends.
+                        </p>
+                        <div className="flex flex-col md:px-12 md:w-[60%] justify-center space-y-12">
+                            <p className={`text-[18px] leading-[140%] ${plus_jakarta_sans_thin.className}`}>
+                                Here&apos; the thing. You shouldn&apos;t need to worry about that at this stage. The biggest ideas and companies started simply as side-projects or inner-child curiosities.
+                            </p>
+                        </div>
+                        <div className="flex flex-row w-full justify-end">
+                            <p className={`text-[18px] md:w-[55%] leading-[140%] ${plus_jakarta_sans_thin.className}`}>
+                                Before you have any conviction that an idea should become a startup, it&apos;s important to tinker with an idea, to put it in front of users, and to get feedback. SX is the place for you to do that, and to learn how to do it well.
                             </p>
                         </div>
                     </div>
@@ -66,11 +84,11 @@ const AboutPage = () => {
                         <p className={`${messina_light.className} w-full justify-end text-end items-end`}>How we started</p>
                     </div>
                     <div className={`flex flex-col space-y-8 justify-center gap-y-4`}>
-                        <p className={`md:text-[36px] text-[32px] text-cent leading-[125%] md:px-36 px-12 ${plus_jakarta_sans_medium.className}`}>
-                            We’re looking to better define college entrepreneurship. While college is an exciting time to work on your craziest ideas, many students feel lost in the process of developing their ideas.
+                        <p className={`md:text-[36px] text-[32px] text-cent leading-[125%] md:px-40 px-12 ${plus_jakarta_sans_medium.className}`}>
+                            We’re looking to <span className={`${crimson_regular_italic.className} tracking-tight text-[42px]`}>{' '}redefine{' '}</span> college entrepreneurship. While college is an exciting time to work on your craziest ideas, <span className={`${crimson_regular_italic.className} tracking-tight text-[42px]`}>{' '}many students feel lost{' '}</span>in the process of developing their ideas.
                         </p>
-                        <p className="md:px-36 px-12">
-                            We’re here to change that.
+                        <p className="md:px-40 px-12">
+                            By growing a culture of making things, we’re here to change that.
                         </p>
                         <div className={`md:px-80 px-12 space-y-8 text-[18px] ${plus_jakarta_sans_thin.className}`}>
                             <p>
