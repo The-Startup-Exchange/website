@@ -112,7 +112,7 @@ const AboutPage = () => {
                                 {team.slice(rowIndex * 4, (rowIndex + 1) * 4).map((teamMember, index) => (
                                     <div key={index} className={`flex flex-col align-start w-full sm:w-1/2 space-y-6 text-start`}>
                                         <div className="relative w-full h-auto">
-                                            <Image src={teamMember.image} alt={teamMember.name} width="100%" height="auto" layout="responsive"/>
+                                            <Image src={teamMember.image} alt={teamMember.name} width={225} height={225} objectFit="cover" className="w-full"/>
                                         </div>
                                         <div className="space-y-4">
                                             <p className={`text-[21px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>
