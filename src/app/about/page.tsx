@@ -68,7 +68,7 @@ const AboutPage = () => {
                         </p>
                         <div className="flex flex-col md:px-12 md:w-[60%] justify-center space-y-12">
                             <p className={`text-[18px] leading-[140%] ${plus_jakarta_sans_thin.className}`}>
-                                Here&apos; the thing. You shouldn&apos;t need to worry about that at this stage. The biggest ideas and companies started simply as side-projects or inner-child curiosities.
+                                Here&apos;s the thing. You shouldn&apos;t need to worry about that at this stage. The biggest ideas and companies started simply as side-projects or inner-child curiosities.
                             </p>
                         </div>
                         <div className="flex flex-row w-full justify-end">
@@ -111,7 +111,7 @@ const AboutPage = () => {
                                 By bringing together organizers from universities across the country, our team understands the unique challenges that every campus faces when building a community of like-minded entrepreneurs.
                             </p>
                             <p>
-                                We work closely with student organizations and institutions to create inclusive, close-knit communities where students can form meaningful relationships and gain the support and encouragement they need to pursue their entrepreneurial journeys.
+                                We work closely with student organizations and institutions to create inclusive, close-knit communities where students can form meaningful relationships and gain the support and accountability that they need to pursue their maker journeys.
                             </p>
                             <p>
                                 In addition to our work with universities, we actively collaborate with leading investors, startups, and corporations to bring new and exciting opportunities to the builders in our community. These partnerships range from community events and sponsorship to marketing and recruitment opportunities, further enhancing the resources and networks available to the SX community.
