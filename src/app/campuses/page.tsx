@@ -218,6 +218,7 @@ const Campuses = () => {
                     </div>
                 </div>
             </div>
+            <DashedDivider/>
             <Footer />
         </>
     );

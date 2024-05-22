@@ -199,6 +199,7 @@ const AboutPage = () => {
                     </div>
                 </div>
             </div>
+            <DashedDivider/>
             <Footer />
         </>
   );

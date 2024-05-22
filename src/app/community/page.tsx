@@ -206,6 +206,7 @@ const Community = () => {
                     </div>
                 </div>
             </div>
+            <DashedDivider/>
             <Footer />
         </>
     );
