@@ -18,7 +18,7 @@ interface FAQItemProps {
 
 const FAQItem: React.FC<FAQItemProps> = ({ item }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const { theme } = useTheme();
+  const { theme, styles } = useTheme();
   const descriptionStyle = {
     maxHeight: isVisible ? '200px' : '0px',
     overflow: 'hidden',
@@ -28,7 +28,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ item }) => {
 
   return (
     <div className="w-full">
-      <div className={`flex flex-row w-full ${isVisible ? '' : 'border-b'} border-[#323232] md:py-12 py-8 align-start items-start justify-start space-x-4 cursor-pointer`}
+      <div className={`flex flex-row w-full ${isVisible ? '' : 'border-b'} ${styles.dashedBorderColor} md:py-12 py-8 align-start items-start justify-start space-x-4 cursor-pointer`}
            onClick={() => setIsVisible(!isVisible)}>
           <h1 className={`text-[#A0A0A0] md:text-[24px] text-[20px] leading-[125%] ${plus_jakarta_sans_medium.className} ${isVisible ? 'rotate-90' : ''} transition duration-500`}>
           →
@@ -38,7 +38,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ item }) => {
           </h1>
       </div>
       <div style={descriptionStyle}>
-        <div className="flex flex-row w-full border-b border-[#323232] md:pb-12 pb-8 align-start items-start justify-start space-x-4">
+        <div className={`flex flex-row w-full border-b ${styles.dashedBorderColor} md:pb-12 pb-8 align-start items-start justify-start space-x-4`}>
           <h1 className={`text-[#7E7E7E] md:text-[21px] text-[13px] px-[40px] tracking-tight leading-[125%] ${messina_book.className}`}>
             {item.desc}
           </h1>
