@@ -43,8 +43,8 @@ export default function Footer() {
       };
     return (
       <>
-        <footer className={`flex w-full flex-col border-dashed border-t space-x-4 ${theme === 'dark' ? 'text-[#A1A1A1] bg-black border-[#414141]' : 'text-black bg-white border-[#E0E0E0]'}`}>
-            <div className={`${styles.borderColor} md:mx-11 px-12 mx-5 py-[52px] border-x border-t z-10`}>
+        <footer className={`flex w-full flex-col border-dashed space-x-4 ${theme === 'dark' ? 'text-[#A1A1A1] bg-black border-[#414141]' : 'text-black bg-white border-[#E0E0E0]'}`}>
+            <div className={`${styles.borderColor} md:mx-11 px-12 mx-5 py-[52px] border-x z-10`}>
                 <div className="flex w-full justify-start">
                     <Image src={Images.sxFooterText} alt="Startup Exchange Logo" layout="responsive" width={100} height={100} />
                 </div>

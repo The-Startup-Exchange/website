@@ -44,6 +44,7 @@ const Home = () => {
         <CTA/>
         {/* <DashedDivider/> */}
         <BottomMenu/>
+        <DashedDivider/>
         <Footer/>
       </main>
     </>
