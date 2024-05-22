@@ -9,6 +9,7 @@ import {
     plus_jakarta_sans_medium,
     plus_jakarta_sans_regular,
     plus_jakarta_sans_semibold,
+    crimson_regular_italic,
     messina_book
 } from '../../app/fonts';
 
@@ -19,8 +20,8 @@ const BuildersInSX = () => {
       <div className={`flex flex-col md:mx-11 mx-5 py-[75px] gap-y-20 ${styles.borderColor} border-x`}>
         <div
           className={`flex flex-col w-full items-start px-12 justify-start border-b pb-24 space-y-10 ${styles.borderColor}`}>
-            <h1 className={`md:w-[85%] md:text-[58px] text-[32px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>SX is the community for the most ambitious college students passionate about their ideas.</h1>
-            <p className={`md:text-[32px] ${theme === 'dark' ? 'text-gray-400' : 'text-black'} text-[18px] leading-[150%] ${plus_jakarta_sans_regular.className}`}>Our community helps you grow from -1 to 1.</p>
+            <h1 className={`md:w-[85%] md:text-[58px] text-[32px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>SX is the <span className={`${crimson_regular_italic.className} tracking-tight md:text-[68px] text-[42px]`}>{' '}community{' '}</span>for the most ambitious college students passionate about their <span className={`${crimson_regular_italic.className} tracking-tight md:text-[68px] text-[42px]`}>{' '}ideas.{' '}</span></h1>
+            <p className={`md:text-[32px] ${theme === 'dark' ? 'text-gray-400' : 'text-black'} text-[18px] leading-[150%] ${plus_jakarta_sans_regular.className}`}>Our community helps you grow <span className={`${crimson_regular_italic.className} tracking-tight md:text-[38px] text-[21px]`}>{' '}from -1 to 1.{' '}</span></p>
         </div>
         <div
           className="flex flex-row w-full px-12 justify-between align-center items-center">

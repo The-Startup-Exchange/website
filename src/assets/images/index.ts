@@ -62,6 +62,8 @@ import bcgX from './partnerLogos/bcgX.webp';
 import biolocity from './partnerLogos/biolocity.webp';
 import celsius from './partnerLogos/celsius.webp';
 import cityAtlanta from './partnerLogos/cityAtlanta.png';
+import zeroOneLogo from './partnerLogos/zeroOneLogo.png';
+import zeroOneLogoBlack from './partnerLogos/zeroOneLogoBlack.png';
 // contrary
 import gt from './partnerLogos/gt.png';
 import gtCreateX from './partnerLogos/gtCreateX.webp';
@@ -138,11 +140,14 @@ import uiuc_sundays from './participatingCampuses/uiuc_sundays.jpg';
 import sxgt_team from './participatingCampuses/sxgt_team.jpg';
 import rev_retreat from './participatingCampuses/rev_retreat.jpeg';
 import v1michigan_team from './participatingCampuses/v1michigan_team.jpeg';
+import zeroToOne from './participatingCampuses/zeroToOne.jpeg';
 
 import sxFull from './sxLogos/sxFull.png';
 import sxFullBlack from './sxLogos/sxFullBlack.png';
 import sxLogo from './sxLogos/sxLogo.png';
 import sxLogoBlack from './sxLogos/sxLogoBlack.png';
+import sxFooterText from './sxLogos/sxFooterText.png';
+import sxFooterTextWhite from './sxLogos/sxFooterTextWhite.png';
 
 type ImagesType = {
     [key: string]: StaticImageData;
@@ -277,6 +282,11 @@ type ImagesType = {
     joe: StaticImageData;
     ayushi: StaticImageData;
     communityRev: StaticImageData;
+    zeroToOne: StaticImageData;
+    zeroOneLogo: StaticImageData;
+    zeroOneLogoBlack: StaticImageData;
+    sxFooterText: StaticImageData;
+    sxFooterTextWhite: StaticImageData;
 };
 
 
@@ -412,6 +422,11 @@ const Images: ImagesType = {
     joe,
     ayushi,
     communityRev,
+    zeroToOne,
+    zeroOneLogo,
+    zeroOneLogoBlack,
+    sxFooterText,
+    sxFooterTextWhite,
 };
 
 export default Images;
