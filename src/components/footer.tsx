@@ -46,10 +46,10 @@ export default function Footer() {
         <footer className={`flex w-full flex-col border-dashed space-x-4 ${theme === 'dark' ? 'text-[#A1A1A1] bg-black border-[#414141]' : 'text-black bg-white border-[#E0E0E0]'}`}>
             <div className={`${styles.borderColor} md:mx-11 px-5 mx-5 md:py-[52px] py-6 border-x z-10`}>
                 <div className="flex w-full justify-start">
-                    <Image src={Images.sxFooterText} alt="Startup Exchange Logo" layout="responsive" width={100} height={100} />
+                    <Image src={theme === 'dark' ? Images.sxFooterText : Images.sxFooterTextWhite} alt="Startup Exchange Logo" layout="responsive" width={100} height={100} />
                 </div>
-                <div className="flex flex-row justify-between md:pt-12 pt-8">
-                    <div className={`${messina_light.className} flex flex-col text-[12px] md:text-[13px] gap-x-4 tracking-tight items-start`}>
+                <div className="flex flex-row justify-between align-end items-end md:pt-12 pt-8">
+                    <div className={`${messina_light.className} flex flex-col text-[12px] md:text-[13px] gap-y-2 tracking-tight items-start`}>
                         <div>
                         © 2024 STARTUP EXCHANGE. 
                         </div>
