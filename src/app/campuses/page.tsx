@@ -151,10 +151,10 @@ const Campuses = () => {
                             </ul>
                         </p>
                         <p className={`text-[36px] leading-[125%] ${plus_jakarta_sans_medium.className}`}>
-                            3. If a viable fit, we jam on hosting a &quot;Ship-It&quot; event on their campus.
+                            3. If a viable fit, we jam on hosting a &quot;<Link href="https://shipit.lol/" className="underline" target="_blank" rel="noopener noreferrer">Ship-It</Link>&quot; event on their campus.
                         </p>
                         <p className={`text-[18px] md:px-12 px-4 leading-[175%] ${plus_jakarta_sans_thin.className}`}>
-                            &quot;Ship-It&quot; is an event that our campuses host every week to regularly bring student makers, builders, and creators together. It’s three hours set aside to work on a side project, and to get feedback from others on your idea.
+                            &quot;<Link href="https://shipit.lol/" className={`${styles.textColor} underline`} target="_blank" rel="noopener noreferrer">Ship-It</Link>&quot; is an event that our campuses host every week to regularly bring student makers, builders, and creators together. It’s three hours set aside to work on a side project, and to get feedback from others on your idea.
                         </p>
                         <p className={`text-[18px] md:px-12 px-4 leading-[175%] ${plus_jakarta_sans_thin.className}`}>
                             Organizers are not confined to solely hosting &quot;Ship-It&quot;, but it’s our strongly recommended starting point for bringing builders together.
