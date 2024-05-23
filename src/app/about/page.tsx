@@ -56,7 +56,7 @@ const AboutPage = () => {
                         </p>
                         <div className="flex flex-row w-full justify-end">
                             <p className={`text-[18px] md:w-[60%] leading-[140%] ${plus_jakarta_sans_thin.className}`}>
-                                We envision a reality where builders can figure out how to succesfully build and grow a startup idea, regardless of what college they attend.
+                                We envision a reality where students can learn how to build and grow a startup idea, regardless of what college they attend.
                             </p>
                         </div>
                     </div>
