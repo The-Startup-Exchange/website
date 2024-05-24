@@ -39,7 +39,7 @@ const BuildersInSX = () => {
                   <div key={index} className={`flex flex-col min-w-[200px] max-w-[250px] ${index === builders.length - 1 ? 'mr-[-20px]' : ''}`}>
                     <div className={`relative border ${styles.borderColor} border-dashed`} style={{ height: '238px' }}>
                       <Image src={builder.pic} layout="fill" objectFit="cover" className={``} alt="sx" />
-                      <p className={`absolute bottom-2 right-2 text-gray-200 text-[14px] ${messina_book.className}`}>{builder.category}</p>
+                      <p className={`absolute bottom-2 right-2 text-gray-200 text-[14px] ${messina_book.className}`}>{builder.category.toUpperCase()}</p>
                     </div>
                     <div className={`border border-dashed p-5 space-y-4 ${styles.borderColor}`}>
                         <p className={`text-[15px] leading-[150%] ${styles.textColor} ${plus_jakarta_sans_semibold.className}`} style={{ minHeight: '70px' }}>{builder.oneLiner}</p>
