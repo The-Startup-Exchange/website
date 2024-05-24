@@ -45,7 +45,7 @@ export const builders = [
       },
       {
         oneLiner: "Truman designed a wearable EEG patch alerting people with epilepsy of impending seizures.",
-        category: "Medical Devices \& Diagnostics",
+        category: "Medical Devices",
         pic: Images.truman,
         college: Images.uchicago,
         link: "https://www.linkedin.com/in/ayushisinhahaha/",
