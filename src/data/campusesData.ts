@@ -66,7 +66,7 @@ export const campuses = [
       ],
     },
     {
-      name: 'V1Michigan',
+      name: 'V1 @ Michigan',
       uni: 'University of Michigan',
       pictureName: Images.v1michigan_team,
       logo: Images.v1Michigan,
