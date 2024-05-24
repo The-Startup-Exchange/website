@@ -44,6 +44,8 @@ import uiuc from './colleges/uiuc.png';
 import georgiaTech from './colleges/georgiaTech.png';
 import harvard from './colleges/harvard.webp';
 import nyu from './colleges/nyu.webp';
+import uchicago from './colleges/uchicago.png';
+import duke from './colleges/duke.png';
 
 import rocket from "./communityPics/rocket.png";
 import communityRev from "./communityPics/communityRev.jpeg";
@@ -123,6 +125,10 @@ import shreya from './people/shreya.png';
 import ali from './people/ali.jpeg';
 import joe from './people/joe.jpeg';
 import ayushi from './people/ayushi.jpeg';
+import truman from './people/truman.jpeg';
+import kareem from './people/kareem.jpeg';
+import kasie from './people/kasie.jpeg';
+import rae from './people/rae.jpeg';
 
 import adiTeam from './people/adi.jpeg';
 import carterTeam from './people/carter.webp';
@@ -287,6 +293,12 @@ type ImagesType = {
     zeroOneLogoBlack: StaticImageData;
     sxFooterText: StaticImageData;
     sxFooterTextWhite: StaticImageData;
+    uchicago: StaticImageData;
+    duke: StaticImageData;
+    truman: StaticImageData;
+    kareem: StaticImageData;
+    kasie: StaticImageData;
+    rae: StaticImageData;
 };
 
 
@@ -380,6 +392,7 @@ const Images: ImagesType = {
     biolocity,
     celsius,
     cityAtlanta,
+    duke,
     gt,
     gtCreateX,
     gtCoC,
@@ -415,6 +428,7 @@ const Images: ImagesType = {
     tsv,
     ventureAtlanta,
     ventureLab,
+    uchicago,
     ysabelle,
     matt,
     shreya,
@@ -427,6 +441,10 @@ const Images: ImagesType = {
     zeroOneLogoBlack,
     sxFooterText,
     sxFooterTextWhite,
+    truman,
+    kareem,
+    kasie,
+    rae,
 };
 
 export default Images;

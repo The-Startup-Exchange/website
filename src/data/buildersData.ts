@@ -43,6 +43,34 @@ export const builders = [
         college: Images.harvard,
         link: "https://www.linkedin.com/in/ayushisinhahaha/",
       },
+      {
+        oneLiner: "Truman designed a wearable EEG patch alerting people with epilepsy of impending seizures.",
+        category: "Medical Devices \& Diagnostics",
+        pic: Images.truman,
+        college: Images.uchicago,
+        link: "https://www.linkedin.com/in/ayushisinhahaha/",
+      },
+      {
+        oneLiner: "Kasie is enabling programmable delivery of protein therapeutics.",
+        category: "Biotechnology \& Pharmaceuticals",
+        pic: Images.kasie,
+        college: Images.duke,
+        link: "https://www.linkedin.com/in/ayushisinhahaha/",
+      },
+      {
+        oneLiner: "Rae designed a crossbody bag that provides rapid access to naloxene.",
+        category: "Medical Devices \& Diagnostics",
+        pic: Images.rae,
+        college: Images.georgiaTech,
+        link: "https://www.linkedin.com/in/ayushisinhahaha/",
+      },
+      {
+        oneLiner: "Kareem designed a UTI-guard monitoring incontinence in elderly women.",
+        category: "Biotechnology \& Pharmaceuticals",
+        pic: Images.kareem,
+        college: Images.georgiaTech,
+        link: "https://www.linkedin.com/in/ayushisinhahaha/",
+      },
 
 ]
 
