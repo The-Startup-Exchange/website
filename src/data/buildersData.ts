@@ -9,11 +9,11 @@ export const builders = [
         link: "https://twitter.com/therealvikranth",
       },
       {
-        oneLiner: "Matt is using AI to turn Canvas into an intelligent studying tool.",
-        category: "EDUCATION",
-        pic: Images.matt,
-        college: Images.georgiaTech,
-        link: "https://www.linkedin.com/in/mattpsteele/",
+        oneLiner: "Truman designed a wearable EEG patch alerting people with epilepsy of impending seizures.",
+        category: "Medical Devices",
+        pic: Images.truman,
+        college: Images.uchicago,
+        link: "https://www.linkedin.com/in/ayushisinhahaha/",
       },
       {
         oneLiner: "Ysabelle is using computer vision to enable kids with neuromotor disabilities.",
@@ -44,11 +44,11 @@ export const builders = [
         link: "https://www.linkedin.com/in/ayushisinhahaha/",
       },
       {
-        oneLiner: "Truman designed a wearable EEG patch alerting people with epilepsy of impending seizures.",
-        category: "Medical Devices",
-        pic: Images.truman,
-        college: Images.uchicago,
-        link: "https://www.linkedin.com/in/ayushisinhahaha/",
+        oneLiner: "Matt is using AI to turn Canvas into an intelligent studying tool.",
+        category: "EDUCATION",
+        pic: Images.matt,
+        college: Images.georgiaTech,
+        link: "https://www.linkedin.com/in/mattpsteele/",
       },
       {
         oneLiner: "Kasie is enabling programmable delivery of protein therapeutics.",
