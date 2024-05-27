@@ -191,7 +191,7 @@ const Events = () => {
                     </div>
                     <div className="px-12 pb-20 space-y-20">
                         {events.map((event, index) => (
-                        <Link href={event.link} target="_blank" rel="noopener noreferrer" className={`flex flex-row w-full space-x-20 items-center ${plus_jakarta_sans_regular.className}`}>
+                        <Link key={index} href={event.link} target="_blank" rel="noopener noreferrer" className={`flex flex-row w-full space-x-20 items-center ${plus_jakarta_sans_regular.className}`}>
                             <div className="relative w-[50%]">
                                 <Image src={event.image} alt="hi" width={550} height={300} objectFit="cover" layout="responsive"/>
                                 <div className="absolute inset-0 bg-black opacity-0 hover:opacity-60 flex items-center justify-center transition-opacity duration-300">
