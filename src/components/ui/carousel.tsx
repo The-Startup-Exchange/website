@@ -77,28 +77,28 @@ const Carousel = React.forwardRef<
       setCanScrollNext(api.canScrollNext())
     }, [])
 
-    const scrollPrev = React.useCallback((event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-      event.preventDefault();
-      api?.scrollTo((api.selectedScrollSnap() - 3 + api.scrollSnapList().length) % api.scrollSnapList().length);
-  }, [api]);
-  
-  const scrollNext = React.useCallback((event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-      event.preventDefault();
-      api?.scrollTo((api.selectedScrollSnap() + 3) % api.scrollSnapList().length);
-  }, [api]);
+    const scrollPrev = React.useCallback(() => {
+      if (!api) return;
+      api.scrollTo((api.selectedScrollSnap() - 3 + api.scrollSnapList().length) % api.scrollSnapList().length);
+    }, [api]);
+    
+    const scrollNext = React.useCallback(() => {
+      if (!api) return;
+      api.scrollTo((api.selectedScrollSnap() + 3) % api.scrollSnapList().length);
+    }, [api]);
 
     const handleKeyDown = React.useCallback(
       (event: React.KeyboardEvent<HTMLDivElement>) => {
         if (event.key === "ArrowLeft") {
-          event.preventDefault()
-          scrollPrev()
+          event.preventDefault();
+          scrollPrev();  // Call without passing the event object
         } else if (event.key === "ArrowRight") {
-          event.preventDefault()
-          scrollNext()
+          event.preventDefault();
+          scrollNext();  // Call without passing the event object
         }
       },
       [scrollPrev, scrollNext]
-    )
+    );
 
     React.useEffect(() => {
       if (!api || !setApi) {
@@ -128,10 +128,9 @@ const Carousel = React.forwardRef<
           carouselRef,
           api: api,
           opts,
-          orientation:
-            orientation || (opts?.axis === "y" ? "vertical" : "horizontal"),
-          scrollPrev,
-          scrollNext,
+          orientation: orientation || (opts?.axis === "y" ? "vertical" : "horizontal"),
+          scrollPrev,  // Directly use the function without wrapping
+          scrollNext,  // Directly use the function without wrapping
           canScrollPrev,
           canScrollNext,
         }}
@@ -215,9 +214,8 @@ const CarouselPrevious = React.forwardRef<
         className
       )}
       disabled={!canScrollPrev}
-      onClick={(event) => {
-        event.preventDefault();
-        scrollPrev(event);
+      onClick={() => {
+        scrollPrev(); 
       }}
       {...props}
     >
@@ -247,9 +245,8 @@ const CarouselNext = React.forwardRef<
         className
       )}
       disabled={!canScrollNext}
-      onClick={(event) => {
-        event.preventDefault();
-        scrollNext(event);
+      onClick={() => {
+        scrollNext();
       }}
       {...props}
     >
