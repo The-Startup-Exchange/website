@@ -10,7 +10,38 @@ export const metadata = {
     default: "Startup Exchange | The path to moving your ideas forward awaits.",
     template: "%s | Startup Exchange",
   },
-  description: "SX offers college students the community and mentors that enable them to become full-time founders. Sign up to hear about cool builders, campus communities, and upcoming events.",
+  description: "Startup Exchange is a student-led organization curating the largest community for college builders, makers, and creators. We enable you to build, launch, and grow your ideas.",
+  keywords: ["startup", "startup exchange", "college startups", "college entrepreneurship", "startup accelerators"],
+  twitter: {
+    card: "summary_large_image",
+    site: "@startupxchange",
+    creator: "@startupxchange",
+    images: "https://startup.exchange/head/embed.png",
+    title: {
+      default: "Startup Exchange | The path to moving your ideas forward awaits.",
+      template: "%s | Startup Exchange",
+    },
+    description:
+      "Startup Exchange is a student-led organization curating the largest community for college builders, makers, and creators. We enable you to build, launch, and grow your ideas.",
+  },
+  openGraph: {
+    url: "https://startup.exchange/",
+    type: "website",
+    locale: "en_US",
+    siteName: "Startup Exchange",
+    title: {
+      default: "Startup Exchange | The path to moving your ideas forward awaits.",
+      template: "%s | Startup Exchange",
+    },
+    description:
+    "Startup Exchange is a student-led organization curating the largest community for college builders, makers, and creators. We enable you to build, launch, and grow your ideas.",
+    images: [
+      {
+        url: "https://startup.exchange/head/embed.png",
+        alt: "Startup Exchange: The path to moving your ideas forward awaits.",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
