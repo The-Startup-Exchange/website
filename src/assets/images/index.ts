@@ -155,6 +155,8 @@ import sxLogoBlack from './sxLogos/sxLogoBlack.png';
 import sxFooterText from './sxLogos/sxFooterText.png';
 import sxFooterTextWhite from './sxLogos/sxFooterTextWhite.png';
 
+import aiatl from './events/aiatl.jpeg';
+
 type ImagesType = {
     [key: string]: StaticImageData;
     rocket: StaticImageData;
@@ -299,6 +301,7 @@ type ImagesType = {
     kareem: StaticImageData;
     kasie: StaticImageData;
     rae: StaticImageData;
+    aiatl: StaticImageData;
 };
 
 
@@ -445,6 +448,7 @@ const Images: ImagesType = {
     kareem,
     kasie,
     rae,
+    aiatl,
 };
 
 export default Images;
