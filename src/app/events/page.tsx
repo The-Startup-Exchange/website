@@ -112,7 +112,7 @@ const Events = () => {
         },
         {
             name: "ImpactHack",
-            description: "The largest collegiate healthcare pitch competition in digital health, AI and medical diagnostics. 250+ participants in 2024.",
+            description: "A policy and tech hackathon aligned with the UN Sustainable Development Goals.",
             logo: Images.impactHackLogo,
             image: Images.impactHack,
             link: "https://www.impacthackatl.com",
