@@ -16,12 +16,14 @@ import {
     plus_jakarta_sans_regular,
     plus_jakarta_sans_medium,
     plus_jakarta_sans_semibold,
+    plus_jakarta_sans_extrabold,
     plus_jakarta_sans_thin,
     messina_book,
     messina_light,
     crimson_regular_italic,
     messina_semibold,
     messina_bold,
+    crimson_regular,
 } from '../fonts';
 
 
@@ -184,7 +186,7 @@ const Events = () => {
                         <Marquee className="gap-x-9" speed={75} loop={0}>
                             <div className={`flex flex-row gap-10`}>
                                 {sponsors.map((sponsor, index) => (
-                                    <div className={`relative items-center align-center`} style={{ height: '75px' }}>
+                                    <div key={index} className={`relative items-center align-center`} style={{ height: '75px' }}>
                                         <Image
                                             src={Images[sponsor]}
                                             alt={sponsor}
@@ -218,6 +220,35 @@ const Events = () => {
                             <CarouselPrevious />
                             <CarouselNext />
                         </Carousel>
+                    </div>
+                </div>
+                <DashedDivider />
+                <div className={`flex flex-col w-[94%] z-10 py-12 space-y-12 ${theme === 'dark' ? 'border-[#242424]' : 'border-[#E0E0E0]'} border-x justify-center gap-y-4`}>
+                    <div className="items-start px-12 pb-2">
+                        <p className={`text-start ${messina_light.className}`}>ship-it 🚢</p>
+                    </div>
+                    <div className="px-12">
+                        <div className={`flex flex-col items-start w-full md:px-72 space-y-12`}>
+                            <div className="relative space-y-8 w-full">
+                                <Image src={Images.shipIt} alt="shipit" width={750} height={750} />
+                                <p className={`text-[32px] text-start ${plus_jakarta_sans_medium.className}`}>
+                                    Ship-It: a space to forget about class & hw and <span className={`${crimson_regular_italic.className}`}>&quot;ship&quot; your next idea.</span> 
+                                </p>
+                            </div>
+                            <div className="justify-center space-y-8 align-center items-center">
+                                <p className={`text-[18px] ${plus_jakarta_sans_thin.className}`}>
+                                    &quot;Ship-it&quot; is SX&apos;s weekly co-working session that brings together student makers, builders, and creators to work on their ideas.<br /><br />
+                                    Ship-it is the place to start, to be inspired, and regain your childlike imagination and drive for making things & sharing them with friends.
+                                </p>
+                            </div>
+                            <div>
+                                <Button href="http://shipit.lol" variant="outline" className={`py-3 z-10 px-5 hover:text-black transition duration-500 ${theme === 'dark' ? 'bg-black text-white border border-[#232323]' : 'bg-white text-black border border-[#e0e0e0]'}`}>
+                                    <div className={`${messina_book.className} font-bold`}>
+                                    LEARN MORE {'>'}
+                                    </div>
+                                </Button>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <DashedDivider />
@@ -268,7 +299,48 @@ const Events = () => {
                         </Link>
                         ))}
                     </div>
+                    <div className={`flex md:flex-row flex-col z-10 ${theme === 'dark' ? 'border-[#242424]' : 'border-[#E0E0E0]'} border-t space-x-8`}>
+                        <div className={`px-12 py-20 w-full flex md:flex-row flex-col justify-between md:space-x-12 md:align-center md:items-center`}>
+                            <p className={`${plus_jakarta_sans_extrabold.className} text-[32px] w-full pb-12 md:pb-0`}>Stay up-to-date on upcoming events.</p>
+                            <Button href="https://docs.google.com/forms/d/1K4TKHANO3iWyFM51OqRXBqT1wP2FTYEjE1pdz6559Y0/viewform?edit_requested=true" variant="secondary" className={`px-10 w-full md:w-auto ${messina_semibold.className}`}>COUNT ME IN</Button>
+                        </div>
+                    </div>
                 </div>
+                <DashedDivider />
+                {/* <div className={`flex flex-col w-[94%] z-10 space-y-12 ${theme === 'dark' ? 'border-[#242424]' : 'border-[#E0E0E0]'} border-x justify-center gap-y-4`}>
+                    <div className="items-start py-12 px-12 pb-2">
+                        <p className={`text-start ${messina_light.className}`}>SX Summit ATL</p>
+                    </div>
+                    <div className="px-12">
+                        <div className={`flex flex-col items-start w-full md:px-72 space-y-12`}>
+                            <div className="relative space-y-8 w-full">
+                                <Image src={Images.shipIt} alt="shipit" width={750} height={750} />
+                                <p className={`text-[32px] text-start ${plus_jakarta_sans_medium.className}`}>
+                                    Ship-It: a space to forget about class & hw and <span className={`${crimson_regular_italic.className}`}>&quot;ship&quot; your next idea.</span> 
+                                </p>
+                            </div>
+                            <div className="justify-center space-y-8 align-center items-center">
+                                <p className={`text-[18px] ${plus_jakarta_sans_thin.className}`}>
+                                    &quot;Ship-it&quot; is SX's weekly co-working session that brings together student makers, builders, and creators to work on their ideas.<br /><br />
+                                    Ship-it is the place to start, to be inspired, and regain your childlike imagination and drive for making things & sharing them with friends.
+                                </p>
+                            </div>
+                            <div>
+                                <Button href="http://shipit.lol" variant="outline" className={`py-3 z-10 px-5 hover:text-black transition duration-500 ${theme === 'dark' ? 'bg-black text-white border border-[#232323]' : 'bg-white text-black border border-[#e0e0e0]'}`}>
+                                    <div className={`${messina_book.className} font-bold`}>
+                                    LEARN MORE {'>'}
+                                    </div>
+                                </Button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={`flex md:flex-row flex-col z-10 ${theme === 'dark' ? 'border-[#242424]' : 'border-[#E0E0E0]'} border-t space-x-8`}>
+                        <div className={`px-12 py-20 w-full flex md:flex-row flex-col justify-between md:space-x-12 md:align-center md:items-center`}>
+                            <p className={`${plus_jakarta_sans_extrabold.className} text-[32px] w-full pb-12 md:pb-0`}>Stay up-to-date on upcoming events.</p>
+                            <Button href="https://docs.google.com/forms/d/1K4TKHANO3iWyFM51OqRXBqT1wP2FTYEjE1pdz6559Y0/viewform?edit_requested=true" variant="secondary" className={`px-10 w-full md:w-auto ${messina_semibold.className}`}>COUNT ME IN</Button>
+                        </div>
+                    </div>
+                </div> */}
                 <DashedDivider />
             </div>
             <Footer />

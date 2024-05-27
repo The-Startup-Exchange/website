@@ -162,6 +162,7 @@ import impactHackLogo from './sxLogos/impactHackLogo.png';
 import webThreeATLLogo from './sxLogos/webThreeATLLogo.png';
 import immerseGTLogo from './sxLogos/immerseGTLogo.png';
 import hacklyticsLogo from './sxLogos/hacklyticsLogo.png';
+import shipIt from './sxLogos/shipIt.png';
 
 import aiatl from './events/aiatl.jpeg';
 import pitchRx from './events/pitchRx.jpg';
@@ -354,6 +355,7 @@ type ImagesType = {
     kathrynGuest: StaticImageData;
     coryGuest: StaticImageData;
     safwaanGuest: StaticImageData;
+    shipIt: StaticImageData;
 };
 
 
@@ -526,7 +528,8 @@ const Images: ImagesType = {
     ajGuest,
     kathrynGuest,
     coryGuest,
-    safwaanGuest
+    safwaanGuest,
+    shipIt
 };
 
 export default Images;
