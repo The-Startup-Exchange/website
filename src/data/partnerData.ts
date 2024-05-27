@@ -77,6 +77,11 @@ export const partners = [
         href: 'https://www.dormroomfund.com/',
     },
     {
+        name: 'accenture',
+        logo: Images.accenture,
+        href: 'https://www.accenture.com/',
+    },
+    {
         name: 'roboflow',
         logo: Images.roboflow,
         href: 'https://www.roboflow.com/',

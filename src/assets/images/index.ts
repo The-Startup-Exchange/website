@@ -50,6 +50,7 @@ import duke from './colleges/duke.png';
 import rocket from "./communityPics/rocket.png";
 import communityRev from "./communityPics/communityRev.jpeg";
 
+import accenture from './partnerLogos/accenture.png';
 import buildIllinois from './partnerLogos/buildIllinois.png';
 import rev from './partnerLogos/rev.png';
 import sxgt from './partnerLogos/sxgt.png';
@@ -63,6 +64,7 @@ import arnav from './partnerLogos/arnav.webp';
 import bcgX from './partnerLogos/bcgX.webp';
 import biolocity from './partnerLogos/biolocity.webp';
 import celsius from './partnerLogos/celsius.webp';
+import chainlink from './partnerLogos/chainlink.png';
 import cityAtlanta from './partnerLogos/cityAtlanta.png';
 import zeroOneLogo from './partnerLogos/zeroOneLogo.png';
 import zeroOneLogoBlack from './partnerLogos/zeroOneLogoBlack.png';
@@ -178,6 +180,8 @@ import seanGuest from './events/seanGuest.webp';
 import charuGuest from './events/charuGuest.webp';
 import ajGuest from './events/ajGuest.webp';
 import kathrynGuest from './events/kathrynGuest.webp';
+import coryGuest from './events/coryGuest.jpg';
+import safwaanGuest from './events/safwaanGuest.jpg';
 
 type ImagesType = {
     [key: string]: StaticImageData;
@@ -265,11 +269,13 @@ type ImagesType = {
     anthropic: StaticImageData;
     atdc: StaticImageData;
     abc: StaticImageData;
+    accenture: StaticImageData;
     arnav: StaticImageData;
     bcgX: StaticImageData;
     biolocity: StaticImageData;
     celsius: StaticImageData;
     cityAtlanta: StaticImageData;
+    chainlink: StaticImageData;
     gt: StaticImageData;
     gtCreateX: StaticImageData;
     gtCoC: StaticImageData;
@@ -346,6 +352,8 @@ type ImagesType = {
     charuGuest: StaticImageData;
     ajGuest: StaticImageData;
     kathrynGuest: StaticImageData;
+    coryGuest: StaticImageData;
+    safwaanGuest: StaticImageData;
 };
 
 
@@ -431,6 +439,7 @@ const Images: ImagesType = {
     paperclipBlack,
     fifteenSeventeen,
     fourDao,
+    accenture,
     anthropic,
     atdc,
     abc,
@@ -438,6 +447,7 @@ const Images: ImagesType = {
     bcgX,
     biolocity,
     celsius,
+    chainlink,
     cityAtlanta,
     duke,
     gt,
@@ -514,7 +524,9 @@ const Images: ImagesType = {
     seanGuest,
     charuGuest,
     ajGuest,
-    kathrynGuest
+    kathrynGuest,
+    coryGuest,
+    safwaanGuest
 };
 
 export default Images;

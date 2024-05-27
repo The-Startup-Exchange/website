@@ -9,6 +9,8 @@ import DashedDivider from "@/components/dashedDivider";
 import Image from 'next/image';
 import Images from '../../assets/images';
 import { useTheme } from '../../context/ThemeContext';
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
+import { Button } from "@/components/ui/button";
 
 import {
     plus_jakarta_sans_regular,
@@ -30,6 +32,11 @@ const Events = () => {
             name: "Michael Seibel",
             company: "Managing Director, Y Combinator",
             pic: Images.michaelGuest
+        },
+        {
+            name: "Cory Levy",
+            company: "Founder, ZFellows",
+            pic: Images.coryGuest
         },
         {
             name: "Dylan Cooper",
@@ -55,6 +62,11 @@ const Events = () => {
             name: "Chris Klaus",
             company: "Founder & CTO, ISS (acqr. by IBM)",
             pic: Images.chrisGuest
+        },
+        {
+            name: "Safwaan Khan",
+            company: "Head of Capital, Founders Inc.",
+            pic: Images.safwaanGuest
         },
         {
             name: "Kabir Barday",
@@ -85,7 +97,7 @@ const Events = () => {
     const events =[
         {
             name: "AI ATL",
-            description: "Georgia Tech & Atlanta's official AI hackathon. 400+ participants in 2023.",
+            description: "Georgia Tech & Atlanta's official AI hackathon. 400+ participants from 43 universities in 2023.",
             logo: Images.aiAtlLogo,
             image: Images.aiatl,
             link: "https://www.aiatl.io",
@@ -94,7 +106,7 @@ const Events = () => {
         },
         {
             name: "PitchRx",
-            description: "The largest collegiate healthcare pitch competition in digital health, AI and medical diagnostics. 250+ participants in 2024.",
+            description: "The largest collegiate healthcare pitch competition in digital health, AI and medical diagnostics. 250+ participants from 17 universitiesin 2024.",
             logo: Images.pitchRxLogo,
             image: Images.pitchRx,
             link: "https://www.pitchrx.io",
@@ -103,7 +115,7 @@ const Events = () => {
         },
         {
             name: "ImmerseGT",
-            description: "Georgia Tech's official XR hackathon. Largest in the world in 2023.",
+            description: "Georgia Tech's official XR hackathon. Largest in the world in 2023, with 400+ hackers from 53 universities globally.",
             logo: Images.immerseGTLogo,
             image: Images.immerseGT,
             link: "https://www.immersegt.io",
@@ -112,7 +124,7 @@ const Events = () => {
         },
         {
             name: "ImpactHack",
-            description: "A policy and tech hackathon aligned with the UN Sustainable Development Goals.",
+            description: "A policy and tech hackathon aligned with the UN Sustainable Development Goals. 200+ participants in 2023.",
             logo: Images.impactHackLogo,
             image: Images.impactHack,
             link: "https://www.impacthackatl.com",
@@ -138,6 +150,8 @@ const Events = () => {
             attendees: "250+ from 17 universities"
         }
     ];
+
+    const sponsors = ["google", "nvidia", "anthropic", "huggingFace", "chainlink", "zfellows", "mayoClinic", "contrary", "fifteenSeventeen", "finc", "bcgX", "drive", "accenture"];
     const { theme, styles } = useTheme();
     // useEffect(() => {
     //     Redirect();
@@ -163,42 +177,64 @@ const Events = () => {
                 </div>
                 <DashedDivider />
                 <div className={`flex flex-col w-[94%] z-10 space-y-12 ${theme === 'dark' ? 'border-[#242424]' : 'border-[#E0E0E0]'} border-x justify-center gap-y-4`}>
-                    <div className="items-start px-12 py-12">
-                        <p className={`text-start ${messina_light.className}`}>Previous speakers</p>
+                    <div className="items-start px-12 pt-12 pb-2">
+                        <p className={`text-start ${messina_light.className}`}>Previous sponsors</p>
                     </div>
-                    <div className="flex flex-col w-full">
+                    <div className={`flex flex-col w-full border-b ${styles.borderColor}`}>
                         <Marquee className="gap-x-9" speed={75} loop={0}>
-                            <div className="flex flex-row gap-4">
-                                {speakers.map((speaker, index) => (
-                                <div key={index} className={`flex flex-col min-w-[200px] max-w-[250px] ${index === speakers.length - 1 ? 'mr-[-20px]' : ''}`}>
-                                    <div className={`relative border ${styles.borderColor} border-dashed`} style={{ height: '238px' }}>
-                                        <Image src={speaker.pic} layout="fill" objectFit="cover" className={``} alt="sx" />
+                            <div className={`flex flex-row gap-10`}>
+                                {sponsors.map((sponsor, index) => (
+                                    <div className={`relative items-center align-center`} style={{ height: '75px' }}>
+                                        <Image
+                                            src={Images[sponsor]}
+                                            alt={sponsor}
+                                            height={42}
+                                            className="opacity-80 hover:opacity-100 transition duration-500"
+                                            style={{ maxWidth: '100%', height: 'auto' }}
+                                        />
                                     </div>
-                                    <div className={`border border-dashed p-5 space-y-4 ${styles.borderColor}`}>
-                                        <p className={`text-[15px] leading-[150%] ${styles.textColor} ${plus_jakarta_sans_semibold.className}`} >{speaker.name}</p>
-                                        <p className={`text-[15px] leading-[150%] ${styles.textColor} ${plus_jakarta_sans_thin.className}`} style={{ minHeight: '45px' }}>{speaker.company}</p>
-                                    </div>
-                                </div>
                                 ))}
                             </div>
                         </Marquee>
+                    </div>
+                    <div className="items-start px-12 py-2">
+                        <p className={`text-end ${messina_light.className}`}>Previous speakers</p>
+                    </div>
+                    <div className="flex flex-col w-full relative">
+                        <Carousel>
+                            <CarouselContent>
+                                {speakers.map((speaker, index) => (
+                                    <CarouselItem key={index} className={`flex flex-col min-w-[200px] max-w-[200px]`}>
+                                        <div className={`relative border ${styles.borderColor} border-dashed`} style={{ height: '238px' }}>
+                                            <Image src={speaker.pic} layout="fill" objectFit="cover" className={``} alt="sx" />
+                                        </div>
+                                        <div className={`border border-dashed p-5 space-y-4 ${styles.borderColor}`}>
+                                            <p className={`text-[15px] leading-[150%] ${styles.textColor} ${plus_jakarta_sans_semibold.className}`} >{speaker.name}</p>
+                                            <p className={`text-[15px] leading-[150%] ${styles.textColor} ${plus_jakarta_sans_thin.className}`} style={{ minHeight: '45px' }}>{speaker.company}</p>
+                                        </div>
+                                    </CarouselItem>
+                                ))}
+                            </CarouselContent>
+                            <CarouselPrevious />
+                            <CarouselNext />
+                        </Carousel>
                     </div>
                 </div>
                 <DashedDivider />
                 <div className={`flex flex-col w-[94%] z-10 space-y-12 ${theme === 'dark' ? 'border-[#242424]' : 'border-[#E0E0E0]'} border-x justify-center gap-y-4`}>
                     <div className="items-start px-12 py-12">
-                        <p className={`text-end ${messina_light.className}`}>Previous events</p>
+                        <p className={`text-end ${messina_light.className}`}>Hackathons and pitch competitions</p>
                     </div>
                     <div className="px-12 pb-20 space-y-20">
                         {events.map((event, index) => (
-                        <Link key={index} href={event.link} target="_blank" rel="noopener noreferrer" className={`flex flex-row w-full space-x-20 items-center ${plus_jakarta_sans_regular.className}`}>
-                            <div className="relative w-[50%]">
+                        <Link key={index} href={event.link} target="_blank" rel="noopener noreferrer" className={`flex md:flex-row flex-col w-full md:space-x-20 md:space-y-0 space-y-12 md:items-center ${plus_jakarta_sans_regular.className}`}>
+                            <div className="relative md:w-[50%] w-full">
                                 <Image src={event.image} alt="hi" width={550} height={300} objectFit="cover" layout="responsive"/>
-                                <div className="absolute inset-0 bg-black opacity-0 hover:opacity-60 flex items-center justify-center transition-opacity duration-300">
-                                    <Image src={event.logo} alt="Logo" width={100} height={100} />
+                                <div className="absolute inset-0 bg-black opacity-0 hover:opacity-70 flex items-center justify-center transition-opacity duration-300">
+                                    <Image src={event.logo} alt="Logo" width={250} height={250} />
                                 </div>
                             </div>
-                            <div className="justify-center w-[50%] space-y-8 align-center items-center">
+                            <div className="justify-center md:w-[50%] space-y-8 align-center items-center">
                                 <div>
                                     <p className={`text-[32px] ${plus_jakarta_sans_medium.className}`}>
                                        {event.name}
@@ -216,18 +252,24 @@ const Events = () => {
                                     </p>
                                 </div>
                                 <div className="flex flex-col space-y-2">
-                                    <p className={`text-[14px] ${messina_book.className}`}>
+                                    {/* <p className={`text-[14px] ${messina_book.className}`}>
                                         Attendees
                                     </p>
                                     <p className={`text-[14px] ${messina_bold.className}`}>
                                        {event.attendees}
-                                    </p>
+                                    </p> */}
+                                    <Button href={event.link} variant="outline" className={`py-3 z-10 px-5 hover:text-black transition duration-500 ${theme === 'dark' ? 'bg-black text-white border border-[#232323]' : 'bg-white text-black border border-[#e0e0e0]'}`}>
+                                        <div className={`${messina_book.className} font-bold`}>
+                                        LEARN MORE {'>'}
+                                        </div>
+                                    </Button>
                                 </div>
                             </div>
                         </Link>
                         ))}
                     </div>
                 </div>
+                <DashedDivider />
             </div>
             <Footer />
         </>

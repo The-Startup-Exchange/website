@@ -14,11 +14,11 @@ const navItems = [
   },
   {
     name: "EVENTS",
-    link: "https://lu.ma/sxevents",
+    link: "/events",
   },
   {
     name: "DONATE",
-    link: "/donate",
+    link: "/",
   },
   {
     name: "BLOG",
@@ -38,7 +38,7 @@ const SiteMenu = ({ useBold = false, vertical = false, textAlign = 'text-center'
   return (
     <div className={`${textAlign} flex ${layoutClass} md:text-left`}>
       {navItems.map((item) => (
-        item.name === "EVENTS" ? (
+        item.name === "DONATE" ? (
           <a key={item.link} href={item.link} target="_blank" rel="noopener noreferrer">
             <h2 className={`${fontClass} text-[15px] transition duration-500 hover:text-[#414141]`}>{item.name}</h2>
           </a>
