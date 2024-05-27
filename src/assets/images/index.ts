@@ -167,6 +167,17 @@ import webThreeATL from './events/webThreeATL.jpg';
 import immerseGT from './events/immerseGT.jpg';
 import hacklytics from './events/hacklytics.jpg';
 import impactHack from './events/impactHack.jpg';
+import chrisGuest from './events/chrisGuest.webp';
+import michaelGuest from './events/michaelGuest.webp';
+import kabirGuest from './events/kabirGuest.webp';
+import jhillikaGuest from './events/jhillikaGuest.webp';
+import dylanGuest from './events/dylanGuest.jpg';
+import danGuest from './events/danGuest.webp';
+import brooksGuest from './events/brooksGuest.jpg';
+import seanGuest from './events/seanGuest.webp';
+import charuGuest from './events/charuGuest.webp';
+import ajGuest from './events/ajGuest.webp';
+import kathrynGuest from './events/kathrynGuest.webp';
 
 type ImagesType = {
     [key: string]: StaticImageData;
@@ -324,6 +335,17 @@ type ImagesType = {
     immerseGT: StaticImageData;
     hacklytics: StaticImageData;
     impactHack: StaticImageData;
+    chrisGuest: StaticImageData;
+    michaelGuest: StaticImageData;
+    kabirGuest: StaticImageData;
+    jhillikaGuest: StaticImageData;
+    dylanGuest: StaticImageData;
+    danGuest: StaticImageData;
+    brooksGuest: StaticImageData;
+    seanGuest: StaticImageData;
+    charuGuest: StaticImageData;
+    ajGuest: StaticImageData;
+    kathrynGuest: StaticImageData;
 };
 
 
@@ -482,6 +504,17 @@ const Images: ImagesType = {
     immerseGT,
     hacklytics,
     impactHack,
+    chrisGuest,
+    michaelGuest,
+    kabirGuest,
+    jhillikaGuest,
+    dylanGuest,
+    danGuest,
+    brooksGuest,
+    seanGuest,
+    charuGuest,
+    ajGuest,
+    kathrynGuest
 };
 
 export default Images;

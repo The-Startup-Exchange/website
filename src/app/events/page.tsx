@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Link from 'next/link';
 import Header from "../../components/header";
 import Footer from "../../components/footer";
+import Marquee from "react-fast-marquee";
 import DashedDivider from "@/components/dashedDivider";
 import Image from 'next/image';
 import Images from '../../assets/images';
@@ -12,6 +13,7 @@ import { useTheme } from '../../context/ThemeContext';
 import {
     plus_jakarta_sans_regular,
     plus_jakarta_sans_medium,
+    plus_jakarta_sans_semibold,
     plus_jakarta_sans_thin,
     messina_book,
     messina_light,
@@ -22,6 +24,64 @@ import {
 
 
 const Events = () => {
+
+    const speakers = [
+        {
+            name: "Michael Seibel",
+            company: "Managing Director, Y Combinator",
+            pic: Images.michaelGuest
+        },
+        {
+            name: "Dylan Cooper",
+            company: "SVP, PrizePicks",
+            pic: Images.dylanGuest
+        },
+        {
+            name: "Brooks Buffington",
+            company: "Founder, YikYak",
+            pic: Images.brooksGuest
+        },
+        {
+            name: "Sean Henry",
+            company: "Founder & CEO, Stord",
+            pic: Images.seanGuest
+        },
+        {
+            name: "Charu Thomas",
+            company: "Founder & CEO, Ox",
+            pic: Images.charuGuest
+        },
+        {
+            name: "Chris Klaus",
+            company: "Founder & CTO, ISS (acqr. by IBM)",
+            pic: Images.chrisGuest
+        },
+        {
+            name: "Kabir Barday",
+            company: "Founder & CEO, OneTrust",
+            pic: Images.kabirGuest
+        },
+        {
+            name: "Dan Porter",
+            company: "Founder & CEO, Overtime",
+            pic: Images.danGuest
+        },
+        {
+            name: "AJ Piplica",
+            company: "Founder & CEO, Hermeus",
+            pic: Images.ajGuest
+        },
+        {
+            name: "Jhillika Kumar",
+            company: "Founder & CEO, Mentra",
+            pic: Images.jhillikaGuest
+        },
+        {
+            name: "Kathryn Hays",
+            company: "Founder, Kabbage (acqr. by AmEx)",
+            pic: Images.kathrynGuest
+        }
+    ];
     const events =[
         {
             name: "AI ATL",
@@ -99,6 +159,29 @@ const Events = () => {
                         <p className={`text-[18px] md:w-[50%] align-end justify-end leading-[140%] ${plus_jakarta_sans_thin.className}`}>
                         We continuously bring cutting-edge and exciting opportunities to college builders. This includes hackathons, demo days, and pitch competitions.
                         </p>
+                    </div>
+                </div>
+                <DashedDivider />
+                <div className={`flex flex-col w-[94%] z-10 space-y-12 ${theme === 'dark' ? 'border-[#242424]' : 'border-[#E0E0E0]'} border-x justify-center gap-y-4`}>
+                    <div className="items-start px-12 py-12">
+                        <p className={`text-start ${messina_light.className}`}>Previous speakers</p>
+                    </div>
+                    <div className="flex flex-col w-full">
+                        <Marquee className="gap-x-9" speed={75} loop={0}>
+                            <div className="flex flex-row gap-4">
+                                {speakers.map((speaker, index) => (
+                                <div key={index} className={`flex flex-col min-w-[200px] max-w-[250px] ${index === speakers.length - 1 ? 'mr-[-20px]' : ''}`}>
+                                    <div className={`relative border ${styles.borderColor} border-dashed`} style={{ height: '238px' }}>
+                                        <Image src={speaker.pic} layout="fill" objectFit="cover" className={``} alt="sx" />
+                                    </div>
+                                    <div className={`border border-dashed p-5 space-y-4 ${styles.borderColor}`}>
+                                        <p className={`text-[15px] leading-[150%] ${styles.textColor} ${plus_jakarta_sans_semibold.className}`} >{speaker.name}</p>
+                                        <p className={`text-[15px] leading-[150%] ${styles.textColor} ${plus_jakarta_sans_thin.className}`} style={{ minHeight: '45px' }}>{speaker.company}</p>
+                                    </div>
+                                </div>
+                                ))}
+                            </div>
+                        </Marquee>
                     </div>
                 </div>
                 <DashedDivider />
