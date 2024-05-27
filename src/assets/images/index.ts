@@ -154,8 +154,19 @@ import sxLogo from './sxLogos/sxLogo.png';
 import sxLogoBlack from './sxLogos/sxLogoBlack.png';
 import sxFooterText from './sxLogos/sxFooterText.png';
 import sxFooterTextWhite from './sxLogos/sxFooterTextWhite.png';
+import aiAtlLogo from './sxLogos/aiAtlLogo.png';
+import pitchRxLogo from './sxLogos/pitchRxLogo.png';
+import impactHackLogo from './sxLogos/impactHackLogo.png';
+import webThreeATLLogo from './sxLogos/webThreeATLLogo.png';
+import immerseGTLogo from './sxLogos/immerseGTLogo.png';
+import hacklyticsLogo from './sxLogos/hacklyticsLogo.png';
 
 import aiatl from './events/aiatl.jpeg';
+import pitchRx from './events/pitchRx.jpg';
+import webThreeATL from './events/webThreeATL.jpg';
+import immerseGT from './events/immerseGT.jpg';
+import hacklytics from './events/hacklytics.jpg';
+import impactHack from './events/impactHack.jpg';
 
 type ImagesType = {
     [key: string]: StaticImageData;
@@ -302,6 +313,17 @@ type ImagesType = {
     kasie: StaticImageData;
     rae: StaticImageData;
     aiatl: StaticImageData;
+    aiAtlLogo: StaticImageData;
+    pitchRxLogo: StaticImageData;
+    pitchRx: StaticImageData;
+    impactHackLogo: StaticImageData;
+    webThreeATLLogo: StaticImageData;
+    immerseGTLogo: StaticImageData;
+    hacklyticsLogo: StaticImageData;
+    webThreeATL: StaticImageData;
+    immerseGT: StaticImageData;
+    hacklytics: StaticImageData;
+    impactHack: StaticImageData;
 };
 
 
@@ -449,6 +471,17 @@ const Images: ImagesType = {
     kasie,
     rae,
     aiatl,
+    aiAtlLogo,
+    pitchRxLogo,
+    pitchRx,
+    impactHackLogo,
+    webThreeATLLogo,
+    immerseGTLogo,
+    hacklyticsLogo,
+    webThreeATL,
+    immerseGT,
+    hacklytics,
+    impactHack,
 };
 
 export default Images;
