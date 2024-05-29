@@ -12,11 +12,10 @@ import Images from '../../assets/images';
 import { Button } from "@/components/ui/button";
 import posthog from 'posthog-js'
 
-posthog.init(process.env.POSTHOG_API_KEY!, { api_host: 'https://us.i.posthog.com' })
+posthog.init(process.env.NEXT_PUBLIC_POSTHOG_API_KEY!, { api_host: 'https://us.i.posthog.com' })
 
 const Hero = () => {
     const { theme, toggleTheme } = useTheme();
-
     return (
         <div className={`flex flex-col w-[94%] ${theme === 'dark' ? 'bg-black' : 'bg-white'} text-${theme === 'dark' ? 'white' : 'black'}`}>
             <div className={`flex flex-col md:py-56 pt-24 pb-36 ${theme === 'dark' ? 'border-[#242424]' : 'border-[#E0E0E0]'} border-x items-start justify-center gap-y-4 relative`}>
@@ -40,8 +39,9 @@ const Hero = () => {
                             variant="secondary" 
                             className="px-8" 
                             href="/about"
-                            onClick={() => posthog.capture('our_story_button_clicked', {property: 'value'})}
-                        >
+                            onClick={() => {
+                                posthog.capture('our_story_button_clicked', {property: 'value'});
+                            }}>
                             Read our story
                         </Button>
                     </div>
