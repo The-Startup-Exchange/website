@@ -28,7 +28,7 @@ const BottomMenu = () => {
                   width={200}
                   height={200}
               />
-              <h1 className={`text-[14px] leading-[125%] ${plus_jakarta_sans_extrabold.className}`}>STARTUP EXCHANGE</h1>
+              <h1 className={`text-[14px] leading-[125%] text-center ${plus_jakarta_sans_extrabold.className}`}>STARTUP EXCHANGE</h1>
             </div>
             <div className="flex flex-row w-full items-center align-center justify-center z-10">
               <SiteMenu />

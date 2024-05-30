@@ -38,7 +38,7 @@ const ParticipatingCampuses = () => {
     <div className={`flex flex-col w-full ${styles.backgroundColor} ${styles.textColor} gap-y-4`}>
       <div className={`flex flex-col md:mx-11 mx-5 px-12 py-[75px] border-x ${styles.borderColor} md:gap-y-20 gap-y-12`}>
         <div
-          className="flex flex-row w-full justify-between align-center items-center">
+          className="flex md:flex-row flex-col w-full md:space-y-0 space-y-4 md:justify-between md:align-center md:items-center">
           <h1 className={`${styles.textColor} md:w-[85%] md:text-[58px] text-[32px] leading-[125%] ${plus_jakarta_sans_medium.className}`}> Participating campuses</h1>
           <Button href="/community" variant="outline" className={`py-3 px-5  ${theme === 'dark' ? 'bg-black text-white border border-[#232323]' : 'bg-white text-black border border-[#e0e0e0]'}`}>
             <div className={`${messina_book.className} font-bold`}>

@@ -2,155 +2,236 @@
 
 import Cookies from "js-cookie";
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-// import { baseUrl } from "../lib/api/constants";
-// import { useError } from "../lib/useError";
-// import { AffiliateName } from "./pricing/affiliate/affiliateIcons";
-// import TagManager from "react-gtm-module";
+import { createClient } from '@supabase/supabase-js'
+import { Button } from "@/components/ui/button";
+import { useMediaQuery } from "utils/use-media-query";
+import { useTheme } from '../context/ThemeContext';
+
+import {
+  Command,
+  CommandGroup,
+  CommandItem,
+  CommandList,
+} from "@/components/ui/command"
+import {
+  Drawer,
+  DrawerContent,
+  DrawerTrigger,
+} from "@/components/ui/drawer"
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover"
+
+type Option = {
+  value: string
+  label: string
+}
+
+const options: Option[] = [
+  {
+    value: "is_investor",
+    label: "I'm an investor",
+  },
+  {
+    value: "is_new_builder",
+    label: "I’m new to building ideas",
+  },
+  {
+    value: "is_experienced_builder",
+    label: "I've built stuff in the past",
+  },
+  {
+    value: "is_partner",
+    label: "I'm a prospective partner",
+  },
+  {
+    value: "is_vc_founder",
+    label: "I've raised money",
+  },
+]
 
 const EmailCapture = () => {
+  const { theme, styles } = useTheme();
+  const [open, setOpen] = useState(false);
+  const isDesktop = useMediaQuery("(min-width: 768px)");
+
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
+  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_API_KEY!;
+  const supabase = createClient(supabaseUrl, supabaseKey);
+
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState(false);
   const [isEmailSubmitted, setIsEmailSubmitted] = useState(false);
   const router = useRouter();
-//   const saveEmail = useSaveEmail();
-//   const { addError } = useError();
-//   const tagManagerArgs = {
-//     gtmId: "GTM-KPCZM3KM",
-//   };
 
-//   type makeBody = {
-//     email: string;
-//   };
-//   const makeWebhookURL = "https://hook.us1.make.com/r7rc3npskluiqgn5louyenwtbtl38zje";
+  const validateEmail = (email: string) => {
+    return /\S+@\S+\.\S+/.test(email);
+  };
 
-//   const searchParams = useSearchParams();
-//   let affiliateName = searchParams?.get("affiliateName");
-//   if (!Object.values(AffiliateName).includes(affiliateName as AffiliateName)) {
-//     affiliateName = "";
-//   }
+  const handleSubmit = async () => {
+    if (!validateEmail(email)) {
+      setEmailError(true);
+      return;
+    }
+    setEmailError(false);
+    try {
+      const { data, error } = await supabase
+        .from('emails')
+        .insert([
+          { email: email }
+        ]);
+      if (error) throw error;
+      setIsEmailSubmitted(true);
+      setOpen(true);
+    } catch (error) {
+      console.error('Error inserting data: ', error);
+      setEmailError(true);
+    }
+  };
 
-//   useEffect(() => {
-//     const emailSubmitted = Cookies.get("emailSubmitted") === "true";
-//     setIsEmailSubmitted(emailSubmitted);
-//     TagManager.initialize(tagManagerArgs);
-//   }, []);
+  const handleOptionSelect = async (value: string) => {
+    try {
+      const { data, error } = await supabase
+        .from('emails')
+        .update({ [value]: true })
+        .eq('email', email);
+      if (error) throw error;
+      console.log('Update success:', data);
+      setEmail("");
+      setOpen(false);
+    } catch (error) {
+      console.error('Error updating data: ', error);
+    }
+  };
 
-//   const validateEmail = (email: string) => {
-//     const re = /\S+@\S+\.\S+/;
-//     return re.test(email);
-//   };
+  // const checkEmail = async (email: string) => {
+  //   try {
+  //     const { data, error } = await supabase
+  //       .from('emails')
+  //       .select()
+  //       .eq('email', email);
+  //     if (error) throw error;
+  //     console.log('Email check:', data);
+  //     return data;
+  //   } catch (error) {
+  //     console.error('Error checking email:', error);
+  //   }
+  // };
 
-//   const handleSubmit = async () => {
-//     if (email.length > 0) {
-//       if (validateEmail(email)) {
-//         saveEmail(email);
-//         Cookies.set("emailSubmitted", "true", { expires: 30 }); // Set cookie for 7 days
-//         // track facebook conversion
-//         if (affiliateName && affiliateName == "Facebook") {
-//           const pixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID || "";
-//           const options = {
-//             autoConfig: true, // set pixel's autoConfig. More info: https://developers.facebook.com/docs/facebook-pixel/advanced/
-//             debug: false, // enable logs
-//           };
-//           import("react-facebook-pixel")
-//             .then((module) => module.default)
-//             .then((ReactPixel) => {
-//               ReactPixel.init(pixelId, undefined, options);
-//               ReactPixel.track("Contact");
-//             });
-//         }
-//         TagManager.dataLayer({
-//           dataLayer: {
-//             event: "waitlist_join",
-//             email: email,
-//           },
-//         });
+  // const testUpdate = async () => {
+  //   try {
+  //     const { data, error } = await supabase
+  //       .from('emails')
+  //       // .select()
+  //       .update({ is_investor : true })
+  //       .eq('email', 'thegamingprotocol06@gmail.com')
+  //       .select();
+  //     if (error) throw error;
+  //     console.log('Test update:', data);
+  //   } catch (error) {
+  //     console.error('Error during test update:', error);
+  //   }
+  // };
 
-//         const body: makeBody = { email };
-//         // const response = await fetch(makeWebhookURL, {
-//         //   method: "POST",
-//         //   headers: {
-//         //     "Content-Type": "application/json",
-//         //   },
-//         //   body: JSON.stringify(body),
-//         // });
+  function ComboBoxResponsive() {
+    const commonProps = {
+      onClick: (evt: React.MouseEvent<HTMLButtonElement>) => {
+        evt.preventDefault();
+        handleSubmit();
+      },
+      className: "md:px-6 px-3 md:pb-0 mb-2",
+      variant: "outline" as const,
+    };
 
-//         // if (response.status === 200) {
-//         //   console.log("Email submitted successfully");
-//           setIsEmailSubmitted(true);
-//         // }
-//         if (affiliateName && affiliateName != "") {
-//           // router.push("/register?" + "affiliateName=" + affiliateName);
-//         } else {
-//           // router.push("/register");
-//         }
-//       } else {
-//         addError("Invalid email", "Please enter a valid email address.");
-//         setEmailError(true);
-//       }
-//     }
-//   };
+    if (isDesktop) {
+      return (
+        <Popover open={open} onOpenChange={setOpen}>
+          <PopoverTrigger asChild>
+            <Button {...commonProps}>Get connected</Button>
+          </PopoverTrigger>
+          <PopoverContent className="p-0" align="start">
+            <OptionList />
+          </PopoverContent>
+        </Popover>
+      )
+    }
+
+    return (
+      <Drawer open={open} onOpenChange={setOpen}>
+        <DrawerTrigger asChild>
+          <div className="w-full">
+            <Button {...commonProps}>Get connected</Button>
+          </div>
+        </DrawerTrigger>
+        <DrawerContent>
+          <div className="mt-4">
+            <OptionList />
+          </div>
+        </DrawerContent>
+      </Drawer>
+    )
+  }
+
+  function OptionList() {
+    return (
+      <Command>
+        <CommandList>
+          <CommandGroup>
+            {options.map((option) => (
+              <CommandItem
+                key={option.value}
+                value={option.value}
+                onSelect={() => {
+                  handleOptionSelect(option.value);
+                  // setOpen(false);
+                }}
+              >
+                {option.label}
+              </CommandItem>
+            ))}
+          </CommandGroup>
+        </CommandList>
+      </Command>
+    )
+  }
 
   return (
     <>
-
-        <div
-          className={`[ ] relative mb-8 mt-4 box-content w-full max-w-[485px] items-center rounded-full border-[1px]  border-solid border-transparent ${emailError ? "email-error" : ""}`}
-        >
-          <input
-            className={`[ fg-dark-24 w-full rounded-full border bg-neutral-100 py-4 pl-6 pr-20 font-sans  text-base  leading-[1.5rem] text-[#CECECE] drop-shadow-xl ${emailError ? "email-error2" : ""} ]`}
-            type="text"
-            // onChange={(evt) => setEmail(evt.target.value)}
-            onChange={(evt) => setEmail(evt.target.value)}
-            maxLength={80}
-            required={true}
-            placeholder={"Enter email address"}
-          />
-          <Link
-            // onClick={(evt) => handleSubmit()}
-            href='/'
-            className="absolute right-0 top-0 my-2 mr-2 animate-shimmer items-center justify-center rounded-[46px] border-2 border-blue-300 bg-[linear-gradient(110deg,#076AFF,45%,#48BDFF,55%,#076AFF)] bg-[length:200%_100%] px-4 py-2 font-medium text-white"
-            data-variant="gradient"
-            data-size="thin"
-          >
-            Get early access
-            </Link>
-        </div>
-
-
+      <div
+        className={`flex md:flex-row flex-col px-2 mb-8 mt-4 box-content w-full max-w-[485px] items-center rounded-[16px] border ${emailError ? "border-red-500" : "border-gray-300"}`}
+      >
+        <input
+          key={isEmailSubmitted ? "submitted" : "not-submitted"}
+          className={`fg-dark-24 w-full bg-transparent py-4 md:pl-2 pl-1.5 md:pr-4 pr-3.5 font-sans md:text-base text-sm leading-[1.5rem] outline-none text-[#CECECE] drop-shadow-xl ${emailError ? "border-red-500 placeholder-red-500" : ""}`}
+          type="text"
+          onChange={(evt) => {
+            setEmail(evt.target.value);
+            if (emailError) setEmailError(false);
+          }}
+          maxLength={80}
+          required={true}
+          placeholder={"Enter your email address"}
+        />
+        <ComboBoxResponsive/>
+        {/* <Button
+          variant="secondary" 
+          className="px-8" 
+          onClick={() => checkEmail('cartercote06@gmail.com')}>
+          checkEmail
+        </Button> */}
+        {/* <Button
+          variant="secondary" 
+          className="px-8" 
+          onClick={() => testUpdate()}>
+          testUpdate
+        </Button> */}
+      </div>
     </>
   );
 };
 
 export default EmailCapture;
-
-{/* const useSaveEmail = () => {
-  const { addError } = useError();
-  const saveEmail = async (email: string) => {
-    try {
-      // call the backend to create subscription
-      const url = new URL("/onboarding/capture-email", baseUrl);
-      let response = await fetch(url, {
-        method: "POST",
-        credentials: "include",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: email,
-        }),
-      });
-      if (response.status !== 200 && response.status !== 400) {
-        // throw error
-        addError("An error occured while saving your email.", "Please try again.");
-      }
-      const body = await response.json();
-      // window.location.href = body.redirect_url;
-    } catch (error) {
-      addError("An error occured while saving your email.", error?.toString() ?? "");
-    }
-  };
-  return saveEmail;
-}; */}

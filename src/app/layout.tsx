@@ -6,6 +6,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
+  metadataBase: "https://startup.exchange",
   title: {
     default: "Startup Exchange | The path to moving your ideas forward awaits.",
     template: "%s | Startup Exchange",
