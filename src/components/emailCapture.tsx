@@ -10,6 +10,11 @@ import { useMediaQuery } from "utils/use-media-query";
 import { useTheme } from '../context/ThemeContext';
 
 import {
+  plus_jakarta_sans_extrabold,
+  plus_jakarta_sans_regular
+} from '../app/fonts';
+
+import {
   Command,
   CommandGroup,
   CommandItem,
@@ -143,7 +148,7 @@ const EmailCapture = () => {
         evt.preventDefault();
         handleSubmit();
       },
-      className: "md:px-6 px-3 md:pb-0 mb-2",
+      className: "md:px-6 px-3 md:mb-0 mb-2",
       variant: "outline" as const,
     };
 
@@ -202,11 +207,11 @@ const EmailCapture = () => {
   return (
     <>
       <div
-        className={`flex md:flex-row flex-col px-2 mb-8 mt-4 box-content w-full max-w-[485px] items-center rounded-[16px] border ${emailError ? "border-red-500" : "border-gray-300"}`}
+        className={`flex md:flex-row flex-col px-2 mb-8 mt-4 box-content w-full max-w-[485px] items-center rounded-[16px] border ${styles.borderColor} ${emailError ? "border-red-500" : "border-gray-300"}`}
       >
         <input
           key={isEmailSubmitted ? "submitted" : "not-submitted"}
-          className={`fg-dark-24 w-full bg-transparent py-4 md:pl-2 pl-1.5 md:pr-4 pr-3.5 font-sans md:text-base text-sm leading-[1.5rem] outline-none text-[#CECECE] drop-shadow-xl ${emailError ? "border-red-500 placeholder-red-500" : ""}`}
+          className={`fg-dark-24 ${plus_jakarta_sans_regular.className} w-full bg-transparent py-4 md:pl-2 pl-1.5 md:pr-4 pr-3.5 font-sans md:text-base text-sm ${theme === 'dark' ? 'placeholder-[#CECECE]' : 'placeholder-black'} leading-[1.5rem] outline-none text-[#CECECE] drop-shadow-xl ${emailError ? "border-red-500 placeholder-red-500" : ""}`}
           type="text"
           onChange={(evt) => {
             setEmail(evt.target.value);
