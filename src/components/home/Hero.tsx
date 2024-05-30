@@ -22,7 +22,7 @@ const Hero = () => {
     return (
         <div className={`flex flex-col w-[94%] ${theme === 'dark' ? 'bg-black' : 'bg-white'} text-${theme === 'dark' ? 'white' : 'black'}`}>
             <div className={`flex flex-col md:py-56 pt-24 pb-36 ${theme === 'dark' ? 'border-[#242424]' : 'border-[#E0E0E0]'} border-x items-start justify-center gap-y-4 relative`}>
-                <video autoPlay muted loop className="absolute w-full h-full object-cover opacity-60 z-0">
+                <video autoPlay muted loop playsInline className="absolute w-full h-full object-cover opacity-60 z-0" style={{ pointerEvents: 'none' }}>
                     <source src="/sxVid.mp4" type="video/mp4" />
                 </video>
                 <div className="flex flex-col w-full gap-y-4 md:px-12 px-6 z-10 relative">
