@@ -123,9 +123,9 @@ const Community = () => {
                         <div className={`flex flex-col border border-dashed ${styles.dashedBorderColor} md:w-1/3 w-full`}>
                             <div className="w-full relative">
                                 <Image
-                                    src={Images.communityRev}
+                                    src={Images.howItWorks1}
                                     alt="0 → 1"
-                                    height={60}
+                                    height={400}
                                     className="opacity-80 hover:opacity-100 transition duration-500"
                                     style={{ width: '100%', height: 'auto' }}
                                 />
@@ -135,9 +135,9 @@ const Community = () => {
                         <div className={`flex flex-col border border-dashed ${styles.dashedBorderColor} md:w-1/3 w-full`}>
                             <div className="w-full relative">
                                 <Image
-                                    src={Images.communityRev}
+                                    src={Images.howItWorks2}
                                     alt="0 → 1"
-                                    height={60}
+                                    height={400}
                                     className="opacity-80 hover:opacity-100 transition duration-500"
                                     style={{ width: '100%', height: 'auto' }}
                                 />
@@ -147,9 +147,9 @@ const Community = () => {
                         <div className={`flex flex-col border border-dashed ${styles.dashedBorderColor} md:w-1/3 w-full`}>
                             <div className="w-full relative">
                                 <Image
-                                    src={Images.communityRev}
+                                    src={Images.howItWorks3}
                                     alt="0 → 1"
-                                    height={60}
+                                    height={400}
                                     className="opacity-80 hover:opacity-100 transition duration-500"
                                     style={{ width: '100%', height: 'auto' }}
                                 />

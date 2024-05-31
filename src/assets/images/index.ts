@@ -49,6 +49,10 @@ import duke from './colleges/duke.png';
 
 import rocket from "./communityPics/rocket.png";
 import communityRev from "./communityPics/communityRev.jpeg";
+import howItWorks1 from "./communityPics/howItWorks1.jpeg";
+import howItWorks2 from "./communityPics/howItWorks2.jpg";
+import howItWorks3 from "./communityPics/howItWorks3.jpg";
+
 
 import accenture from './partnerLogos/accenture.png';
 import buildIllinois from './partnerLogos/buildIllinois.png';
@@ -356,6 +360,9 @@ type ImagesType = {
     coryGuest: StaticImageData;
     safwaanGuest: StaticImageData;
     shipIt: StaticImageData;
+    howItWorks1: StaticImageData;
+    howItWorks2: StaticImageData;
+    howItWorks3: StaticImageData;
 };
 
 
@@ -529,7 +536,10 @@ const Images: ImagesType = {
     kathrynGuest,
     coryGuest,
     safwaanGuest,
-    shipIt
+    shipIt,
+    howItWorks1,
+    howItWorks2,
+    howItWorks3
 };
 
 export default Images;
