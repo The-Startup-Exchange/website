@@ -6,6 +6,7 @@ import Header from "../../components/header";
 import Footer from "../../components/footer";
 import Marquee from "react-fast-marquee";
 import DashedDivider from "@/components/dashedDivider";
+import EmailCapture from '@/components/emailCapture';
 import Image from 'next/image';
 import Images from '../../assets/images';
 import { useTheme } from '../../context/ThemeContext';
@@ -300,9 +301,9 @@ const Events = () => {
                         ))}
                     </div>
                     <div className={`flex md:flex-row flex-col z-10 ${theme === 'dark' ? 'border-[#242424]' : 'border-[#E0E0E0]'} border-t space-x-8`}>
-                        <div className={`px-12 py-20 w-full flex md:flex-row flex-col justify-between md:space-x-12 md:align-center md:items-center`}>
+                        <div className={`px-12 py-20 w-full flex md:flex-row flex-col justify-between md:space-x-12 md:align-center md:items-center md:align-center`}>
                             <p className={`${plus_jakarta_sans_extrabold.className} text-[32px] w-full pb-12 md:pb-0`}>Stay up-to-date on upcoming events.</p>
-                            <Button href="https://docs.google.com/forms/d/1K4TKHANO3iWyFM51OqRXBqT1wP2FTYEjE1pdz6559Y0/viewform?edit_requested=true" variant="secondary" className={`px-10 w-full md:w-auto ${messina_semibold.className}`}>COUNT ME IN</Button>
+                            <EmailCapture/>
                         </div>
                     </div>
                 </div>

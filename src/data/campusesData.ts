@@ -8,7 +8,7 @@ export const campuses = [
       logo: Images.sxgt,
       blackLogo: Images.sxgtBlack,
       description: 'A space for Georgia Tech makers, builders, & creators to exchange their ideas.',
-      link: 'https://tinyurl.com/startupexchangegt',
+      link: 'https://www.startupexchangegt.org/',
       items: [
         {
           id: 1,

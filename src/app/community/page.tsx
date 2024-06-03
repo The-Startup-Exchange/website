@@ -202,7 +202,7 @@ const Community = () => {
                 <div className={`flex md:flex-row flex-col w-[94%] z-10 ${theme === 'dark' ? 'border-[#242424]' : 'border-[#E0E0E0]'} border-x space-x-8`}>
                     <div className={`px-12 py-20 w-full flex md:flex-row flex-col justify-between md:space-x-12 md:align-center md:items-center`}>
                         <p className={`${plus_jakarta_sans_extrabold.className} text-[32px] w-full pb-12 md:pb-0`}>Interested in joining the community?</p>
-                        <Button href="https://docs.google.com/forms/d/1K4TKHANO3iWyFM51OqRXBqT1wP2FTYEjE1pdz6559Y0/viewform?edit_requested=true" variant="secondary" className={`px-10 w-full md:w-auto ${messina_semibold.className}`}>APPLY FOR F24</Button>
+                        <Button href="https://airtable.com/apppnBcY3p3kbfT9V/pagCGeASraULRMoSw/form" variant="secondary" className={`px-10 w-full md:w-auto ${messina_semibold.className}`}>APPLY FOR F24</Button>
                     </div>
                 </div>
             </div>
