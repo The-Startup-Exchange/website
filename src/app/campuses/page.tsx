@@ -214,7 +214,7 @@ const Campuses = () => {
                     </div>
                     <div className={`px-12 py-20 border-t ${styles.borderColor} w-full flex md:flex-row flex-col justify-between md:space-x-12 md:align-center md:items-center`}>
                         <p className={`${plus_jakarta_sans_extrabold.className} text-[32px] w-full pb-12 md:pb-0`}>Interested in joining our team of organizers?</p>
-                        <Button href="mailto:hello@startup.exchange" variant="secondary" className={`px-10 w-full md:w-auto ${messina_semibold.className}`}>CONTACT US</Button>
+                        <Button href="https://airtable.com/appIL9IqHDejLtfIJ/paglnE2sFlFwv8kzj/form" variant="secondary" className={`px-10 w-full md:w-auto ${messina_semibold.className}`}>CONTACT US</Button>
                     </div>
                 </div>
             </div>
