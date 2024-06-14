@@ -2,10 +2,13 @@
 
 import Cookies from "js-cookie";
 import Link from "next/link";
+import Image from "next/image";
+import Images from '../assets/images';
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { createClient } from '@supabase/supabase-js'
 import { Button } from "@/components/ui/button";
+import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
 import { useMediaQuery } from "utils/use-media-query";
 import { useTheme } from '../context/ThemeContext';
 
@@ -62,6 +65,10 @@ const options: Option[] = [
 const EmailCapture = () => {
   const { theme, styles } = useTheme();
   const [open, setOpen] = useState(false);
+  const [alertVisible, setAlertVisible] = useState(false);
+  const [alertMessage, setAlertMessage] = useState("");
+  const [alertVariant, setAlertVariant] = useState<"default" | "destructive" | null>("default");
+
   const isDesktop = useMediaQuery("(min-width: 768px)");
 
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
@@ -80,6 +87,10 @@ const EmailCapture = () => {
   const handleSubmit = async () => {
     if (!validateEmail(email)) {
       setEmailError(true);
+      setAlertMessage("We were unable to submit your email address. Please try again.");
+      setAlertVariant("destructive");
+      setAlertVisible(true);
+      setTimeout(() => setAlertVisible(false), 3000);
       return;
     }
     setEmailError(false);
@@ -90,11 +101,17 @@ const EmailCapture = () => {
           { email: email }
         ]);
       if (error) throw error;
+      setAlertMessage("Success! You've been added to the Startup Exchange mailing list.");
+      setAlertVariant("default");
       setIsEmailSubmitted(true);
       setOpen(true);
     } catch (error) {
       console.error('Error inserting data: ', error);
       setEmailError(true);
+      setAlertMessage("Error: We were unable to submit your email address. Please try again.");
+      setAlertVariant("destructive");
+      setAlertVisible(true);
+      setTimeout(() => setAlertVisible(false), 3000);
     }
   };
 
@@ -108,6 +125,8 @@ const EmailCapture = () => {
       console.log('Update success:', data);
       setEmail("");
       setOpen(false);
+      setAlertVisible(true);
+      setTimeout(() => setAlertVisible(false), 3000);
     } catch (error) {
       console.error('Error updating data: ', error);
     }
@@ -206,6 +225,18 @@ const EmailCapture = () => {
 
   return (
     <>
+      {alertVisible && (
+        <div className="fixed bottom-5 right-5 animate-slide-up">
+          <Alert variant={alertVariant}>
+              <div className="flex flex-col">
+                <AlertTitle>{alertVariant === "destructive" ? "Error!" : "Success!"}</AlertTitle>
+                <AlertDescription>
+                  {alertMessage}
+                </AlertDescription>
+              </div>
+          </Alert>
+        </div>
+      )}
       <div
         className={`flex md:flex-row flex-col px-2 mb-8 mt-4 box-content w-full max-w-[485px] items-center rounded-[16px] border ${styles.borderColor} ${emailError ? "border-red-500" : "border-gray-300"}`}
       >

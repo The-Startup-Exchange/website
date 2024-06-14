@@ -7,6 +7,7 @@ import instagram from './icons/instagram.png';
 import linkedin from './icons/linkedin.png';
 import twitter from './icons/twitter.png';
 import paperclip from './icons/paperclip.png';
+import check from './icons/check.png';
 
 import discordBlack from './icons/discordBlack.png';
 import instagramBlack from './icons/instagramBlack.png';
@@ -194,6 +195,7 @@ type ImagesType = {
     darkMode: StaticImageData;
     lightMode: StaticImageData;
     discord: StaticImageData;
+    check: StaticImageData;
     instagram: StaticImageData;
     linkedin: StaticImageData;
     twitter: StaticImageData;
@@ -371,6 +373,7 @@ const Images: ImagesType = {
     darkMode,
     lightMode,
     discord,
+    check,
     instagram,
     linkedin,
     twitter,
